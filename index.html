@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sion Academy Martinique : école bienveillante, Joy Club et Parent Lab au Lamentin</title>
+<meta name="description" content="Sion Academy est une école chrétienne hors contrat au Lamentin, en Martinique. Pédagogie active, petites classes, accueil des enfants HPI, périscolaire Joy Club et école des parents Parent Lab. Inscriptions 2026 ouvertes.">
+<meta name="keywords" content="école Martinique, école hors contrat Lamentin, école chrétienne Martinique, Sion Academy, pédagogie Freinet Martinique, enfants HPI Martinique, périscolaire Lamentin, école des parents Martinique, Joy Club, Parent Lab">
+<meta name="author" content="Sion Émergence">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sion Academy : grandir, apprendre et rêver ensemble en Martinique">
+<meta property="og:description" content="Un lieu de vie éducatif au Lamentin pour les enfants, les familles et tout le territoire. École, périscolaire et accompagnement des parents.">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Sion Émergence">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sion Academy Martinique : école, Joy Club et Parent Lab">
+<meta name="twitter:description" content="Un tiers-lieu éducatif chaleureux au Lamentin. Inscriptions 2026 ouvertes.">
+<link rel="canonical" href="https://sion-emergence.fr/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Sion Academy","alternateName":"Sion Émergence","description":"École chrétienne hors contrat, périscolaire Joy Club et école des parents Parent Lab. Un tiers-lieu éducatif au Lamentin en Martinique.","address":{"@type":"PostalAddress","addressLocality":"Le Lamentin","addressRegion":"Martinique","addressCountry":"FR"},"email":"contact@sion-emergence.fr","url":"https://sion-emergence.fr/"}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&family=Dancing+Script:wght@500;600;700&family=Fredoka:wght@400;500;600;700&family=Caveat:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Open Sans',sans-serif;background:#F5F4EF;color:#1A2E29;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+:root{
+  --cream:#F5F4EF;--white:#fff;
+  --forest:#2B5446;--forest-d:#1A3530;--forest-l:#3D7060;--forest-m:#EAF2EE;
+  --sand:#E9DBCA;--sand-d:#D6C4AA;
+  --coral:#E8725A;--coral-l:#F5C0B0;--coral-p:#FDF0EC;
+  --teal:#3E9FA1;--teal-l:#AFDCDD;--teal-p:#E6F5F5;
+  --gold:#C49A14;--gold-l:#F2E19A;--gold-p:#FBF6E0;
+  --ink:#1A2E29;--ink-s:#3A5048;--ink-m:#7A9490;
+  --line:#D6D2CA;
+  --r-sm:6px;--r-md:12px;--r-lg:16px;--r-xl:24px;--r-2xl:32px;--r-pill:999px;
+  --sh-sm:0 2px 12px rgba(27,60,46,.08);--sh-md:0 4px 24px rgba(27,60,46,.11);--sh-lg:0 10px 48px rgba(27,60,46,.15);
+}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.reveal.on{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
+input,select,textarea{width:100%;font-family:'Open Sans',sans-serif;font-size:14px;color:#1A2E29;background:#F5F4EF;border:1.5px solid #D6D2CA;border-radius:10px;padding:12px 16px;outline:none;transition:border-color .2s,box-shadow .2s}
+input:focus,select:focus,textarea:focus{border-color:#2B5446;box-shadow:0 0 0 3px rgba(43,84,70,.1)}
+textarea{resize:vertical;min-height:100px}
+label{font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#3A5048;display:block;margin-bottom:6px}
+@media(max-width:768px){
+  .hide-mob{display:none!important}
+  .mob-1col{grid-template-columns:1fr!important}
+  h1.big{font-size:38px!important}
+  h2.sec{font-size:28px!important}
+}
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:#F5F4EF}
+::-webkit-scrollbar-thumb{background:#D6C4AA;border-radius:3px}
+.show-mob{display:none}
+@media(max-width:768px){.show-mob{display:flex!important}}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const {useState,useEffect,useRef,useCallback}=React;
+
+// French apostrophe helper — avoids JS string escape issues
+const A = "\u2019";
+const L = (s) => s.replace(/'/g, A);
+
+const TWEAK_DEFAULTS=/*EDITMODE-BEGIN*/{"accentColor":"#E8725A","heroTheme":"forest","showCta":true}/*EDITMODE-END*/;
+
+function useReveal(ref){
+  useEffect(()=>{
+    const root = ref && ref.current ? ref.current : document;
+    const els = root.querySelectorAll(".reveal");
+    const obs = new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting) e.target.classList.add("on");});},{threshold:.1});
+    els.forEach(el=>obs.observe(el));
+    return()=>obs.disconnect();
+  },[ref]);
+}
+
+const Blob = ({c, s, op=.14}) => (
+  <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style={{position:"absolute", fill:c, opacity:op, pointerEvents:"none", ...s}}>
+    <path d="M45,-77C58,-69,69,-57,77,-43C84,-29,87,-14,85,1C83,15,77,29,68,42C59,55,47,67,33,74C19,81,4,84,-11,82C-27,80,-43,74,-54,64C-65,53,-72,39,-76,24C-79,9,-79,-7,-74,-21C-68,-36,-57,-49,-43,-58C-30,-67,-15,-73,1,-74C16,-74,32,-84,45,-77Z" transform="translate(100 100)"/>
+  </svg>
+);
+
+const Wave = ({fill}) => (
+  <svg style={{display:"block", width:"100%", marginBottom:-2, position:"absolute", bottom:0, left:0}} viewBox="0 0 1440 64" preserveAspectRatio="none" fill={fill} xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,64 C360,0 1080,64 1440,0 L1440,64 L0,64Z"/>
+  </svg>
+);
+
+const Eyebrow = ({children, light, color}) => (
+  <p style={{fontFamily:"Montserrat,sans-serif", fontSize:10, fontWeight:700, letterSpacing:".18em", textTransform:"uppercase", color: light ? "rgba(255,255,255,.5)" : (color || "#7A9490"), marginBottom:10}}>{children}</p>
+);
+
+const Tag = ({children, color="#2B5446", bg="#EAF2EE"}) => (
+  <span style={{fontFamily:"Montserrat,sans-serif", fontSize:9, fontWeight:700, letterSpacing:".12em", textTransform:"uppercase", color, background:bg, borderRadius:999, padding:"4px 12px", display:"inline-block"}}>{children}</span>
+);
+
+const Script = ({text, color="#E8725A", size=22}) => (
+  <p style={{fontFamily:"Dancing Script,cursive", fontSize:size, fontWeight:600, color, marginBottom:10}}>{text}</p>
+);
+
+/* ─── Kid-universe visual primitives ─── */
+const Kidwrite = ({text, color="#E8725A", size=28}) => (
+  <p style={{fontFamily:"Caveat,cursive", fontSize:size, fontWeight:700, color, marginBottom:10, lineHeight:1.1}}>{text}</p>
+);
+
+const Sun = ({s={}}) => (
+  <svg viewBox="0 0 100 100" style={{position:"absolute", ...s}} xmlns="http://www.w3.org/2000/svg">
+    <circle cx="50" cy="50" r="20" fill="#F2E19A"/>
+    {[0,45,90,135,180,225,270,315].map(a => (
+      <rect key={a} x="48" y="8" width="4" height="14" rx="2" fill="#F2E19A" transform={"rotate("+a+" 50 50)"}/>
+    ))}
+  </svg>
+);
+
+const Cloud = ({s={}, c="#fff", op=.7}) => (
+  <svg viewBox="0 0 120 60" style={{position:"absolute", opacity:op, ...s}} xmlns="http://www.w3.org/2000/svg">
+    <path d="M25,45 Q5,45 10,30 Q5,15 25,18 Q30,5 50,12 Q65,0 80,15 Q105,10 105,32 Q120,45 95,48 Z" fill={c}/>
+  </svg>
+);
+
+const Star = ({s={}, c="#F2E19A"}) => (
+  <svg viewBox="0 0 24 24" style={{position:"absolute", ...s}} xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6l-6.3 4.4L8 13.8 2 9.4h7.6z" fill={c}/>
+  </svg>
+);
+
+const Leaf = ({s={}, c="#3E9FA1"}) => (
+  <svg viewBox="0 0 24 24" style={{position:"absolute", ...s}} xmlns="http://www.w3.org/2000/svg">
+    <path d="M5 22 C 5 14, 12 2, 22 4 C 20 14, 13 21, 5 22 Z" fill={c}/>
+    <path d="M5 22 L 18 8" stroke="#fff" strokeWidth="1" fill="none" opacity=".5"/>
+  </svg>
+);
+
+const Rainbow = ({s={}}) => (
+  <svg viewBox="0 0 140 80" style={{position:"absolute", ...s}} xmlns="http://www.w3.org/2000/svg">
+    <path d="M10,75 A60,60 0 0,1 130,75" stroke="#E8725A" strokeWidth="8" fill="none"/>
+    <path d="M18,75 A52,52 0 0,1 122,75" stroke="#F2E19A" strokeWidth="8" fill="none"/>
+    <path d="M26,75 A44,44 0 0,1 114,75" stroke="#3E9FA1" strokeWidth="8" fill="none"/>
+    <path d="M34,75 A36,36 0 0,1 106,75" stroke="#2B5446" strokeWidth="8" fill="none"/>
+  </svg>
+);
+
+const Flower = ({s={}, c="#E8725A"}) => (
+  <svg viewBox="0 0 60 60" style={{position:"absolute", ...s}} xmlns="http://www.w3.org/2000/svg">
+    {[0,60,120,180,240,300].map(a => (
+      <ellipse key={a} cx="30" cy="15" rx="7" ry="12" fill={c} transform={"rotate("+a+" 30 30)"}/>
+    ))}
+    <circle cx="30" cy="30" r="6" fill="#F2E19A"/>
+  </svg>
+);
+
+const Wiggle = ({w=100, c="#E8725A", s={}}) => (
+  <svg viewBox={"0 0 "+w+" 20"} style={{position:"absolute", ...s}} xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d={"M0,10 Q"+w/8+",0 "+w/4+",10 T"+w/2+",10 T"+3*w/4+",10 T"+w+",10"} stroke={c} strokeWidth="3" fill="none" strokeLinecap="round"/>
+  </svg>
+);
+
+const Balloon = ({s={}, c="#E8725A"}) => (
+  <svg viewBox="0 0 40 70" style={{position:"absolute", ...s}} xmlns="http://www.w3.org/2000/svg">
+    <ellipse cx="20" cy="22" rx="17" ry="22" fill={c}/>
+    <path d="M20,44 L18,50 L22,50 Z" fill={c}/>
+    <path d="M20,50 Q24,55 18,62 Q22,68 20,70" stroke="#3A5048" strokeWidth="1" fill="none"/>
+    <ellipse cx="14" cy="15" rx="4" ry="6" fill="rgba(255,255,255,.4)"/>
+  </svg>
+);
+
+const Pencil = ({s={}}) => (
+  <svg viewBox="0 0 80 20" style={{position:"absolute", ...s}} xmlns="http://www.w3.org/2000/svg">
+    <rect x="10" y="6" width="50" height="8" fill="#F2E19A"/>
+    <rect x="60" y="6" width="12" height="8" fill="#E8725A"/>
+    <polygon points="0,10 10,6 10,14" fill="#3A5048"/>
+    <polygon points="6,10 10,8 10,12" fill="#F5C0B0"/>
+    <rect x="10" y="6" width="50" height="2" fill="rgba(0,0,0,.08)"/>
+  </svg>
+);
+
+const Btn = ({children, v="primary", size="md", onClick, full, style:sx}) => {
+  const [h, sh] = useState(false);
+  const sz = {sm:{fontSize:10, padding:"9px 22px"}, md:{fontSize:11, padding:"13px 30px"}, lg:{fontSize:12, padding:"16px 40px"}};
+  const vs = {
+    primary: {background: h?"#1A3530":"#2B5446", color:"#fff", border:"none"},
+    coral: {background: h?"#c95a42":"#E8725A", color:"#fff", border:"none"},
+    teal: {background: h?"#2e8082":"#3E9FA1", color:"#fff", border:"none"},
+    outline: {background: h?"#EAF2EE":"transparent", color:"#2B5446", border:"2px solid #2B5446"},
+    white: {background: h?"rgba(255,255,255,.88)":"#fff", color:"#2B5446", border:"none"},
+    ghost: {background:"transparent", color: h?"#2B5446":"#3A5048", border:"none"}
+  };
+  return (
+    <button onClick={onClick} onMouseEnter={()=>sh(true)} onMouseLeave={()=>sh(false)}
+      style={{fontFamily:"Montserrat,sans-serif", fontWeight:700, letterSpacing:".08em", textTransform:"uppercase", borderRadius:999, cursor:"pointer", transition:"all .22s ease", display:"inline-flex", alignItems:"center", gap:8, ...sz[size], ...vs[v], width: full?"100%":"auto", justifyContent: full?"center":"flex-start", ...sx}}>
+      {children}
+    </button>
+  );
+};
+
+const NAV_ITEMS = [
+  {id:"home", label:"Accueil"},
+  {id:"about", label:"Le projet"},
+  {id:"academy", label:"Sion Academy"},
+  {id:"joyclub", label:"Joy Club"},
+  {id:"parentlab", label:"Parent Lab"},
+  {id:"dispositifs", label:"Dispositifs"},
+  {id:"candidatures", label:"Candidatures"},
+  {id:"partenaires", label:"Partenaires"}
+];
+
+const Nav = ({page, go}) => {
+  const [sc, setSc] = useState(false);
+  const [open, setOpen] = useState(false);
+  const dark = page === "home" && !sc;
+  useEffect(()=>{
+    const fn = () => setSc(window.scrollY > 40);
+    window.addEventListener("scroll", fn);
+    return () => window.removeEventListener("scroll", fn);
+  },[]);
+  return (
+    <nav style={{position:"fixed", top:0, left:0, right:0, zIndex:300, height:68, display:"flex", alignItems:"center", padding:"0 32px", background: sc?"rgba(245,244,239,.97)":"transparent", backdropFilter: sc?"blur(14px)":"none", boxShadow: sc?"0 2px 24px rgba(27,60,46,.08)":"none", transition:"all .3s ease"}}>
+      <div style={{maxWidth:1280, margin:"0 auto", width:"100%", display:"flex", alignItems:"center", justifyContent:"space-between"}}>
+        <button onClick={()=>{go("home"); setOpen(false);}} style={{background:"none", border:"none", cursor:"pointer", display:"flex", flexDirection:"column", gap:1}}>
+          <img src="assets/logo.png" alt="Sion" style={{height:38, filter: dark?"brightness(0) invert(1)":"none", transition:"filter .3s"}}/>
+          <span style={{fontFamily:"Montserrat,sans-serif", fontSize:8, fontWeight:700, letterSpacing:".18em", textTransform:"uppercase", color: dark?"rgba(255,255,255,.5)":"#7A9490"}}>Émergence</span>
+        </button>
+
+        <div className="hide-mob" style={{display:"flex", gap:22, alignItems:"center"}}>
+          {NAV_ITEMS.slice(1,6).map(n => (
+            <button key={n.id} onClick={()=>go(n.id)} style={{background:"none", border:"none", cursor:"pointer", fontFamily:"Montserrat,sans-serif", fontSize:10, fontWeight:700, letterSpacing:".09em", textTransform:"uppercase", color: dark?"rgba(255,255,255,.8)":(page===n.id?"#2B5446":"#3A5048"), borderBottom: page===n.id?"2px solid #E8725A":"2px solid transparent", paddingBottom:2, transition:"all .18s"}}>
+              {n.label}
+            </button>
+          ))}
+          <Btn v="coral" size="sm" onClick={()=>go("candidatures")}>Candidatures</Btn>
+        </div>
+
+        <button onClick={()=>setOpen(!open)} className="show-mob" style={{background:"none", border:"none", cursor:"pointer", flexDirection:"column", gap:5, padding:4}}>
+          {[0,1,2].map(i => <span key={i} style={{display:"block", width:22, height:2, background: dark?"#fff":"#1A2E29", borderRadius:2}}/>)}
+        </button>
+      </div>
+      {open && (
+        <div style={{position:"absolute", top:68, left:0, right:0, background:"#fff", boxShadow:"0 10px 48px rgba(27,60,46,.15)", padding:"24px 28px", display:"flex", flexDirection:"column", gap:4}}>
+          {NAV_ITEMS.map(n => (
+            <button key={n.id} onClick={()=>{go(n.id); setOpen(false);}} style={{background:"none", border:"none", cursor:"pointer", textAlign:"left", fontFamily:"Montserrat,sans-serif", fontSize:12, fontWeight:700, letterSpacing:".09em", textTransform:"uppercase", color: page===n.id?"#2B5446":"#3A5048", padding:"10px 0", borderBottom:"1px solid #D6D2CA"}}>
+              {n.label}
+            </button>
+          ))}
+          <Btn v="coral" size="md" onClick={()=>{go("candidatures"); setOpen(false);}} full style={{marginTop:12}}>Candidatures →</Btn>
+        </div>
+      )}
+    </nav>
+  );
+};
+
+const Footer = ({go}) => (
+  <footer style={{background:"#1A3530", padding:"72px 40px 36px"}}>
+    <div style={{maxWidth:1280, margin:"0 auto"}}>
+      <div className="mob-1col" style={{display:"grid", gridTemplateColumns:"1.8fr 1fr 1fr 1fr", gap:48, marginBottom:48, paddingBottom:40, borderBottom:"1px solid rgba(255,255,255,.08)"}}>
+        <div>
+          <img src="assets/logo.png" alt="Sion Émergence" style={{height:46, filter:"brightness(0) invert(1)", marginBottom:6, opacity:.85}}/>
+          <p style={{fontFamily:"Montserrat,sans-serif", fontSize:9, fontWeight:700, letterSpacing:".16em", textTransform:"uppercase", color:"rgba(255,255,255,.3)", marginBottom:16}}>Émergence</p>
+          <p style={{fontFamily:"Open Sans,sans-serif", fontSize:12, lineHeight:1.8, color:"rgba(255,255,255,.42)", maxWidth:260, marginBottom:20}}>{L("Un lieu vivant où les enfants grandissent et les familles se retrouvent, au c'ur de la Martinique.")}</p>
+          <Script color="rgba(255,255,255,.2)" size={16} text={L("Là où l'éducation rejoint la vie")}/>
+        </div>
+        {[
+          ["Le lieu", [["À propos","about"], ["Dispositifs","dispositifs"], ["Partenaires","partenaires"]]],
+          ["Nos offres", [["Sion Academy","academy"], ["Joy Club","joyclub"], ["Parent Lab","parentlab"]]],
+          ["Rejoindre", [["Candidatures","candidatures"], ["Contact","partenaires"], ["Inscription","candidatures"]]]
+        ].map(([t, links]) => (
+          <div key={t}>
+            <p style={{fontFamily:"Montserrat,sans-serif", fontSize:9, fontWeight:700, letterSpacing:".14em", textTransform:"uppercase", color:"rgba(255,255,255,.28)", marginBottom:16}}>{t}</p>
+            {links.map(([l, pg]) => (
+              <button key={l} onClick={()=>go(pg)} style={{display:"block", background:"none", border:"none", cursor:"pointer", fontFamily:"Open Sans,sans-serif", fontSize:12, color:"rgba(255,255,255,.48)", marginBottom:9, padding:0, textAlign:"left", transition:"color .16s"}} onMouseEnter={e=>e.target.style.color="rgba(255,255,255,.85)"} onMouseLeave={e=>e.target.style.color="rgba(255,255,255,.48)"}>{l}</button>
+            ))}
+          </div>
+        ))}
+      </div>
+      <div style={{display:"flex", justifyContent:"space-between", alignItems:"center", flexWrap:"wrap", gap:12}}>
+        <p style={{fontFamily:"Open Sans,sans-serif", fontSize:11, color:"rgba(255,255,255,.22)"}}>© 2026 Sion Émergence · Le Lamentin, Martinique</p>
+        <div style={{display:"flex", gap:20}}>
+          <span style={{fontFamily:"Open Sans,sans-serif", fontSize:11, color:"rgba(255,255,255,.2)", cursor:"pointer"}}>Mentions légales</span>
+          <span style={{fontFamily:"Open Sans,sans-serif", fontSize:11, color:"rgba(255,255,255,.2)", cursor:"pointer"}}>Confidentialité</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+);
+
+const PageHero = ({tag, title, italic, sub, bg="#2B5446", light=true}) => (
+  <section style={{background:bg, padding:"130px 40px 100px", position:"relative", overflow:"hidden"}}>
+    <Blob c="#E8725A" s={{width:380, height:380, top:-100, right:-60}} op={.09}/>
+    <Blob c="#3E9FA1" s={{width:260, height:260, bottom:-60, left:-40}} op={.1}/>
+    <div style={{maxWidth:800, margin:"0 auto", position:"relative", zIndex:1}}>
+      <div className="reveal"><Eyebrow light={light}>{tag}</Eyebrow></div>
+      <h1 className="reveal d1 big" style={{fontFamily:"Playfair Display,serif", fontSize:58, fontWeight:800, lineHeight:1.08, letterSpacing:"-.02em", color: light?"#fff":"#1A2E29", marginBottom:10}}>
+        {title}{italic && <><br/><em style={{color: light?"#F5C0B0":"#E8725A", fontStyle:"italic"}}>{italic}</em></>}
+      </h1>
+      {sub && <p className="reveal d2" style={{fontFamily:"Open Sans,sans-serif", fontSize:16, lineHeight:1.85, color: light?"rgba(234,242,238,.78)":"#3A5048", maxWidth:560, marginTop:14}}>{sub}</p>}
+    </div>
+    <Wave fill="#F5F4EF"/>
+  </section>
+);
+
+const S = ({children, bg="#F5F4EF", pad="80px 40px", style:sx}) => (
+  <section style={{background:bg, padding:pad, ...sx}}>
+    <div style={{maxWidth:1280, margin:"0 auto"}}>{children}</div>
+  </section>
+);
+
+const Card = ({children, style:sx, onClick}) => {
+  const [h, sh] = useState(false);
+  return (
+    <div onClick={onClick} onMouseEnter={()=>sh(true)} onMouseLeave={()=>sh(false)}
+      style={{borderRadius:32, transition:"transform .24s ease, box-shadow .24s ease", transform: h && onClick?"translateY(-5px)":"none", boxShadow: h && onClick?"0 10px 48px rgba(27,60,46,.15)":"none", cursor: onClick?"pointer":"default", ...sx}}>
+      {children}
+    </div>
+  );
+};
+
+const Band = ({go}) => (
+  <section style={{background:"#E9DBCA", padding:"72px 40px", position:"relative", overflow:"hidden"}}>
+    <Blob c="#E8725A" s={{width:300, height:300, top:-80, left:"5%"}} op={.08}/>
+    <Blob c="#3E9FA1" s={{width:260, height:260, bottom:-60, right:"8%"}} op={.08}/>
+    <div style={{maxWidth:680, margin:"0 auto", textAlign:"center", position:"relative", zIndex:1}}>
+      <Script text={L("Les inscriptions 2026'2027 sont ouvertes")}/>
+      <h2 className="sec" style={{fontFamily:"Playfair Display,serif", fontSize:36, fontWeight:700, color:"#1A2E29", marginBottom:14, letterSpacing:"-.02em"}}>Une place pour votre enfant</h2>
+      <p style={{fontFamily:"Open Sans,sans-serif", fontSize:15, lineHeight:1.8, color:"#3A5048", marginBottom:32}}>Les places sont limitées. Prenez contact avec nous dès aujourd{A}hui.</p>
+      <div style={{display:"flex", gap:14, justifyContent:"center", flexWrap:"wrap"}}>
+        <Btn v="coral" size="lg" onClick={()=>go("candidatures")}>Déposer une candidature</Btn>
+        <Btn v="outline" size="lg" onClick={()=>go("partenaires")}>Nous contacter</Btn>
+      </div>
+    </div>
+  </section>
+);
+
+/* ───────── HOME ───────── */
+const HomePage = ({go}) => {
+  const ref = useRef(); useReveal(ref);
+  return (
+    <div ref={ref}>
+      <section style={{background:"#2B5446", minHeight:"100vh", display:"flex", alignItems:"center", position:"relative", overflow:"hidden"}}>
+        <Blob c="#E8725A" s={{width:520, height:520, top:-120, right:-80}} op={.1}/>
+        <Blob c="#3E9FA1" s={{width:360, height:360, bottom:40, left:-80}} op={.12}/>
+        <Blob c="#C49A14" s={{width:220, height:220, bottom:100, right:180}} op={.09}/>
+        <div style={{maxWidth:1280, margin:"0 auto", padding:"110px 40px 80px", width:"100%", position:"relative", zIndex:1}}>
+          <div className="mob-1col" style={{display:"grid", gridTemplateColumns:"1.1fr .9fr", gap:80, alignItems:"center"}}>
+            <div>
+              <div className="reveal" style={{display:"inline-flex", alignItems:"center", gap:8, background:"rgba(255,255,255,.1)", borderRadius:999, padding:"5px 16px 5px 6px", marginBottom:28, backdropFilter:"blur(8px)"}}>
+                <span style={{background:"#E8725A", borderRadius:999, padding:"3px 10px", fontFamily:"Montserrat,sans-serif", fontSize:9, fontWeight:700, letterSpacing:".12em", textTransform:"uppercase", color:"#fff"}}>Martinique</span>
+                <span style={{fontFamily:"Open Sans,sans-serif", fontSize:12, color:"rgba(255,255,255,.7)"}}>{L("Un lieu pour grandir en famille")}</span>
+              </div>
+              <h1 className="reveal d1 big" style={{fontFamily:"Playfair Display,serif", fontSize:66, fontWeight:800, lineHeight:1.06, letterSpacing:"-.025em", color:"#fff", marginBottom:14}}>
+                Sion<br/>
+                <em style={{fontStyle:"italic", color:"#F5C0B0"}}>Émergence</em>
+              </h1>
+              <Script color="#F2E19A" size={22} text={L("Là où l'éducation rejoint la vie")}/>
+              <p className="reveal d2" style={{fontFamily:"Open Sans,sans-serif", fontSize:16, lineHeight:1.85, color:"rgba(234,242,238,.78)", marginBottom:36, maxWidth:480, marginTop:8}}>
+                {L("Un endroit unique en Martinique où l'on apprend sérieusement, où l'on se fait de vrais amis et où l'on construit l'avenir ensemble : enfants, parents et voisins de quartier.")}
+              </p>
+              <div className="reveal d3" style={{display:"flex", gap:14, flexWrap:"wrap", marginBottom:52}}>
+                <Btn v="coral" size="lg" onClick={()=>go("academy")}>Découvrir Sion Academy</Btn>
+                <Btn v="white" size="lg" onClick={()=>go("about")}>Notre projet →</Btn>
+              </div>
+              <div className="reveal" style={{display:"flex", gap:44, paddingTop:28, borderTop:"1px solid rgba(255,255,255,.1)", flexWrap:"wrap"}}>
+                {[["3 offres","éducatives","#F5C0B0"], ["Hors contrat","excellence exigeante","#AFDCDD"], ["Le Lamentin",L("c'ur de la Martinique"),"#F2E19A"]].map(([a,b,c])=>(
+                  <div key={a}>
+                    <p style={{fontFamily:"Playfair Display,serif", fontSize:22, fontWeight:700, color:c}}>{a}</p>
+                    <p style={{fontFamily:"Open Sans,sans-serif", fontSize:11, color:"rgba(255,255,255,.45)", marginTop:2}}>{b}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="reveal d2 hide-mob" style={{display:"flex", flexDirection:"column", gap:14}}>
+              <div style={{position:"relative", borderRadius:32, overflow:"hidden", aspectRatio:"4/3", boxShadow:"0 30px 60px rgba(0,0,0,.25)"}}>
+                <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=900&q=80" alt={L("Un enfant qui apprend à lire avec joie")} style={{width:"100%", height:"100%", objectFit:"cover", display:"block"}}/>
+                <div style={{position:"absolute", inset:0, background:"linear-gradient(180deg, transparent 40%, rgba(43,84,70,.55) 100%)"}}/>
+                <div style={{position:"absolute", left:18, bottom:18, right:18, display:"flex", alignItems:"center", gap:10}}>
+                  <div style={{width:36, height:36, borderRadius:"50%", background:"#F5C0B0", display:"flex", alignItems:"center", justifyContent:"center", fontFamily:"Playfair Display,serif", fontWeight:800, fontSize:14, color:"#2B5446"}}>S</div>
+                  <p style={{fontFamily:"Open Sans,sans-serif", fontSize:11, color:"rgba(255,255,255,.9)", lineHeight:1.4}}>{L("Un lieu où les enfants se lèvent le matin avec l'envie d'y aller")}</p>
+                </div>
+                <div style={{position:"absolute", top:14, right:14, background:"rgba(255,255,255,.95)", borderRadius:14, padding:"8px 12px", display:"flex", alignItems:"center", gap:8, boxShadow:"0 4px 12px rgba(0,0,0,.15)"}}>
+                  <div style={{width:7, height:7, borderRadius:"50%", background:"#3E9FA1", boxShadow:"0 0 0 3px rgba(62,159,161,.25)"}}/>
+                  <span style={{fontFamily:"Montserrat,sans-serif", fontSize:9, fontWeight:700, color:"#2B5446", letterSpacing:".08em"}}>RENTRÉE 2026</span>
+                </div>
+              </div>
+              <div style={{display:"grid", gridTemplateColumns:"repeat(3,1fr)", gap:10}}>
+                {[["Sion Academy","École","#EAF2EE","#2B5446","academy"], ["Joy Club","Périscolaire","#E6F5F5","#3E9FA1","joyclub"], ["Parent Lab","Parentalité","#FDF0EC","#E8725A","parentlab"]].map(([name, label, bg, c, pg])=>(
+                  <div key={name} onClick={()=>go(pg)} style={{background:bg, borderRadius:24, padding:"16px 14px", cursor:"pointer", transition:"transform .2s"}} onMouseEnter={e=>e.currentTarget.style.transform="scale(1.04)"} onMouseLeave={e=>e.currentTarget.style.transform=""}>
+                    <Tag color={c} bg="white">{label}</Tag>
+                    <p style={{fontFamily:"Playfair Display,serif", fontSize:16, fontWeight:700, color:"#1A2E29", marginTop:8}}>{name}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+        <Wave fill="#F5F4EF"/>
+      </section>
+
+      {/* ═══════════ CONSTATS & DOULEURS ═══════════ */}
+      <S bg="#F5F4EF" pad="100px 40px" style={{position:"relative", overflow:"hidden"}}>
+        <Blob c="#E8725A" s={{width:380, height:380, top:-80, right:-120}} op={.07}/>
+        <Blob c="#3E9FA1" s={{width:280, height:280, bottom:-80, left:-100}} op={.08}/>
+        <div className="reveal" style={{textAlign:"center", marginBottom:56, maxWidth:760, margin:"0 auto 56px", position:"relative", zIndex:1}}>
+          <Eyebrow>Ce que nous entendons, partout</Eyebrow>
+          <h2 className="sec" style={{fontFamily:"Playfair Display,serif", fontSize:46, fontWeight:700, color:"#1A2E29", letterSpacing:"-.02em", lineHeight:1.1, marginBottom:18}}>
+            {L("Élever un enfant en Martinique,")}<br/><em style={{color:"#E8725A", fontStyle:"italic"}}>{L("c'est parfois un chemin solitaire")}</em>
+          </h2>
+          <p style={{fontFamily:"Open Sans,sans-serif", fontSize:16, lineHeight:1.8, color:"#3A5048"}}>
+            {L("Beaucoup de familles nous partagent les mêmes inquiétudes. Nous les écoutons vraiment, et nous bâtissons Sion Émergence pour y répondre, concrètement.")}
+          </p>
+        </div>
+
+        <div className="mob-1col" style={{display:"grid", gridTemplateColumns:"repeat(3,1fr)", gap:20, position:"relative", zIndex:1, marginBottom:48}}>
+          {[
+            {q: L("'Mon enfant n'a plus envie d'aller à l'école.'"), a: L("La classe est trop grande, le rythme trop rapide. Ses questions restent sans réponse, son étincelle s'éteint peu à peu."), bg:"#FDF0EC", col:"#E8725A"},
+            {q: L("'Il est en avance, et ça dérange.'"), a: L("Les enfants HPI s'ennuient, se sentent différents, parfois en souffrance. Peu d'écoles en Martinique savent vraiment les accompagner."), bg:"#E6F5F5", col:"#3E9FA1"},
+            {q: L("'Je ne sais plus comment faire avec lui.'"), a: L("Être parent aujourd'hui, c'est jongler avec mille injonctions. On manque d'un lieu où parler, sans jugement, entre parents et avec des professionnels."), bg:"#FBF6E0", col:"#C49A14"},
+            {q: L("'Il ne connaît pas d'où il vient.'"), a: L("Entre les écrans et les programmes standardisés, nos enfants perdent le lien avec la Martinique, ses histoires, sa langue, ses savoir-faire."), bg:"#EAF2EE", col:"#2B5446"},
+            {q: L("'Je travaille, je n'ai pas le temps.'"), a: L("Entre l'école, les trajets, le périscolaire, les vacances, trouver un cadre cohérent et bienveillant toute l'année devient un casse-tête."), bg:"#FDF0EC", col:"#E8725A"},
+            {q: L("'On se sent seuls dans ce rôle.'"), a: L("Les familles sont isolées. Plus de village, plus de grands-parents à côté, plus de voisins pour donner un coup de main ou un conseil."), bg:"#E6F5F5", col:"#3E9FA1"}
+          ].map((d, i) => (
+            <div key={i} className={"reveal d"+(i%3)} style={{background:d.bg, borderRadius:28, padding:"30px 26px 28px", position:"relative", overflow:"hidden"}}>
+              <div style={{position:"absolute", top:-16, left:18, fontFamily:"Playfair Display,serif", fontSize:90, fontWeight:900, color:d.col, opacity:.18, lineHeight:1}}>"</div>
+              <p style={{fontFamily:"Playfair Display,serif", fontStyle:"italic", fontSize:19, fontWeight:600, color:"#1A2E29", lineHeight:1.35, marginBottom:14, position:"relative", zIndex:1, paddingTop:14}}>{d.q}</p>
+              <div style={{width:32, height:2, background:d.col, borderRadius:2, marginBottom:12}}/>
+              <p style={{fontFamily:"Open Sans,sans-serif", fontSize:13, lineHeight:1.7, color:"#3A5048", position:"relative", zIndex:1}}>{d.a}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="reveal" style={{maxWidth:820, margin:"0 auto", textAlign:"center", position:"relative", zIndex:1, background:"white", borderRadius:24, padding:"32px 36px", boxShadow:"0 4px 24px rgba(27,60,46,.08)"}}>
+          <p style={{fontFamily:"Open Sans,sans-serif", fontSize:15, lineHeight:1.8, color:"#3A5048"}}>
+            <strong style={{color:"#2B5446"}}>{L("Vous vous reconnaissez dans l'un de ces constats ?")}</strong> {L("Vous n'êtes pas seul. Sion Émergence existe justement pour ça : construire, ensemble, un autre chemin.")}
+          </p>
+        </div>
+      </S>
+
+      {/* ═══════════ VISION MANIFESTE ═══════════ */}
+      <S bg="#2B5446" pad="110px 40px" style={{position:"relative", overflow:"hidden"}}>
+        <Blob c="#E8725A" s={{width:500, height:500, top:-150, right:-100}} op={.09}/>
+        <Blob c="#C49A14" s={{width:300, height:300, bottom:-80, left:80}} op={.07}/>
+        <Blob c="#3E9FA1" s={{width:240, height:240, top:"40%", left:-60}} op={.09}/>
+
+        <div style={{maxWidth:1200, margin:"0 auto", position:"relative", zIndex:1}}>
+          <div className="mob-1col" style={{display:"grid", gridTemplateColumns:"1fr 1fr", gap:72, alignItems:"center", marginBottom:72}}>
+            <div className="reveal">
+              <Eyebrow light>Notre vision</Eyebrow>
+              <h2 style={{fontFamily:"Playfair Display,serif", fontSize:52, fontWeight:700, color:"#fff", lineHeight:1.08, letterSpacing:"-.025em", marginBottom:18}}>
+                {L("Et si l'école")}<br/><em style={{color:"#F5C0B0", fontStyle:"italic"}}>{L("redevenait un village ?")}</em>
+              </h2>
+              <Script color="#F2E19A" size={22} text={L("Un lieu où l'on se connaît, où l'on s'aide, où l'on grandit ensemble")}/>
+              <p style={{fontFamily:"Open Sans,sans-serif", fontSize:16, lineHeight:1.9, color:"rgba(234,242,238,.82)", marginTop:24, marginBottom:18}}>
+                {L("Nous rêvons d'un lieu où l'enfant est regardé comme une personne entière. Où ses talents, ses rythmes, ses questions trouvent des adultes disponibles. Où ses parents sont accueillis, pas jugés.")}
+              </p>
+              <p style={{fontFamily:"Open Sans,sans-serif", fontSize:16, lineHeight:1.9, color:"rgba(234,242,238,.82)"}}>
+                {L("Nous croyons qu'une éducation de qualité n'est pas un luxe. Elle doit être accessible, enracinée dans la culture martiniquaise et portée par une vraie communauté humaine.")}
+              </p>
+            </div>
+            <div className="reveal d1" style={{display:"grid", gridTemplateColumns:"1fr 1fr", gap:14}}>
+              <div style={{borderRadius:24, overflow:"hidden", aspectRatio:"3/4", marginTop:30}}>
+                <img src="https://images.unsplash.com/photo-1560785496-3c9d27877182?w=600&q=80" alt={L("Enfants qui jouent ensemble")} style={{width:"100%", height:"100%", objectFit:"cover", display:"block"}}/>
+              </div>
+              <div style={{display:"flex", flexDirection:"column", gap:14}}>
+                <div style={{borderRadius:24, overflow:"hidden", aspectRatio:"1/1"}}>
+                  <img src="https://images.unsplash.com/photo-1607453998774-d533f65dac99?w=500&q=80" alt={L("Parent et enfant complices")} style={{width:"100%", height:"100%", objectFit:"cover", display:"block"}}/>
+                </div>
+                <div style={{borderRadius:24, overflow:"hidden", aspectRatio:"4/5"}}>
+                  <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?w=500&q=80" alt={L("Atelier créatif")} style={{width:"100%", height:"100%", objectFit:"cover", display:"block"}}/>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="reveal" style={{background:"rgba(255,255,255,.06)", borderRadius:32, padding:"48px 40px", border:"1px solid rgba(255,255,255,.1)", backdropFilter:"blur(8px)", marginBottom:48}}>
+            <p style={{fontFamily:"Montserrat,sans-serif", fontSize:11, fontWeight:700, letterSpacing:".16em", textTransform:"uppercase", color:"#F5C0B0", marginBottom:20, textAlign:"center"}}>{L("Notre manifeste, en cinq engagements")}</p>
+            <div className="mob-1col" style={{display:"grid", gridTemplateColumns:"repeat(5,1fr)", gap:24}}>
+              {[
+                {n:"01", t:L("L'enfant d'abord"), d:L("Chaque enfant est unique. Nous adaptons, nous écoutons, nous accompagnons son rythme propre."), c:"#F5C0B0"},
+                {n:"02", t:L("La famille partenaire"), d:L("Les parents ne restent pas à la porte. Ils sont accueillis, formés, soutenus à chaque étape."), c:"#AFDCDD"},
+                {n:"03", t:L("La Martinique comme socle"), d:L("Créole, contes, histoire caribéenne, jardin, savoirs locaux : notre culture a toute sa place."), c:"#F2E19A"},
+                {n:"04", t:L("L'excellence accessible"), d:L("Petites classes, enseignants engagés, pédagogie active. Sans élitisme. Avec exigence."), c:"#F5C0B0"},
+                {n:"05", t:L("Le lien communautaire"), d:L("Voisins, aînés, artisans, partenaires : un tiers-lieu vivant où tout le monde a sa place."), c:"#AFDCDD"}
+              ].map((p, i) => (
+                <div key={p.n}>
+                  <p style={{fontFamily:"Playfair Display,serif", fontStyle:"italic", fontSize:36, fontWeight:700, color:p.c, marginBottom:12, lineHeight:1}}>{p.n}</p>
+                  <p style={{fontFamily:"Montserrat,sans-serif", fontSize:13, fontWeight:700, color:"#fff", marginBottom:10, lineHeight:1.3}}>{p.t}</p>
+                  <p style={{fontFamily:"Open Sans,sans-serif", fontSize:12, lineHeight:1.7, color:"rgba(234,242,238,.65)"}}>{p.d}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </S>
+
+      {/* ═══════════ L'UNIVERS EN IMAGES ═══════════ */}
+      <S bg="#E9DBCA" pad="100px 40px" style={{position:"relative", overflow:"hidden"}}>
+        <Blob c="#2B5446" s={{width:320, height:320, top:-60, right:-80}} op={.08}/>
+        <div className="reveal" style={{textAlign:"center", marginBottom:56, maxWidth:680, margin:"0 auto 56px", position:"relative", zIndex:1}}>
+          <Eyebrow>{L("L'univers Sion Émergence")}</Eyebrow>
+          <h2 style={{fontFamily:"Playfair Display,serif", fontSize:42, fontWeight:700, color:"#1A2E29", letterSpacing:"-.02em", lineHeight:1.1, marginBottom:14}}>
+            {L("Le quotidien d'un lieu")}<br/><em style={{color:"#E8725A", fontStyle:"italic"}}>{L("qui fait grandir")}</em>
+          </h2>
+          <p style={{fontFamily:"Open Sans,sans-serif", fontSize:15, lineHeight:1.75, color:"#3A5048"}}>
+            {L("Apprendre en jouant. Créer ensemble. Cuisiner, jardiner, rire, se tromper, recommencer. C'est ça, nos journées.")}
+          </p>
+        </div>
+
+        <div className="mob-1col" style={{display:"grid", gridTemplateColumns:"repeat(12,1fr)", gap:14, position:"relative", zIndex:1, marginBottom:40}}>
+          {[
+            {src:"https://images.unsplash.com/photo-1469719847081-4757697d117a?w=800&q=80", alt:L("Famille à table"), span:"span 5", h:280, cap:L("Partager un bon repas")},
+            {src:"https://images.unsplash.com/photo-1511949860663-92c5c57d48a7?w=800&q=80", alt:L("Atelier peinture"), span:"span 4", h:280, cap:L("Créer avec les mains")},
+            {src:"https://images.unsplash.com/photo-1503919005314-30d93d07d823?w=800&q=80", alt:L("Enfant concentré"), span:"span 3", h:280, cap:L("Se concentrer")},
+            {src:"https://images.unsplash.com/photo-1503945438517-f65904a52ce6?w=800&q=80", alt:L("Lecture à deux"), span:"span 4", h:320, cap:L("Lire ensemble")},
+            {src:"https://images.unsplash.com/photo-1623107274042-16962aa28ea8?w=800&q=80", alt:L("Enfants jouant dehors"), span:"span 5", h:320, cap:L("Courir, rire, respirer")},
+            {src:"https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=800&q=80", alt:L("Petite fille aux couleurs vives"), span:"span 3", h:320, cap:L("Être soi")}
+          ].map((img, i) => (
+            <div key={i} className={"reveal d"+(i%3)} style={{gridColumn:img.span, position:"relative", borderRadius:24, overflow:"hidden", height:img.h, boxShadow:"0 12px 28px rgba(27,60,46,.12)"}}>
+              <img src={img.src} alt={img.alt} style={{width:"100%", height:"100%", objectFit:"cover", display:"block"}}/>
+              <div style={{position:"absolute", inset:0, background:"linear-gradient(180deg, transparent 55%, rgba(27,46,41,.75) 100%)"}}/>
+              <p style={{position:"absolute", left:18, bottom:14, right:18, fontFamily:"Playfair Display,serif", fontStyle:"italic", fontSize:17, fontWeight:600, color:"#fff", lineHeight:1.3}}>{img.cap}</p>
+            </div>
+          ))}
+        </div>
+      </S>
+
+      <S bg="#F5F4EF" pad="80px 40px">
+        <div className="reveal" style={{textAlign:"center", marginBottom:56}}>
+          <Eyebrow>Nos trois offres principales</Eyebrow>
+          <h2 className="sec" style={{fontFamily:"Playfair Display,serif", fontSize:42, fontWeight:700, color:"#1A2E29", letterSpacing:"-.02em", marginBottom:8}}>
+            Trois offres,<br/><em style={{color:"#2B5446", fontStyle:"italic"}}>une grande famille</em>
+          </h2>
+        </div>
+        <div className="mob-1col" style={{display:"grid", gridTemplateColumns:"repeat(3,1fr)", gap:20}}>
+          {[
+            {name:"Sion Academy", tag:"École hors contrat", col:"#2B5446", bg:"#EAF2EE", blob:"#3E9FA1", pg:"academy", desc: L("Une école chaleureuse et exigeante, avec de petites classes, une attention particulière pour les enfants HPI et un vrai amour de la Martinique."), cta: L("Découvrir l'école")},
+            {name:"Joy Club", tag:"Périscolaire & vacances", col:"#3E9FA1", bg:"#E6F5F5", blob:"#2B5446", pg:"joyclub", desc: L("Le moment préféré des enfants ! Avant l'école, après l'école et pendant les vacances, ils jouent, créent et explorent dans un cadre joyeux et rassurant."), cta:"Explorer Joy Club"},
+            {name:"Parent Lab", tag:"École de la parentalité", col:"#E8725A", bg:"#FDF0EC", blob:"#E8725A", pg:"parentlab", desc: L("Parce qu'être parent n'est pas toujours simple, Parent Lab vous donne des outils concrets, un espace d'écoute et beaucoup de bienveillance."), cta:"En savoir plus"}
+          ].map((o, i) => (
+            <Card key={o.name} onClick={()=>go(o.pg)} sx={{background:o.bg, padding:"32px 28px", position:"relative", overflow:"hidden"}} style={{background:o.bg, padding:"32px 28px", position:"relative", overflow:"hidden"}}>
+              <Blob c={o.blob} s={{width:160, height:160, top:-40, right:-40}} op={.12}/>
+              <div className={"reveal d"+i} style={{position:"relative", zIndex:1}}>
+                <Tag color={o.col} bg="white">{o.tag}</Tag>
+                <h3 style={{fontFamily:"Playfair Display,serif", fontSize:26, fontWeight:700, color:"#1A2E29", margin:"14px 0 10px"}}>{o.name}</h3>
+                <p style={{fontFamily:"Open Sans,sans-serif", fontSize:13, lineHeight:1.75, color:"#3A5048", marginBottom:20}}>{o.desc}</p>
+                <span style={{fontFamily:"Montserrat,sans-serif", fontSize:10, fontWeight:700, letterSpacing:".1em", textTransform:"uppercase", color:o.col}}>{o.cta} →</span>
+              </div>
+            </Card>
+          ))}
+        </div>
+      </S>
+
+      <S bg="#E9DBCA" pad="56px 40px">
+        <div className="reveal" style={{textAlign:"center", marginBottom:36}}>
+          <Eyebrow>Ce qui rend ce lieu singulier</Eyebrow>
+          <h2 style={{fontFamily:"Playfair Display,serif", fontSize:30, fontWeight:700, color:"#1A2E29"}}>Des dispositifs ancrés dans le réel</h2>
+        </div>
+        <div className="mob-1col" style={{display:"grid", gridTemplateColumns:"repeat(3,1fr)", gap:16}}>
+          {[
+            {icon:"🌱", title:"Jardin pédagogique", desc: L("Les enfants cultivent, observent et découvrent la nature martiniquaise. La terre est leur première maîtresse.")},
+            {icon:"🍎", title:"Cuisine du jardin", desc: L("Des bons petits plats locaux, de saison, préparés avec amour. Les enfants goutent, découvrent et apprennent à bien manger.")},
+            {icon:"👵🏾", title:"Entre les générations", desc: L("Les anciens racontent, les enfants écoutent. On apprend aussi des voisins, des familles et des artisans du quartier.")}
+          ].map((d, i) => (
+            <div key={d.title} className={"reveal d"+i} style={{background:"white", borderRadius:24, padding:"26px 22px", boxShadow:"0 2px 12px rgba(27,60,46,.08)"}}>
+              <div style={{fontSize:28, marginBottom:12}}>{d.icon}</div>
+              <p style={{fontFamily:"Montserrat,sans-serif", fontSize:12, fontWeight:700, color:"#2B5446", marginBottom:7}}>{d.title}</p>
+              <p style={{fontFamily:"Open Sans,sans-serif", fontSize:13, lineHeight:1.7, color:"#3A5048"}}>{d.desc}</p>
+            </div>
+          ))}
+        </div>
+        <div className="reveal" style={{textAlign:"center", marginTop:32}}>
+          <Btn v="ghost" size="sm" onClick={()=>go("dispositifs")}>Voir tous les dispositifs →</Btn>
+        </div>
+      </S>
+
+      <S bg="#2B5446" pad="80px 40px" style={{position:"relative", overflow:"hidden"}}>
+        <Blob c="#E8725A" s={{width:400, height:400, top:-100, right:-60}} op={.08}/>
+        <div style={{maxWidth:900, margin:"0 auto", position:"relative", zIndex:1}}>
+          <div className="reveal" style={{textAlign:"center", marginBottom:48}}>
+            <Eyebrow light>Notre ADN</Eyebrow>
+            <h2 style={{fontFamily:"Playfair Display,serif", fontSize:36, fontWeight:700, color:"#fff", marginBottom:14}}>Un projet chrétien, inclusif et humain</h2>
+            <p style={{fontFamily:"Open Sans,sans-serif", fontSize:15, lineHeight:1.85, color:"rgba(234,242,238,.72)", maxWidth:600, margin:"0 auto"}}>
+              {L("Nous croyons qu'une bonne école change les familles et que des familles soudées changent un territoire. Nos valeurs sont chrétiennes, notre accueil est large. Tout le monde est le bienvenu.")}
+            </p>
+          </div>
+          <div className="mob-1col" style={{display:"grid", gridTemplateColumns:"repeat(4,1fr)", gap:14}}>
+            {[["Enraciné","Martinique, Caraïbe, territoire"], ["Exigeant","Excellence sans élitisme"], ["Bienveillant",L("L'enfant au centre")], ["Ouvert","Inclusif et communautaire"]].map(([t, s], i) => (
+              <div key={t} className={"reveal d"+i} style={{background:"rgba(255,255,255,.07)", borderRadius:24, padding:"22px 18px", textAlign:"center", border:"1px solid rgba(255,255,255,.08)"}}>
+                <p style={{fontFamily:"Playfair Display,serif", fontSize:18, fontWeight:700, color:"#fff", marginBottom:6}}>{t}</p>
+                <p style={{fontFamily:"Open Sans,sans-serif", fontSize:12, color:"rgba(255,255,255,.48)", lineHeight:1.6}}>{s}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </S>
+
+      <Band go={go}/>
+      <Footer go={go}/>
+    </div>
+  );
+};
+
+/* ───────── ABOUT ───────── */
+const AboutPage = ({go}) => {
+  const ref = useRef(); useReveal(ref);
+  return (
+    <div ref={ref}>
+      <PageHero tag="Le projet" title="Sion Émergence" italic="un lieu vivant" sub={L("Une école, oui, mais aussi bien plus que ça. Un endroit chaleureux où les enfants apprennent, où les parents se sentent accueillis et où le lien se tisse avec le territoire.")}/>
+      <S bg="#F5F4EF" pad="80px 40px">
+        <div className="mob-1col" style={{display:"grid", gridTemplateColumns:"1fr 1fr", gap:72, alignItems:"start", marginBottom:64}}>
+          <div className="reveal">
+            <Eyebrow>Notre histoire</Eyebrow>
+            <h2 style={{fontFamily:"Playfair Display,serif", fontSize:36, fontWeight:700, color:"#1A2E29", marginBottom:14, letterSpacing:"-.02em"}}>
+              {L("Né d'une")}<br/><em style={{color:"#2B5446", fontStyle:"italic"}}>conviction profonde</em>
+            </h2>
+            <p style={{fontFamily:"Open Sans,sans-serif", fontSize:14, lineHeight:1.85, color:"#3A5048", marginBottom:16}}>
+              {L("Sion Émergence est né d'une envie simple. Offrir à la Martinique un lieu qui rassemble vraiment les enfants, les parents et le territoire. Un lieu où l'excellence n'est pas réservée à quelques-uns. Un lieu qui croit que chaque enfant a en lui quelque chose de précieux à faire grandir.")}
+            </p>
+            <p style={{fontFamily:"Open Sans,sans-serif", fontSize:14, lineHeight:1.85, color:"#3A5048", marginBottom:24}}>
+              {L("Nos valeurs chrétiennes nous guident au quotidien : le respect de chacun, la transmission, le lien humain et l'espérance. À partir de là, nous avons imaginé un projet scolaire ouvert, chaleureux et bien ancré en Martinique.")}
+            </p>
+            <Script text={L("Éduquer, c'est croire en quelqu'un avant qu'il y croie lui-même")}/>
+          </div>
+          <div className="reveal d1">
+            <div style={{background:"#E9DBCA", borderRadius:32, padding:"36px 32px", marginBottom:16, position:"relative", overflow:"hidden"}}>
+              <Blob c="#2B5446" s={{width:200, height:200, bottom:-40, right:-40}} op={.08}/>
+              <p style={{fontFamily:"Playfair Display,serif", fontStyle:"italic", fontSize:17, lineHeight:1.7, color:"#1A2E29", marginBottom:16, position:"relative", zIndex:1}}>
+                {L("'Instruis l'enfant selon la voie qu'il doit suivre, et quand il sera vieux, il ne s'en détournera pas.'")}
+              </p>
+              <p style={{fontFamily:"Montserrat,sans-serif", fontSize:9, fontWeight:700, letterSpacing:".14em", textTransform:"uppercase", color:"#C49A14", position:"relative", zIndex:1}}>Proverbes 22 : 6</p>
+            </div>
+            {[
+              ["Un tiers-lieu", L("Pas seulement une école : un espace de vie, de transmission et de création de liens.")],
+              ["Des acteurs locaux", L("Intervenants martiniquais, professionnels engagés, familles et partenaires du territoire.")],
+              [L("L'intergénérationnel"), L("Des projets qui relient enfants, parents, grands-parents et acteurs de la commune.")]
+            ].map(([t, d]) => (
+              <div key={t} style={{display:"flex", gap:14, alignItems:"flex-start", marginBottom:16, padding:"16px", background:"white", borderRadius:16, boxShadow:"0 2px 12px rgba(27,60,46,.08)"}}>
+                <div style={{width:8, height:8, borderRadius:"50%", background:"#E8725A", marginTop:6, flexShrink:0}}/>
+                <div>
+                  <p style={{fontFamily:"Montserrat,sans-serif", fontSize:12, fontWeight:700, color:"#1A2E29", marginBottom:3}}>{t}</p>
+                  <p style={{fontFamily:"Open Sans,sans-serif", fontSize:12, color:"#3A5048", lineHeight:1.65}}>{d}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="reveal" style={{background:"#2B5446", borderRadius:32, padding:"48px", position:"relative", overflow:"hidden"}}>
+          <Blob c="#3E9FA1" s={{width:300, height:300, top:-80, right:80}} op={.12}/>
+          <div className="mob-1col" style={{display:"grid", gridTemplateColumns:"repeat(3,1fr)", gap:32, position:"relative", zIndex:1}}>
+            {[
+              ["Notre mission", L("Créer un espace où l'éducation, la famille et le territoire se rejoignent pour former des enfants épanouis et des familles renforcées."), "#F5C0B0"],
+              ["Notre vision", L("Une Martinique où chaque enfant, quelles que soient ses origines, accède à une éducation de qualité dans un cadre de vie bienveillant et exigeant."), "#AFDCDD"],
+              ["Nos valeurs", "Excellence, bienveillance, enracinement, transmission, dignité, ouverture, lien communautaire et foi incarnée.", "#F2E19A"]
+            ].map(([t, d, c]) => (
+              <div key={t}>
+                <p style={{fontFamily:"Montserrat,sans-serif", fontSize:10, fontWeight:700, letterSpacing:".14em", textTransform:"uppercase", color:c, marginBottom:10}}>{t}</p>
+                <p style={{fontFamily:"Open Sans,sans-serif", fontSize:13, lineHeight:1.8, color:"rgba(234,242,238,.75)"}}>{d}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </S>
+      <Band go={go}/>
+      <Footer go={go}/>
+    </div>
+  );
+};
+
+/* ───────── ACADEMY ───────── */
+const AcademyPage = ({go}) => {
+  const ref = useRef(); useReveal(ref);
+  const [faq, setFaq] = useState(null);
+  const faqs = [
+    [L("L'école est-elle ouverte à tous ?"), L("Sion Academy est une école chrétienne ouverte à toutes les familles qui adhèrent à notre projet éducatif et à nos valeurs. Nous n'exigeons pas d'appartenance religieuse particulière ' nous demandons une adhésion sincère à notre vision.")],
+    [L("Qu'est-ce qu'une école hors contrat ?"), L("Une école hors contrat n'est pas liée à l'Éducation nationale. Elle est libre de définir ses programmes et sa pédagogie, tout en respectant les obligations légales d'instruction.")],
+    ["Comment reconnaissez-vous les enfants HPI ?", L("Nous formons nos enseignants à l'identification des profils HPI. Nous adaptons les parcours, enrichissons les apprentissages et travaillons avec les familles pour que ces enfants s'épanouissent.")],
+    ["Quels sont les effectifs par classe ?", L("Nos classes comptent au maximum 18 à 20 élèves. Cette taille volontairement réduite garantit un suivi individualisé et une relation éducative de qualité.")],
+    [L("Comment se déroule le processus d'admission ?"), L("Il comprend une prise de contact, une visite du lieu, un entretien de famille et l'étude d'un dossier. Rendez-vous sur la page Candidatures.")]
+  ];
+  return (
+    <div ref={ref}>
+      <section style={{background:"#2B5446", minHeight:"90vh", display:"flex", alignItems:"center", position:"relative", overflow:"hidden", paddingTop:68}}>
+        <Blob c="#E8725A" s={{width:500, height:500, top:-120, right:-80}} op={.1}/>
+        <Blob c="#C49A14" s={{width:280, height:280, bottom:60, right:200}} op={.09}/>
+        <Blob c="#3E9FA1" s={{width:320, height:320, bottom:-60, left:-40}} op={.11}/>
+        <Sun s={{width:90, height:90, top:130, right:"14%"}}/>
+        <Cloud s={{width:120, height:60, top:180, left:"42%"}} c="rgba(255,255,255,.18)" op={1}/>
+        <Cloud s={{width:80, height:40, top:110, right:"34%"}} c="rgba(255,255,255,.14)" op={1}/>
+        <Star s={{width:22, height:22, top:260, right:"22%"}} c="#F2E19A"/>
+        <Star s={{width:14, height:14, top:200, left:"48%"}} c="#F5C0B0"/>
+        <Rainbow s={{width:180, height:100, bottom:90, left:"2%", opacity:.5}}/>
+        <div style={{maxWidth:1280, margin:"0 auto", padding:"80px 40px 60px", width:"100%", position:"relative", zIndex:1}}>
+          <div className="mob-1col" style={{display:"grid", gridTemplateColumns:"1.1fr .9fr", gap:72, alignItems:"center"}}>
+            <div>
+              <div className="reveal" style={{display:"inline-flex", gap:8, marginBottom:20, flexWrap:"wrap"}}>
+                <Tag color="#F5C0B0" bg="rgba(255,255,255,.1)">École chrétienne</Tag>
+                <Tag color="#AFDCDD" bg="rgba(255,255,255,.1)">Hors contrat</Tag>
+                <Tag color="#F2E19A" bg="rgba(255,255,255,.1)">Martinique</Tag>
+              </div>
+              <h1 className="reveal d1 big" style={{fontFamily:"Fredoka,sans-serif", fontSize:74, fontWeight:700, lineHeight:1.02, letterSpacing:"-.02em", color:"#fff", marginBottom:10}}>
+                Sion<br/><span style={{color:"#F5C0B0"}}>Academy</span>
+              </h1>
+              <Kidwrite color="#F2E19A" size={32} text="apprendre, rêver, grandir"/>
+              <p className="reveal d2" style={{fontFamily:"Open Sans,sans-serif", fontSize:16, lineHeight:1.85, color:"rgba(234,242,238,.78)", maxWidth:480, marginBottom:36, marginTop:8}}>
+                {L("Une école chaleureuse, au Lamentin en Martinique, avec de petites classes, beaucoup d'attention pour chaque enfant et un vrai amour du pays. Nos portes sont ouvertes à toutes les familles qui croient en ce projet.")}
+              </p>
+              <div className="reveal d3" style={{display:"flex", gap:14, flexWrap:"wrap"}}>
+                <Btn v="coral" size="lg" onClick={()=>go("candidatures")}>Inscrire mon enfant</Btn>
+                <Btn v="white" size="lg" onClick={()=>{const el=document.getElementById("pedago"); if(el) el.scrollIntoView({block:"start"});}}>Notre pédagogie ↓</Btn>
+              </div>
+            </div>
+            <div className="reveal d2 hide-mob" style={{display:"flex", flexDirection:"column", gap:14}}>
+              <div style={{background:"rgba(255,255,255,.06)", border:"1px solid rgba(255,255,255,.1)", borderRadius:32, aspectRatio:"4/3", display:"flex", alignItems:"center", justifyContent:"center", position:"relative", overflow:"hidden"}}>
+                <Blob c="#3E9FA1" s={{width:240, height:240, top:-40, right:-30}} op={.2}/>
+                <div style={{textAlign:"center", position:"relative", zIndex:1}}>
+                  <img src="assets/logo.png" alt="" style={{height:80, filter:"brightness(0) invert(1)", opacity:.2, marginBottom:12}}/>
+                  <p style={{fontFamily:"Montserrat,sans-serif", fontSize:11, color:"rgba(255,255,255,.25)", letterSpacing:".07em"}}>{L("Photo de l'école")}</p>
+                </div>
+              </div>
+              <div style={{display:"grid", gridTemplateColumns:"repeat(3,1fr)", gap:10}}>
+                {[["≤ 20","élèves / classe","#F5C0B0"], ["Freinet","+ DFC","#AFDCDD"], ["HPI","pris en compte","#F2E19A"]].map(([a,b,c]) => (
+                  <div key={a} style={{background:"rgba(255,255,255,.07)", borderRadius:16, padding:"16px", textAlign:"center"}}>
+                    <p style={{fontFamily:"Playfair Display,serif", fontSize:22, fontWeight:700, color:c}}>{a}</p>
+                    <p style={{fontFamily:"Open Sans,sans-serif", fontSize:11, color:"rgba(255,255,255,.42)", marginTop:2}}>{b}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+        <Wave fill="#F5F4EF"/>
+      </section>
+
+      <S bg="#E9DBCA" pad="80px 40px">
+        <div className="reveal" style={{textAlign:"center", marginBottom:48}}>
+          <Eyebrow>Ce qui nous distingue</Eyebrow>
+          <h2 className="sec" style={{fontFamily:"Fredoka,sans-serif", fontSize:46, fontWeight:700, color:"#1A2E29", letterSpacing:"-.02em"}}>
+            Une école<br/><span style={{color:"#2B5446"}}>pas comme les autres</span>
+          </h2>
+          <Kidwrite color="#E8725A" size={30} text="avec le sourire et dans le jeu"/>
+        </div>
+        <div className="mob-1col" style={{display:"grid", gridTemplateColumns:"repeat(3,1fr)", gap:18}}>
+          {[
+            ["Petites classes","≤ 20 élèves", L("On connaît chaque enfant par son prénom. Les maîtresses prennent le temps qu'il faut."),"#EAF2EE","#2B5446"],
+            ["Apprendre en faisant","Freinet & DFC", L("Les enfants manipulent, essaient, se trompent, recommencent. C'est comme ça qu'ils retiennent pour de vrai."),"#E6F5F5","#3E9FA1"],
+            ["Enfants HPI","Accueillis", L("Un regard attentif pour les petits cerveaux qui tournent vite. Des défis à leur mesure et beaucoup d'amour."),"#FDF0EC","#E8725A"],
+            ["Ma Martinique","Cultures caraïbes", L("Contes, langues, histoires du pays. Nos enfants savent d'où ils viennent et en sont fiers."),"#FBF6E0","#C49A14"],
+            ["Valeurs chrétiennes","Ouvertes à tous", L("Le respect, l'écoute, l'attention aux autres. Des valeurs qui se vivent au quotidien."),"#EAF2EE","#2B5446"],
+            ["Familles bienvenues","Main dans la main", L("Les parents ne restent pas à la porte. Ils entrent, ils participent, ils comptent."),"#FDF0EC","#E8725A"]
+          ].map(([t, sub, d, bg, col], i) => (
+            <Card key={t} sx={{background:bg, padding:"26px 22px", position:"relative", overflow:"hidden"}} style={{background:bg, padding:"26px 22px", position:"relative", overflow:"hidden"}}>
+              <Blob c={col} s={{width:130, height:130, top:-30, right:-30}} op={.12}/>
+              <div className={"reveal d"+(i%4)} style={{position:"relative", zIndex:1}}>
+                <Tag color={col} bg="white">{sub}</Tag>
+                <p style={{fontFamily:"Playfair Display,serif", fontSize:18, fontWeight:700, color:"#1A2E29", margin:"12px 0 8px"}}>{t}</p>
+                <p style={{fontFamily:"Open Sans,sans-serif", fontSize:12, lineHeight:1.7, color:"#3A5048"}}>{d}</p>
+              </div>
+            </Card>
+          ))}
+        </div>
+      </S>
+
+      <S bg="#FBF6E0" pad="80px 40px" style={{position:"relative", overflow:"hidden"}}>
+        <Sun s={{width:80, height:80, top:50, right:"8%"}}/>
+        <Cloud s={{width:110, height:55, top:100, left:"12%"}} c="#fff" op={1}/>
+        <Balloon s={{width:38, height:65, top:70, right:"28%", transform:"rotate(-10deg)"}} c="#3E9FA1"/>
+        <Balloon s={{width:32, height:55, top:120, right:"34%", transform:"rotate(6deg)"}} c="#E8725A"/>
+        <div className="reveal" style={{textAlign:"center", marginBottom:48}}>
+          <Kidwrite color="#E8725A" size={34} text="une journée à Sion Academy"/>
+          <h2 className="sec" style={{fontFamily:"Fredoka,sans-serif", fontSize:40, fontWeight:700, color:"#1A2E29"}}>{L("Du matin au gouter")}</h2>
+        </div>
+        <div className="mob-1col" style={{display:"grid", gridTemplateColumns:"repeat(4,1fr)", gap:16, position:"relative", zIndex:1}}>
+          {[
+            {t:"8h · Le cercle",d:L("On se dit bonjour, on choisit le programme du jour."),c:"#E8725A",bg:"#FDF0EC"},
+            {t:"10h · Les ateliers",d:L("Chacun avance \u00e0 son rythme, la ma\u00eetresse passe voir."),c:"#3E9FA1",bg:"#E6F5F5"},
+            {t:"12h · \u00c0 table !",d:L("Un bon repas avec des l\u00e9gumes du jardin."),c:"#C49A14",bg:"#FFF"},
+            {t:"15h · Dehors",d:L("Jardin, contes, sport, mus\u00e9e : la vraie vie !"),c:"#2B5446",bg:"#EAF2EE"}
+          ].map((m, i) => (
+            <div key={m.t} className={"reveal d"+(i%4)} style={{background:m.bg, borderRadius:28, padding:"26px 22px", boxShadow:"0 4px 24px rgba(27,60,46,.08)", position:"relative"}}>
+              <div style={{position:"absolute", top:-14, left:18, background:m.c, color:"#fff", width:32, height:32, borderRadius:"50%", display:"flex", alignItems:"center", justifyContent:"center", fontFamily:"Fredoka,sans-serif", fontSize:14, fontWeight:700}}>{i+1}</div>
+              <p style={{fontFamily:"Fredoka,sans-serif", fontSize:18, fontWeight:600, color:m.c, marginTop:10, marginBottom:6}}>{m.t}</p>
+              <p style={{fontFamily:"Open Sans,sans-serif", fontSize:13, color:"#3A5048", lineHeight:1.65}}>{m.d}</p>
+            </div>
+          ))}
+        </div>
+        <div className="reveal" style={{display:"flex", justifyContent:"center", marginTop:48}}>
+          <Wiggle w={240} c="#E8725A" s={{width:240, height:20}}/>
+        </div>
+      </S>
+
+      <section id="pedago" style={{background:"#F5F4EF", padding:"80px 40px", position:"relative", overflow:"hidden"}}>
+        <Cloud s={{width:100, height:50, top:60, left:"6%"}} c="#E6F5F5" op={1}/>
+        <Cloud s={{width:130, height:65, top:120, right:"8%"}} c="#FDF0EC" op={1}/>
+        <Star s={{width:26, height:26, top:90, left:"42%"}} c="#F2E19A"/>
+        <Pencil s={{width:90, height:22, top:170, right:"18%", transform:"rotate(18deg)"}}/>
+        <Leaf s={{width:38, height:38, top:220, left:"14%", transform:"rotate(-30deg)"}} c="#3E9FA1"/>
+        <div style={{maxWidth:1280, margin:"0 auto"}}>
+          <div className="mob-1col" style={{display:"grid", gridTemplateColumns:"1fr 1fr", gap:72, marginBottom:56}}>
+            <div className="reveal">
+              <Eyebrow>Méthode Freinet</Eyebrow>
+              <h2 className="sec" style={{fontFamily:"Fredoka,sans-serif", fontSize:46, fontWeight:700, color:"#1A2E29", marginBottom:14, letterSpacing:"-.02em"}}>
+                On apprend<br/><span style={{color:"#2B5446"}}>en vivant</span>
+              </h2>
+              <Kidwrite color="#E8725A" size={26} text="les mains dans la terre et la tête dans les étoiles"/>
+              <p style={{fontFamily:"Open Sans,sans-serif", fontSize:14, lineHeight:1.85, color:"#3A5048", marginBottom:24}}>
+                {L("Ici, les enfants n'écoutent pas des leçons les bras croisés. Ils cherchent, ils essaient, ils construisent. Chaque journée est une nouvelle aventure avec les copains et la maîtresse.")}
+              </p>
+              {[
+                [L("Tâtonner"), L("Se tromper, ce n'est pas grave. C'est même comme ça qu'on apprend.")],
+                ["Parler, dessiner, créer", L("Chaque enfant a sa voix, ses idées, son style. On les écoute tous.")],
+                ["Ensemble", L("On réfléchit en groupe, on s'entraide, on avance à plusieurs.")],
+                ["De vrais projets", L("Le jardin, la cuisine, les fabrications : les savoirs se vivent vraiment.")]
+              ].map(([t, d], i) => (
+                <div key={t} style={{display:"flex", gap:16, padding:"14px 16px", background:"white", borderRadius:16, marginBottom:10, boxShadow:"0 2px 12px rgba(27,60,46,.08)"}}>
+                  <div style={{width:36, height:36, background:"#EAF2EE", borderRadius:10, display:"flex", alignItems:"center", justifyContent:"center", flexShrink:0, fontFamily:"Playfair Display,serif", fontSize:16, fontWeight:700, color:"#2B5446"}}>{i+1}</div>
+                  <div>
+                    <p style={{fontFamily:"Montserrat,sans-serif", fontSize:11, fontWeight:700, color:"#1A2E29", marginBottom:3}}>{t}</p>
+                    <p style={{fontFamily:"Open Sans,sans-serif", fontSize:12, color:"#3A5048", lineHeight:1.6}}>{d}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="reveal d1">
+              <Eyebrow color="#3E9FA1">Approche DFC</Eyebrow>
+              <h2 className="sec" style={{fontFamily:"Fredoka,sans-serif", fontSize:46, fontWeight:700, color:"#1A2E29", marginBottom:14, letterSpacing:"-.02em"}}>
+                Design For<br/><span style={{color:"#3E9FA1"}}>Change</span>
+              </h2>
+              <Kidwrite color="#3E9FA1" size={26} text="devenir de petits héros du quotidien"/>
+              <p style={{fontFamily:"Open Sans,sans-serif", fontSize:14, lineHeight:1.85, color:"#3A5048", marginBottom:24}}>
+                {L("DFC, c'est apprendre aux enfants à voir un problème autour d'eux et à imaginer une solution. En vrai, pas sur le papier. Et ça, ça les rend fiers.")}
+              </p>
+              <div className="mob-1col" style={{display:"grid", gridTemplateColumns:"repeat(2,1fr)", gap:12}}>
+                {[
+                  ["F","Feel", L("Ressentir, se mettre à la place de l'autre"),"#E8725A"],
+                  ["I","Imagine","Imaginer des idées pour aider","#3E9FA1"],
+                  ["D","Do","Agir, construire, bricoler","#2B5446"],
+                  ["S","Share","Raconter, partager, inspirer","#C49A14"]
+                ].map(([l, w, d, c]) => (
+                  <div key={l} style={{background:"white", borderRadius:24, padding:"22px 18px", textAlign:"center", boxShadow:"0 2px 12px rgba(27,60,46,.08)", position:"relative", overflow:"hidden"}}>
+                    <Blob c={c} s={{width:100, height:100, bottom:-20, right:-20}} op={.1}/>
+                    <p style={{fontFamily:"Playfair Display,serif", fontSize:44, fontWeight:800, color:c, lineHeight:1}}>{l}</p>
+                    <p style={{fontFamily:"Montserrat,sans-serif", fontSize:10, fontWeight:700, letterSpacing:".12em", textTransform:"uppercase", color:"#1A2E29", marginBottom:8}}>{w}</p>
+                    <p style={{fontFamily:"Open Sans,sans-serif", fontSize:12, color:"#3A5048", lineHeight:1.6}}>{d}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="reveal" style={{background:"#2B5446", borderRadius:32, padding:"48px", position:"relative", overflow:"hidden"}}>
+            <Blob c="#E8725A" s={{width:350, height:350, top:-80, right:60}} op={.1}/>
+            <div className="mob-1col" style={{position:"relative", zIndex:1, display:"grid", gridTemplateColumns:"1fr 1fr", gap:48, alignItems:"center"}}>
+              <div>
+                <Eyebrow light>Ancrage martiniquais & caribéen</Eyebrow>
+                <h3 style={{fontFamily:"Playfair Display,serif", fontSize:30, fontWeight:700, color:"#fff", marginBottom:14}}>{L("Savoir d'où l'on vient pour aller plus loin")}</h3>
+                <p style={{fontFamily:"Open Sans,sans-serif", fontSize:13, lineHeight:1.85, color:"rgba(234,242,238,.72)"}}>
+                  {L("L'histoire de la Martinique, les contes caraïbes, la langue créole, les savoirs des anciens. Tout ça a sa place dans les classes de Sion Academy.")}
+                </p>
+              </div>
+              <div style={{display:"flex", flexDirection:"column", gap:12}}>
+                {["Intervenants martiniquais dans les classes","Histoire et créole bien présents","Projets DFC ancrés dans le quartier","Jardin potager pour apprendre en plein air"].map((d) => (
+                  <div key={d} style={{display:"flex", gap:12, alignItems:"center", background:"rgba(255,255,255,.07)", borderRadius:16, padding:"12px 16px"}}>
+                    <div style={{width:6, height:6, borderRadius:"50%", background:"#F5C0B0", flexShrink:0}}/>
+                    <p style={{fontFamily:"Open Sans,sans-serif", fontSize:13, color:"rgba(234,242,238,.8)"}}>{L(d)}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <S bg="#E9DBCA" pad="72px 40px">
+        <div style={{maxWidth:800, margin:"0 auto"}}>
+          <div className="reveal" style={{textAlign:"center", marginBottom:40}}>
+            <Eyebrow>Questions fréquentes</Eyebrow>
+            <h2 style={{fontFamily:"Playfair Display,serif", fontSize:34, fontWeight:700, color:"#1A2E29"}}>Vos questions, nos réponses</h2>
+          </div>
+          {faqs.map(([q, a], i) => (
+            <div key={i} style={{background:"white", borderRadius:24, marginBottom:10, overflow:"hidden", boxShadow:"0 2px 12px rgba(27,60,46,.08)"}}>
+              <button onClick={()=>setFaq(faq===i?null:i)} style={{width:"100%", display:"flex", justifyContent:"space-between", alignItems:"center", padding:"18px 22px", background:"none", border:"none", cursor:"pointer", textAlign:"left"}}>
+                <span style={{fontFamily:"Montserrat,sans-serif", fontSize:12, fontWeight:700, color:"#1A2E29"}}>{q}</span>
+                <span style={{fontFamily:"Montserrat,sans-serif", fontSize:18, color:"#2B5446", transition:"transform .2s", transform: faq===i?"rotate(45deg)":"none"}}>+</span>
+              </button>
+              {faq===i && <div style={{padding:"0 22px 18px", fontFamily:"Open Sans,sans-serif", fontSize:13, lineHeight:1.8, color:"#3A5048"}}>{a}</div>}
+            </div>
+          ))}
+          <div className="reveal" style={{textAlign:"center", marginTop:36}}>
+            <Btn v="coral" size="lg" onClick={()=>go("candidatures")}>Déposer une candidature →</Btn>
+          </div>
+        </div>
+      </S>
+      <Band go={go}/>
+      <Footer go={go}/>
+    </div>
+  );
+};
+
+/* ───────── JOY CLUB ───────── */
+const JoyClubPage = ({go}) => {
+  const ref = useRef(); useReveal(ref);
+  return (
+    <div ref={ref}>
+      <section style={{background:"#3E9FA1", padding:"130px 40px 100px", position:"relative", overflow:"hidden"}}>
+        <Blob c="white" s={{width:400, height:400, top:-100, right:-60}} op={.07}/>
+        <Blob c="#1A3530" s={{width:260, height:260, bottom:-40, left:-30}} op={.12}/>
+        <Sun s={{width:100, height:100, top:110, right:"8%"}}/>
+        <Cloud s={{width:140, height:70, top:170, left:"48%"}} c="rgba(255,255,255,.22)" op={1}/>
+        <Cloud s={{width:90, height:45, top:130, right:"28%"}} c="rgba(255,255,255,.18)" op={1}/>
+        <Balloon s={{width:44, height:75, top:170, right:"22%", transform:"rotate(8deg)"}} c="#E8725A"/>
+        <Balloon s={{width:36, height:60, top:220, right:"30%", transform:"rotate(-6deg)"}} c="#F2E19A"/>
+        <Star s={{width:20, height:20, top:260, right:"40%"}} c="#F2E19A"/>
+        <Star s={{width:14, height:14, top:180, right:"45%"}} c="#F5C0B0"/>
+        <Rainbow s={{width:160, height:90, bottom:120, left:"6%", opacity:.4}}/>
+        <Flower s={{width:44, height:44, bottom:140, right:"12%"}} c="#F5C0B0"/>
+        <div style={{maxWidth:800, margin:"0 auto", position:"relative", zIndex:1}}>
+          <div className="reveal"><Eyebrow light>Périscolaire & vacances</Eyebrow></div>
+          <h1 className="reveal d1 big" style={{fontFamily:"Fredoka,sans-serif", fontSize:74, fontWeight:700, color:"#fff", lineHeight:1.02, marginBottom:10}}>Joy Club</h1>
+          <Kidwrite color="#fff" size={36} text="le club des enfants heureux"/>
+          <p className="reveal d2" style={{fontFamily:"Open Sans,sans-serif", fontSize:16, lineHeight:1.85, color:"rgba(255,255,255,.78)", maxWidth:520, marginTop:8}}>
+            {L("Le matin avant la cloche, le soir après les devoirs, et pendant les vacances aussi : les enfants viennent au Joy Club pour jouer, créer, courir et s'amuser en toute sécurité. Ouvert à tous les enfants du Lamentin.")}
+          </p>
+          <div className="reveal d3" style={{display:"flex", gap:14, marginTop:28}}>
+            <Btn v="white" size="lg" onClick={()=>go("candidatures")}>Inscrire mon enfant</Btn>
+          </div>
+        </div>
+        <Wave fill="#F5F4EF"/>
+      </section>
+
+      <S bg="#F5F4EF" pad="80px 40px">
+        <div className="mob-1col" style={{display:"grid", gridTemplateColumns:"1fr 1fr", gap:20, marginBottom:48}}>
+          <div style={{background:"#E6F5F5", borderRadius:32, padding:"36px 32px", position:"relative", overflow:"hidden"}}>
+            <Blob c="#3E9FA1" s={{width:200, height:200, top:-40, right:-40}} op={.15}/>
+            <div style={{position:"relative", zIndex:1}}>
+              <Tag color="#3E9FA1" bg="white">Périscolaire</Tag>
+              <h3 style={{fontFamily:"Fredoka,sans-serif", fontSize:32, fontWeight:700, color:"#1A2E29", margin:"14px 0 12px"}}>{L("Autour de l'école")}</h3>
+              <p style={{fontFamily:"Open Sans,sans-serif", fontSize:13, lineHeight:1.8, color:"#3A5048", marginBottom:20}}>
+                {L("Dès 7h le matin et jusqu'à 18h30 le soir, les enfants sont accueillis pour des activités, un coup de main sur les devoirs et des temps libres rien que pour jouer.")}
+              </p>
+              {["Lundi au vendredi, de 7h à 18h30","Un coup de main pour les devoirs","Des ateliers créatifs et du sport","Un bon gouter fait maison","Ouvert aussi aux enfants d'autres écoles"].map(d => (
+                <div key={d} style={{display:"flex", gap:10, alignItems:"center", marginBottom:8}}>
+                  <div style={{width:6, height:6, borderRadius:"50%", background:"#3E9FA1", flexShrink:0}}/>
+                  <p style={{fontFamily:"Open Sans,sans-serif", fontSize:13, color:"#3A5048"}}>{L(d)}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div style={{background:"#FDF0EC", borderRadius:32, padding:"36px 32px", position:"relative", overflow:"hidden"}}>
+            <Blob c="#E8725A" s={{width:200, height:200, top:-40, right:-40}} op={.15}/>
+            <div style={{position:"relative", zIndex:1}}>
+              <Tag color="#E8725A" bg="white">Centre aéré & vacances</Tag>
+              <h3 style={{fontFamily:"Fredoka,sans-serif", fontSize:32, fontWeight:700, color:"#1A2E29", margin:"14px 0 12px"}}>Les vacances qui pétillent</h3>
+              <p style={{fontFamily:"Open Sans,sans-serif", fontSize:13, lineHeight:1.8, color:"#3A5048", marginBottom:20}}>
+                {L("Chaque vacances, on choisit un thème rigolo et on part à l'aventure. Ateliers, sorties, découvertes du pays, rencontres avec des artistes et des artisans du coin.")}
+              </p>
+              {["À toutes les vacances scolaires","Un thème différent à chaque fois","Sorties en Martinique pour découvrir le pays","Des artistes et artisans qui viennent jouer avec nous","Ouvert aux enfants de tout le Lamentin"].map(d => (
+                <div key={d} style={{display:"flex", gap:10, alignItems:"center", marginBottom:8}}>
+                  <div style={{width:6, height:6, borderRadius:"50%", background:"#E8725A", flexShrink:0}}/>
+                  <p style={{fontFamily:"Open Sans,sans-serif", fontSize:13, color:"#3A5048"}}>{L(d)}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="reveal" style={{background:"#2B5446", borderRadius:32, padding:"44px 48px", position:"relative", overflow:"hidden", display:"flex", alignItems:"center", justifyContent:"space-between", gap:32, flexWrap:"wrap"}}>
+          <Blob c="#3E9FA1" s={{width:300, height:300, top:-60, right:80}} op={.12}/>
+          <div style={{position:"relative", zIndex:1}}>
+            <Kidwrite color="#AFDCDD" size={26} text="pensé pour les familles martiniquaises"/>
+            <p style={{fontFamily:"Fredoka,sans-serif", fontSize:26, fontWeight:600, color:"#fff", maxWidth:540, marginTop:8}}>
+              {L("Joy Club, ce n'est pas juste pour occuper les enfants. C'est un ")}<span style={{color:"#AFDCDD"}}>vrai moment pour grandir</span>, dans la joie.
+            </p>
+          </div>
+          <Btn v="white" size="lg" onClick={()=>go("candidatures")} style={{flexShrink:0, position:"relative", zIndex:1}}>Inscrire mon enfant →</Btn>
+        </div>
+      </S>
+
+      <S bg="#E9DBCA" pad="80px 40px">
+        <div className="reveal" style={{textAlign:"center", marginBottom:48}}>
+          <Kidwrite color="#3E9FA1" size={32} text="au Joy Club, on fait plein de choses !"/>
+          <h2 style={{fontFamily:"Fredoka,sans-serif", fontSize:42, fontWeight:700, color:"#1A2E29"}}>Un programme qui donne envie</h2>
+        </div>
+        <div className="mob-1col" style={{display:"grid", gridTemplateColumns:"repeat(4,1fr)", gap:16}}>
+          {[
+            {t:"Ateliers d'art", d:L("Peinture, collage, bricolage avec les mains."), c:"#E8725A", bg:"#FDF0EC", ic:(<Flower s={{width:50, height:50, top:18, left:"50%", marginLeft:-25}} c="#E8725A"/>)},
+            {t:"Sport et jeux", d:L("Courir, sauter, rigoler, se d\u00e9fouler dehors."), c:"#3E9FA1", bg:"#E6F5F5", ic:(<Sun s={{width:56, height:56, top:14, left:"50%", marginLeft:-28}}/>)},
+            {t:"Cuisine rigolote", d:L("On go\u00fbte, on touche, on apprend \u00e0 faire."), c:"#C49A14", bg:"#FBF6E0", ic:(<Balloon s={{width:34, height:58, top:10, left:"50%", marginLeft:-17}} c="#C49A14"/>)},
+            {t:"Histoires et contes", d:L("Des l\u00e9gendes cr\u00e9oles racont\u00e9es en cercle."), c:"#2B5446", bg:"#EAF2EE", ic:(<Star s={{width:54, height:54, top:14, left:"50%", marginLeft:-27}} c="#2B5446"/>)}
+          ].map((a, i) => (
+            <div key={a.t} className={"reveal d"+(i%4)} style={{background:a.bg, borderRadius:28, padding:"90px 22px 26px", textAlign:"center", position:"relative", overflow:"hidden", boxShadow:"0 4px 24px rgba(27,60,46,.08)"}}>
+              {a.ic}
+              <p style={{fontFamily:"Fredoka,sans-serif", fontSize:20, fontWeight:600, color:a.c, marginBottom:6}}>{a.t}</p>
+              <p style={{fontFamily:"Open Sans,sans-serif", fontSize:13, color:"#3A5048", lineHeight:1.6}}>{a.d}</p>
+            </div>
+          ))}
+        </div>
+      </S>
+
+      <Band go={go}/>
+      <Footer go={go}/>
+    </div>
+  );
+};
+
+/* ───────── PARENT LAB ───────── */
+const ParentLabPage = ({go}) => {
+  const ref = useRef(); useReveal(ref);
+  return (
+    <div ref={ref}>
+      <section style={{background:"#E9DBCA", padding:"130px 40px 100px", position:"relative", overflow:"hidden"}}>
+        <Blob c="#E8725A" s={{width:380, height:380, top:-100, right:-60}} op={.12}/>
+        <Blob c="#2B5446" s={{width:240, height:240, bottom:-40, left:-20}} op={.08}/>
+        <div style={{maxWidth:800, margin:"0 auto", position:"relative", zIndex:1}}>
+          <div className="reveal"><Eyebrow color="#E8725A">École de la parentalité</Eyebrow></div>
+          <h1 className="reveal d1 big" style={{fontFamily:"Playfair Display,serif", fontSize:64, fontWeight:800, color:"#1A2E29", lineHeight:1.06, marginBottom:10}}>
+            Parent <em style={{color:"#E8725A", fontStyle:"italic"}}>Lab</em>
+          </h1>
+          <Script color="#E8725A" size={22} text={L("Soutenir les parents sans les juger, les écouter pour de vrai")}/>
+          <p className="reveal d2" style={{fontFamily:"Open Sans,sans-serif", fontSize:16, lineHeight:1.85, color:"#3A5048", maxWidth:560, marginTop:8}}>
+            {L("Parent Lab est l'école des parents de Sion Émergence. Un endroit chaleureux pour partager, apprendre et grandir ensemble dans son rôle de parent. Sans jugement, sans culpabilité, juste des outils concrets et beaucoup de bienveillance.")}
+          </p>
+          <div className="reveal d3" style={{display:"flex", gap:14, marginTop:28}}>
+            <Btn v="coral" size="lg" onClick={()=>go("candidatures")}>Rejoindre Parent Lab</Btn>
+          </div>
+        </div>
+        <Wave fill="#F5F4EF"/>
+      </section>
+
+      <S bg="#F5F4EF" pad="80px 40px">
+        <div className="mob-1col" style={{display:"grid", gridTemplateColumns:"1fr 1fr", gap:64, alignItems:"start"}}>
+          <div className="reveal">
+            <Eyebrow>Pourquoi Parent Lab ?</Eyebrow>
+            <h2 className="sec" style={{fontFamily:"Playfair Display,serif", fontSize:34, fontWeight:700, color:"#1A2E29", marginBottom:14, letterSpacing:"-.02em"}}>
+              Être parent,<br/><em style={{color:"#E8725A", fontStyle:"italic"}}>{L("ça s'apprend")}</em>
+            </h2>
+            <p style={{fontFamily:"Open Sans,sans-serif", fontSize:14, lineHeight:1.85, color:"#3A5048", marginBottom:14}}>
+              {L("Être parent, c'est le plus beau des métiers, mais aussi le plus exigeant. Et on vient tous avec nos doutes, nos fatigues, nos questions. Chez Parent Lab, on part du principe que les parents ont besoin d'écoute et de ressources, pas de leçons.")}
+            </p>
+            <p style={{fontFamily:"Open Sans,sans-serif", fontSize:14, lineHeight:1.85, color:"#3A5048", marginBottom:24}}>
+              {L("Une idée toute simple : quand un parent va mieux, l'enfant va mieux. Et quand une famille trouve son équilibre, c'est toute la vie qui s'illumine.")}
+            </p>
+            <Script color="#E8725A" text="Les racines permettent aux branches de s'élever"/>
+          </div>
+          <div>
+            <div className="reveal d1" style={{background:"#FDF0EC", borderRadius:32, padding:"32px 28px", marginBottom:16, position:"relative", overflow:"hidden"}}>
+              <Blob c="#E8725A" s={{width:180, height:180, top:-40, right:-40}} op={.12}/>
+              <p style={{fontFamily:"Montserrat,sans-serif", fontSize:10, fontWeight:700, letterSpacing:".14em", textTransform:"uppercase", color:"#E8725A", marginBottom:14, position:"relative", zIndex:1}}>{L("À qui s'adresse Parent Lab ?")}</p>
+              {[
+                L("Aux parents d'enfants scolarisés à Sion Academy"),
+                "Aux familles de Joy Club",
+                "À tous les parents de la commune et du territoire",
+                "À ceux qui traversent des périodes de questionnement",
+                "À ceux qui veulent renforcer le lien avec leur enfant"
+              ].map(d => (
+                <div key={d} style={{display:"flex", gap:10, marginBottom:9, position:"relative", zIndex:1}}>
+                  <div style={{width:6, height:6, borderRadius:"50%", background:"#E8725A", flexShrink:0, marginTop:5}}/>
+                  <p style={{fontFamily:"Open Sans,sans-serif", fontSize:13, color:"#3A5048", lineHeight:1.65}}>{d}</p>
+                </div>
+              ))}
+            </div>
+            {[
+              ["Soutien éducatif",L("Comprendre le développement de l'enfant, les besoins selon les âges, les apprentissages.")],
+              [L("Lien famille'école"),"Mieux communiquer avec l'équipe pédagogique. Être un partenaire actif."],
+              ["Parentalité concrète",L("Des ateliers pratiques, des situations réelles, des échanges entre parents, sans jargon.")],
+              ["Ressource & ancrage",L("Un lieu où revenir, des personnes à qui parler. La parentalité ne s'exerce pas dans l'isolement.")]
+            ].map(([t, d], i) => (
+              <div key={t} className="reveal" style={{display:"flex", gap:14, padding:"14px 16px", background:"white", borderRadius:16, marginBottom:10, boxShadow:"0 2px 12px rgba(27,60,46,.08)"}}>
+                <div style={{width:36, height:36, background:"#FDF0EC", borderRadius:10, display:"flex", alignItems:"center", justifyContent:"center", flexShrink:0, color:"#E8725A", fontSize:14, fontWeight:700, fontFamily:"Playfair Display,serif"}}>{i+1}</div>
+                <div>
+                  <p style={{fontFamily:"Montserrat,sans-serif", fontSize:11, fontWeight:700, color:"#1A2E29", marginBottom:3}}>{t}</p>
+                  <p style={{fontFamily:"Open Sans,sans-serif", fontSize:12, color:"#3A5048", lineHeight:1.65}}>{L(d)}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </S>
+
+      <S bg="#2B5446" pad="72px 40px" style={{position:"relative", overflow:"hidden"}}>
+        <Blob c="#E8725A" s={{width:360, height:360, top:-80, right:-40}} op={.09}/>
+        <div style={{maxWidth:900, margin:"0 auto", position:"relative", zIndex:1, textAlign:"center"}}>
+          <Eyebrow light>Notre philosophie</Eyebrow>
+          <h2 style={{fontFamily:"Playfair Display,serif", fontSize:34, fontWeight:700, color:"#fff", marginBottom:20}}>Soutenir sans culpabiliser</h2>
+          <p style={{fontFamily:"Open Sans,sans-serif", fontSize:15, lineHeight:1.9, color:"rgba(234,242,238,.75)", maxWidth:620, margin:"0 auto 36px"}}>
+            {L("Notre philosophie, elle est simple. Il n'existe pas de parent parfait, et ce n'est pas ce qu'on cherche. Ici, vous pouvez poser vos questions, raconter vos doutes, trouver des repères, rencontrer d'autres parents qui vivent les mêmes choses que vous.")}
+          </p>
+          <Btn v="white" size="lg" onClick={()=>go("candidatures")}>Rejoindre Parent Lab →</Btn>
+        </div>
+      </S>
+      <Band go={go}/>
+      <Footer go={go}/>
+    </div>
+  );
+};
+
+/* ───────── DISPOSITIFS ───────── */
+const DispositifsPage = ({go}) => {
+  const ref = useRef(); useReveal(ref);
+  const items = [
+    {icon:"🌿", title:"Le jardin pédagogique", tag:"Nature & apprentissage", color:"#2B5446", bg:"#EAF2EE",
+      desc: L("Le jardin n'est pas une activité récréative. C'est un laboratoire vivant où les enfants apprennent la biologie, la patience, la responsabilité et le lien avec la terre martiniquaise. Semer, observer, récolter, comprendre ' chaque geste est un acte d'apprentissage."),
+      points:["Sciences du vivant par la pratique", L("Lien avec l'histoire agricole"),"Responsabilité écologique","Productions intégrées à la cuisine"]},
+    {icon:"🍽", title:"Le traiteur écoresponsable", tag:"Alimentation & territoire", color:"#3E9FA1", bg:"#E6F5F5",
+      desc: L("Manger ensemble est un acte éducatif et communautaire. Notre cuisine s'appuie sur des produits locaux, de saison et issus en partie du jardin pédagogique. Elle nourrit les enfants ' et nourrit aussi leur rapport à l'alimentation."),
+      points:["Produits locaux & de saison","Lien direct avec le jardin","Éducation alimentaire intégrée","Événements communautaires"]},
+    {icon:"🤝", title:"La dynamique intergénérationnelle", tag:"Transmission & lien social", color:"#E8725A", bg:"#FDF0EC",
+      desc: L("Sion Émergence n'est pas réservé aux enfants. C'est un lieu de vie où se croisent les générations : les anciens transmettent leurs savoirs, les jeunes apportent leur énergie, les familles se rencontrent."),
+      points:["Intervenants locaux","Rencontres intergénérationnelles","Événements ouverts","Ancrage dans le tissu martiniquais"]}
+  ];
+  return (
+    <div ref={ref}>
+      <PageHero tag="Ce qui rend le lieu cohérent" title="Dispositifs" italic="pédagogiques" bg="#E9DBCA" light={false} sub={L("Le jardin, la cuisine, le lien intergénérationnel ' ces dispositifs ne sont pas des extras. Ils sont la preuve vivante que notre pédagogie est ancrée dans le réel.")}/>
+      <S bg="#F5F4EF" pad="80px 40px">
+        {items.map((d, i) => (
+          <div key={d.title} className="reveal mob-1col" style={{display:"grid", gridTemplateColumns: i%2===0?"1fr 2fr":"2fr 1fr", gap:0, background:"white", borderRadius:32, marginBottom:20, boxShadow:"0 4px 24px rgba(27,60,46,.11)", overflow:"hidden"}}>
+            <div style={{background:d.bg, padding:"48px 40px", position:"relative", overflow:"hidden", order: i%2===0?0:1}}>
+              <Blob c={d.color} s={{width:220, height:220, bottom:-50, right:-50}} op={.14}/>
+              <div style={{fontSize:44, marginBottom:16, position:"relative", zIndex:1}}>{d.icon}</div>
+              <Tag color={d.color} bg="white">{d.tag}</Tag>
+              <h3 style={{fontFamily:"Playfair Display,serif", fontSize:26, fontWeight:700, color:"#1A2E29", marginTop:12, position:"relative", zIndex:1}}>{d.title}</h3>
+            </div>
+            <div style={{padding:"48px 40px", order: i%2===0?1:0}}>
+              <p style={{fontFamily:"Open Sans,sans-serif", fontSize:14, lineHeight:1.85, color:"#3A5048", marginBottom:14}}>{d.desc}</p>
+              <div style={{display:"flex", flexWrap:"wrap", gap:8, marginTop:16}}>
+                {d.points.map(p => (
+                  <span key={p} style={{fontFamily:"Montserrat,sans-serif", fontSize:10, fontWeight:700, letterSpacing:".1em", textTransform:"uppercase", color:d.color, background:d.bg, borderRadius:999, padding:"5px 14px"}}>{p}</span>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+      </S>
+      <Band go={go}/>
+      <Footer go={go}/>
+    </div>
+  );
+};
+
+/* ───────── CANDIDATURES ───────── */
+const CandidaturesPage = ({go}) => {
+  const ref = useRef(); useReveal(ref);
+  const [form, setForm] = useState({prenom:"", nom:"", email:"", tel:"", offre:"", message:""});
+  const [sent, setSent] = useState(false);
+  const [err, setErr] = useState({});
+  const submit = () => {
+    const e = {};
+    if (!form.prenom.trim()) e.prenom = "Requis";
+    if (!form.nom.trim()) e.nom = "Requis";
+    if (!form.email.includes("@")) e.email = "Email invalide";
+    if (!form.offre) e.offre = "Choisissez une offre";
+    if (Object.keys(e).length) { setErr(e); return; }
+    setSent(true);
+  };
+  return (
+    <div ref={ref}>
+      <PageHero tag="Rejoindre Sion Émergence" title="Candidatures" italic="2026 · 2027" sub="Les places sont limitées. Prenez contact avec nous dès maintenant pour présenter votre famille."/>
+      <S bg="#F5F4EF" pad="80px 40px">
+        <div className="mob-1col" style={{display:"grid", gridTemplateColumns:"1fr 1fr", gap:72, alignItems:"start"}}>
+          <div>
+            <h2 className="reveal" style={{fontFamily:"Playfair Display,serif", fontSize:30, fontWeight:700, color:"#1A2E29", marginBottom:24}}>Ce que nous cherchons</h2>
+            <p className="reveal" style={{fontFamily:"Open Sans,sans-serif", fontSize:14, lineHeight:1.85, color:"#3A5048", marginBottom:24}}>
+              {L("Sion Émergence est un projet exigeant qui repose sur une adhésion sincère de toute la famille. Nous n'attendons pas la perfection ' nous attendons l'engagement.")}
+            </p>
+            {[
+              [L("L'adhésion au projet"), L("Vous partagez notre conviction : l'école forme l'être humain tout entier.")],
+              ["Le lien avec les valeurs", L("Vous respectez nos valeurs chrétiennes sans qu'il soit nécessaire que vous soyez chrétien.")],
+              [L("La coopération famille'école"), "Vous souhaitez être un partenaire éducatif actif."],
+              [L("L'ouverture"), L("Vous êtes prêts à découvrir une pédagogie différente.")]
+            ].map(([t, d], i) => (
+              <div key={t} className="reveal" style={{display:"flex", gap:14, padding:"16px", background: i%2===0?"#EAF2EE":"#E9DBCA", borderRadius:16, marginBottom:10}}>
+                <div style={{width:32, height:32, background:"white", borderRadius:10, display:"flex", alignItems:"center", justifyContent:"center", flexShrink:0, fontFamily:"Montserrat,sans-serif", fontSize:11, fontWeight:700, color:"#2B5446"}}>{i+1}</div>
+                <div>
+                  <p style={{fontFamily:"Montserrat,sans-serif", fontSize:11, fontWeight:700, color:"#1A2E29", marginBottom:3}}>{t}</p>
+                  <p style={{fontFamily:"Open Sans,sans-serif", fontSize:12, color:"#3A5048", lineHeight:1.65}}>{d}</p>
+                </div>
+              </div>
+            ))}
+            <div className="reveal" style={{marginTop:28, background:"#E9DBCA", borderRadius:24, padding:"22px"}}>
+              <p style={{fontFamily:"Montserrat,sans-serif", fontSize:10, fontWeight:700, letterSpacing:".12em", textTransform:"uppercase", color:"#7A9490", marginBottom:12}}>Nous trouver</p>
+              {["📍 Le Lamentin, Martinique","📞 +596 (0)596 XX XX XX","✉ contact@sion-emergence.fr"].map(l => (
+                <p key={l} style={{fontFamily:"Open Sans,sans-serif", fontSize:13, color:"#3A5048", marginBottom:8}}>{l}</p>
+              ))}
+            </div>
+          </div>
+          <div className="reveal d1" style={{background:"white", borderRadius:32, padding:"40px", boxShadow:"0 10px 48px rgba(27,60,46,.15)", position:"relative", overflow:"hidden"}}>
+            <Blob c="#E8725A" s={{width:200, height:200, top:-60, right:-60}} op={.07}/>
+            {sent ? (
+              <div style={{textAlign:"center", padding:"40px 0", position:"relative", zIndex:1}}>
+                <div style={{width:56, height:56, background:"#EAF2EE", borderRadius:"50%", display:"flex", alignItems:"center", justifyContent:"center", margin:"0 auto 18px"}}>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2B5446" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <h3 style={{fontFamily:"Playfair Display,serif", fontSize:24, fontWeight:700, color:"#2B5446", marginBottom:10}}>Candidature reçue !</h3>
+                <p style={{fontFamily:"Open Sans,sans-serif", fontSize:13, color:"#3A5048", lineHeight:1.75, marginBottom:24}}>Merci pour votre intérêt. Nous vous recontacterons sous 48h.</p>
+                <Btn v="outline" size="sm" onClick={()=>setSent(false)}>Nouvelle demande</Btn>
+              </div>
+            ) : (
+              <div style={{position:"relative", zIndex:1}}>
+                <h3 style={{fontFamily:"Playfair Display,serif", fontSize:24, fontWeight:700, color:"#1A2E29", marginBottom:6}}>Déposer une candidature</h3>
+                <p style={{fontFamily:"Open Sans,sans-serif", fontSize:13, color:"#3A5048", marginBottom:28}}>{L("Remplissez ce formulaire ' nous vous répondons sous 48h.")}</p>
+                <div className="mob-1col" style={{display:"grid", gridTemplateColumns:"1fr 1fr", gap:14, marginBottom:14}}>
+                  {[["Prénom","prenom","text","Marie"], ["Nom","nom","text","Dupont"]].map(([l, k, t, ph]) => (
+                    <div key={k}>
+                      <label>{l} *</label>
+                      <input type={t} placeholder={ph} value={form[k]} onChange={e=>{setForm({...form, [k]:e.target.value}); setErr({...err, [k]:null});}} style={{borderColor: err[k]?"#E8725A":undefined}}/>
+                      {err[k] && <p style={{color:"#E8725A", fontSize:11, marginTop:3}}>{err[k]}</p>}
+                    </div>
+                  ))}
+                </div>
+                {[["E-mail *","email","email","marie@exemple.fr"], ["Téléphone","tel","tel","+596 …"]].map(([l, k, t, ph]) => (
+                  <div key={k} style={{marginBottom:14}}>
+                    <label>{l}</label>
+                    <input type={t} placeholder={ph} value={form[k]} onChange={e=>{setForm({...form, [k]:e.target.value}); setErr({...err, [k]:null});}} style={{borderColor: err[k]?"#E8725A":undefined}}/>
+                    {err[k] && <p style={{color:"#E8725A", fontSize:11, marginTop:3}}>{err[k]}</p>}
+                  </div>
+                ))}
+                <div style={{marginBottom:14}}>
+                  <label>Offre souhaitée *</label>
+                  <select value={form.offre} onChange={e=>{setForm({...form, offre:e.target.value}); setErr({...err, offre:null});}} style={{borderColor: err.offre?"#E8725A":undefined}}>
+                    <option value="">Sélectionnez une offre</option>
+                    <option>Sion Academy — Maternelle</option>
+                    <option>Sion Academy — Élémentaire</option>
+                    <option>Sion Academy — Collège</option>
+                    <option>Joy Club — Périscolaire</option>
+                    <option>Joy Club — Vacances</option>
+                    <option>Parent Lab</option>
+                  </select>
+                  {err.offre && <p style={{color:"#E8725A", fontSize:11, marginTop:3}}>{err.offre}</p>}
+                </div>
+                <div style={{marginBottom:24}}>
+                  <label>Message</label>
+                  <textarea placeholder={L("Parlez-nous de votre famille, de votre enfant, de vos questions…")} value={form.message} onChange={e=>setForm({...form, message:e.target.value})}/>
+                </div>
+                <Btn v="coral" size="lg" onClick={submit} full>Envoyer ma candidature →</Btn>
+                <p style={{fontFamily:"Open Sans,sans-serif", fontSize:11, color:"#7A9490", textAlign:"center", marginTop:12}}>Vos données restent confidentielles.</p>
+              </div>
+            )}
+          </div>
+        </div>
+      </S>
+      <Footer go={go}/>
+    </div>
+  );
+};
+
+/* ───────── PARTENAIRES ───────── */
+const PartenairesPage = ({go}) => {
+  const ref = useRef(); useReveal(ref);
+  const [form, setForm] = useState({nom:"", org:"", email:"", message:""});
+  const [sent, setSent] = useState(false);
+  return (
+    <div ref={ref}>
+      <PageHero tag="Soutenir un projet à impact territorial" title="Partenaires" italic="& soutiens" sub={L("Sion Émergence est un projet d'utilité publique. Si vous partagez notre vision d'une éducation ancrée, inclusive et exigeante ' nous avons besoin de vous.")}/>
+      <S bg="#F5F4EF" pad="80px 40px">
+        <div className="reveal mob-1col" style={{display:"grid", gridTemplateColumns:"1fr 1fr", gap:24, marginBottom:56}}>
+          <div style={{background:"#2B5446", borderRadius:32, padding:"40px", position:"relative", overflow:"hidden"}}>
+            <Blob c="#E8725A" s={{width:250, height:250, top:-60, right:-40}} op={.1}/>
+            <div style={{position:"relative", zIndex:1}}>
+              <Eyebrow light>Pourquoi nous soutenir</Eyebrow>
+              <h3 style={{fontFamily:"Playfair Display,serif", fontSize:26, fontWeight:700, color:"#fff", marginBottom:14}}>Un investissement dans la jeunesse martiniquaise</h3>
+              <p style={{fontFamily:"Open Sans,sans-serif", fontSize:13, lineHeight:1.85, color:"rgba(234,242,238,.72)", marginBottom:20}}>
+                {L("Sion Émergence n'est pas une école ordinaire. C'est un tiers-lieu qui articule éducation, famille, lien social et ancrage territorial.")}
+              </p>
+              {["Projet à impact éducatif et social", L("Ancrage local et création d'emplois"),"Lien avec les acteurs du territoire","Modèle réplicable dans la Caraïbe"].map(d => (
+                <div key={d} style={{display:"flex", gap:10, alignItems:"center", marginBottom:8}}>
+                  <div style={{width:6, height:6, borderRadius:"50%", background:"#F5C0B0", flexShrink:0}}/>
+                  <p style={{fontFamily:"Open Sans,sans-serif", fontSize:13, color:"rgba(234,242,238,.75)"}}>{d}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div style={{display:"flex", flexDirection:"column", gap:14}}>
+            {[
+              ["Partenaires éducatifs", L("Collectivités, établissements scolaires, associations d'éducation populaire."),"#E6F5F5","#3E9FA1"],
+              ["Partenaires entreprises","Mécènes, entreprises locales, groupes caribéens sensibles à l'impact social.","#FDF0EC","#E8725A"],
+              ["Partenaires institutionnels","État, collectivités territoriales, fondations, fonds européens.","#EAF2EE","#2B5446"],
+              ["Bénévoles & intervenants", L("Professionnels, acteurs culturels, anciens ' toutes les compétences bienvenues."),"#FBF6E0","#C49A14"]
+            ].map(([t, d, bg, col]) => (
+              <div key={t} style={{background:bg, borderRadius:24, padding:"20px 22px"}}>
+                <p style={{fontFamily:"Montserrat,sans-serif", fontSize:11, fontWeight:700, color:col, marginBottom:4}}>{t}</p>
+                <p style={{fontFamily:"Open Sans,sans-serif", fontSize:13, color:"#3A5048", lineHeight:1.6}}>{L(d)}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mob-1col" style={{display:"grid", gridTemplateColumns:"1fr 1fr", gap:64, alignItems:"start"}}>
+          <div className="reveal">
+            <Eyebrow>Contact</Eyebrow>
+            <h2 style={{fontFamily:"Playfair Display,serif", fontSize:30, fontWeight:700, color:"#1A2E29", marginBottom:14}}>Écrivez-nous</h2>
+            <p style={{fontFamily:"Open Sans,sans-serif", fontSize:14, lineHeight:1.85, color:"#3A5048", marginBottom:24}}>
+              {L("Que vous soyez une famille, un partenaire potentiel, un intervenant ou simplement curieux ' prenez contact.")}
+            </p>
+            {["📍 Le Lamentin, Martinique","📞 +596 (0)596 XX XX XX","✉ contact@sion-emergence.fr","🕐 Lundi'Vendredi, 8h'17h"].map(l => (
+              <div key={l} style={{display:"flex", gap:14, alignItems:"center", padding:"14px 16px", background:"#E9DBCA", borderRadius:16, marginBottom:10}}>
+                <span style={{fontSize:18}}>{l.split(" ")[0]}</span>
+                <p style={{fontFamily:"Open Sans,sans-serif", fontSize:13, color:"#3A5048"}}>{L(l.substring(2))}</p>
+              </div>
+            ))}
+          </div>
+          <div className="reveal d1" style={{background:"white", borderRadius:32, padding:"36px", boxShadow:"0 10px 48px rgba(27,60,46,.15)"}}>
+            {sent ? (
+              <div style={{textAlign:"center", padding:"32px 0"}}>
+                <h3 style={{fontFamily:"Playfair Display,serif", fontSize:22, fontWeight:700, color:"#2B5446", marginBottom:10}}>Message envoyé !</h3>
+                <p style={{fontFamily:"Open Sans,sans-serif", fontSize:13, color:"#3A5048", marginBottom:20}}>Nous vous répondrons dans les plus brefs délais.</p>
+                <Btn v="outline" size="sm" onClick={()=>setSent(false)}>Nouveau message</Btn>
+              </div>
+            ) : (
+              <>
+                {[["Nom","nom","text","Votre nom"], ["Organisation (optionnel)","org","text","Entreprise, collectivité…"], ["E-mail","email","email","votre@email.fr"]].map(([l, k, t, ph]) => (
+                  <div key={k} style={{marginBottom:14}}>
+                    <label>{l}</label>
+                    <input type={t} placeholder={ph} value={form[k]} onChange={e=>setForm({...form, [k]:e.target.value})}/>
+                  </div>
+                ))}
+                <div style={{marginBottom:22}}>
+                  <label>Message</label>
+                  <textarea placeholder="Votre message…" value={form.message} onChange={e=>setForm({...form, message:e.target.value})}/>
+                </div>
+                <Btn v="primary" size="md" onClick={()=>setSent(true)} full>Envoyer →</Btn>
+              </>
+            )}
+          </div>
+        </div>
+      </S>
+      <Footer go={go}/>
+    </div>
+  );
+};
+
+/* ───────── TWEAKS ───────── */
+const TweaksPanel = ({tweaks, setTweaks, visible}) => {
+  if (!visible) return null;
+  const set = (k, v) => {
+    const t = {...tweaks, [k]:v};
+    setTweaks(t);
+    window.parent.postMessage({type:"__edit_mode_set_keys", edits:t}, "*");
+  };
+  return (
+    <div style={{position:"fixed", bottom:20, right:20, zIndex:9999, background:"white", borderRadius:16, boxShadow:"0 8px 48px rgba(0,0,0,.14)", padding:"20px 24px", width:260}}>
+      <p style={{fontFamily:"Montserrat,sans-serif", fontSize:10, fontWeight:700, letterSpacing:".12em", textTransform:"uppercase", color:"#7A9490", marginBottom:16}}>Tweaks</p>
+      <p style={{fontFamily:"Montserrat,sans-serif", fontSize:9, fontWeight:700, letterSpacing:".08em", textTransform:"uppercase", color:"#3A5048", marginBottom:8}}>Couleur accent</p>
+      <div style={{display:"flex", gap:8, marginBottom:16, flexWrap:"wrap"}}>
+        {["#E8725A","#3E9FA1","#2B5446","#C49A14"].map(c => (
+          <div key={c} onClick={()=>set("accentColor", c)} style={{width:28, height:28, borderRadius:"50%", background:c, cursor:"pointer", border: tweaks.accentColor===c?"3px solid #1A2E29":"3px solid transparent"}}/>
+        ))}
+      </div>
+      <p style={{fontFamily:"Montserrat,sans-serif", fontSize:9, fontWeight:700, letterSpacing:".08em", textTransform:"uppercase", color:"#3A5048", marginBottom:8}}>Thème hero</p>
+      <div style={{display:"flex", gap:8, marginBottom:16}}>
+        {[["forest","#2B5446"], ["sand","#E9DBCA"], ["teal","#3E9FA1"]].map(([k, c]) => (
+          <div key={k} onClick={()=>set("heroTheme", k)} style={{width:28, height:28, borderRadius:"50%", background:c, cursor:"pointer", border: tweaks.heroTheme===k?"3px solid #1A2E29":"3px solid transparent"}}/>
+        ))}
+      </div>
+      <div style={{display:"flex", alignItems:"center", justifyContent:"space-between"}}>
+        <p style={{fontFamily:"Montserrat,sans-serif", fontSize:9, fontWeight:700, letterSpacing:".08em", textTransform:"uppercase", color:"#3A5048"}}>Bouton CTA</p>
+        <div onClick={()=>set("showCta", !tweaks.showCta)} style={{width:40, height:22, borderRadius:11, background: tweaks.showCta?"#2B5446":"#D6D2CA", cursor:"pointer", position:"relative", transition:"background .2s"}}>
+          <div style={{position:"absolute", top:3, left: tweaks.showCta?20:3, width:16, height:16, borderRadius:"50%", background:"white", transition:"left .2s", boxShadow:"0 1px 4px rgba(0,0,0,.2)"}}/>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+/* ───────── APP ───────── */
+const App = () => {
+  const [page, setPage] = useState(() => localStorage.getItem("se_page") || "home");
+  const [tweaks, setTweaks] = useState(TWEAK_DEFAULTS);
+  const [tweaksOn, setTweaksOn] = useState(false);
+
+  const go = useCallback((pg) => {
+    setPage(pg);
+    localStorage.setItem("se_page", pg);
+    window.scrollTo({top:0, behavior:"instant"});
+  }, []);
+
+  useEffect(() => {
+    const fn = (e) => {
+      if (e.data && e.data.type === "__activate_edit_mode") setTweaksOn(true);
+      if (e.data && e.data.type === "__deactivate_edit_mode") setTweaksOn(false);
+    };
+    window.addEventListener("message", fn);
+    window.parent.postMessage({type:"__edit_mode_available"}, "*");
+    return () => window.removeEventListener("message", fn);
+  }, []);
+
+  const pages = {
+    home: <HomePage go={go}/>,
+    about: <AboutPage go={go}/>,
+    academy: <AcademyPage go={go}/>,
+    joyclub: <JoyClubPage go={go}/>,
+    parentlab: <ParentLabPage go={go}/>,
+    dispositifs: <DispositifsPage go={go}/>,
+    candidatures: <CandidaturesPage go={go}/>,
+    partenaires: <PartenairesPage go={go}/>
+  };
+
+  return (
+    <div>
+      <Nav page={page} go={go}/>
+      {pages[page] || pages.home}
+      <TweaksPanel tweaks={tweaks} setTweaks={setTweaks} visible={tweaksOn}/>
+    </div>
+  );
+};
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
+</script>
+</body>
+</html>
