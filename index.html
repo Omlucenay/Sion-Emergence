@@ -381,6 +381,7 @@ const Nav=({page, go})=>{
           {NAV.slice(1).map(n=><button key={n.id} onClick={()=>go(n.id)} className="nav-3d" style={{background:page===n.id?"var(--ink)":"transparent",color:page===n.id?"#fff":"var(--ink-s)",border:"none",cursor:"pointer",fontFamily:"'Inter',sans-serif",fontSize:13,fontWeight:500,padding:"10px 18px",borderRadius:999}} onMouseEnter={e=>{if(page!==n.id)e.currentTarget.style.background="rgba(27,40,38,.06)"}} onMouseLeave={e=>{if(page!==n.id)e.currentTarget.style.background="transparent"}}>{n.label}</button>)}
         </div>
         <div className="hide-mob" style={{display:"flex",alignItems:"center",gap:10}}>
+          <Btn v="paper" size="sm" onClick={()=>window.open('https://intentions.sion-emergence.fr','_blank')}>Lettre d'intention</Btn>
           <Btn v="coral" size="sm" onClick={()=>go("candidatures")} icon="arrowRight">J'inscris mon enfant</Btn>
         </div>
         <button onClick={()=>setOpen(!open)} className="show-mob" style={{background:"none",border:"none",cursor:"pointer",padding:8}} aria-label="Menu">
@@ -389,7 +390,10 @@ const Nav=({page, go})=>{
       </div>
       {open&&<div className="show-mob" style={{padding:"12px 20px 24px",flexDirection:"column",gap:4,background:"var(--paper)",borderTop:"1px solid var(--line)"}}>
         {NAV.map(n=><button key={n.id} onClick={()=>{go(n.id);setOpen(false)}} style={{background:page===n.id?"var(--mist)":"none",border:"none",padding:"14px 18px",textAlign:"left",fontFamily:"'Inter',sans-serif",fontSize:15,fontWeight:500,color:"var(--ink)",borderRadius:12}}>{n.label}</button>)}
-        <div style={{marginTop:12}}><Btn v="coral" full onClick={()=>{go("candidatures");setOpen(false)}} icon="arrowRight">J'inscris mon enfant</Btn></div>
+        <div style={{marginTop:12,display:"flex",flexDirection:"column",gap:10}}>
+          <Btn v="paper" full onClick={()=>{window.open('https://intentions.sion-emergence.fr','_blank');setOpen(false)}}>Lettre d'intention</Btn>
+          <Btn v="coral" full onClick={()=>{go("candidatures");setOpen(false)}} icon="arrowRight">J'inscris mon enfant</Btn>
+        </div>
       </div>}
     </nav>
     </>
@@ -457,6 +461,7 @@ const Home=({go})=>{
               <div className="reveal d3" style={{display:"flex",flexWrap:"wrap",gap:14,marginBottom:56}}>
                 <Btn v="coral" size="lg" onClick={()=>go("candidatures")} icon="arrowRight">Déposer une candidature</Btn>
                 <Btn v="paper" size="lg" onClick={()=>go("about")}>Découvrir le projet</Btn>
+                <Btn v="ghost" size="lg" onClick={()=>window.open('https://intentions.sion-emergence.fr','_blank')}>Écrire une lettre d'intention</Btn>
               </div>
               {/* stats mini */}
               <div className="reveal d4 mob-stack" style={{display:"flex",gap:40,borderTop:"1px solid var(--line)",paddingTop:28}}>
