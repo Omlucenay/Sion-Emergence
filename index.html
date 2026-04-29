@@ -497,8 +497,8 @@ const Home=({go})=>{
         <div style={{maxWidth:1440,margin:"0 auto"}}>
           <div className="reveal" style={{textAlign:"center",maxWidth:720,margin:"0 auto 56px"}}>
             <p className="kicker" style={{color:"var(--forest)",marginBottom:14}}>Trois univers · une famille</p>
-            <h2 className="display display-lg" style={{fontSize:"clamp(40px,5.5vw,68px)",fontWeight:500,color:"var(--ink)",marginBottom:16}}>Tout ce dont une famille <em className="editorial" style={{color:"var(--coral)"}}>a besoin</em>,<br/>sous un même toit.</h2>
-            <p style={{fontSize:17,color:"var(--ink-s)",lineHeight:1.6}}>Chaque enfant a son école, chaque moment du jour a sa réponse, chaque parent a un lieu ressource. On a pensé à tout, pour que vous n{A}ayez plus à courir partout.</p>
+            <h2 className="display display-lg" style={{fontSize:"clamp(40px,5.5vw,68px)",fontWeight:500,color:"var(--ink)",marginBottom:16}}>Tout ce dont une famille <em className="editorial" style={{color:"var(--coral)",whiteSpace:"nowrap"}}>a besoin</em>,<br/>sous un même toit.</h2>
+            <p style={{fontSize:17,color:"var(--ink-s)",lineHeight:1.6}}>Chaque enfant a son école, chaque moment du jour a sa réponse, <span style={{whiteSpace:"nowrap"}}>chaque parent a un lieu ressource</span>. On a pensé à tout, pour que vous n{A}ayez plus à courir partout.</p>
           </div>
 
           {/* Bento grid - varied tiles */}
@@ -516,6 +516,7 @@ const Home=({go})=>{
             {/* Joy Club */}
             <div className="tile card-3d reveal d1" onClick={()=>go("joyclub")} style={{gridColumn:"span 3",gridRow:"span 1",background:"var(--teal)",color:"#fff",borderRadius:"var(--r5)",padding:"30px",position:"relative",overflow:"hidden",cursor:"pointer",boxShadow:"var(--sh3)"}}>
               <Dot c="rgba(255,255,255,.15)" size={140} s={{position:"absolute",top:-40,right:-40}}/>
+              <img src="assets/logo-joyclub.png" alt="" style={{position:"absolute",top:24,right:24,height:84,width:84,background:"#fff",borderRadius:14,padding:6,objectFit:"contain"}}/>
               <Chip bg="rgba(255,255,255,.18)" color="#fff">Périscolaire · Vacances</Chip>
               <h3 className="joy" style={{fontSize:42,fontWeight:600,marginTop:12,letterSpacing:"-.02em"}}>Joy Club</h3>
               <p className="hand" style={{color:"var(--gold-l)",fontSize:24,marginTop:-4}}>le club des enfants heureux</p>
@@ -524,7 +525,8 @@ const Home=({go})=>{
             {/* Parent Lab */}
             <div className="tile card-3d reveal d2" onClick={()=>go("parentlab")} style={{gridColumn:"span 3",gridRow:"span 1",background:"var(--blush)",color:"var(--ink)",borderRadius:"var(--r5)",padding:"30px",position:"relative",overflow:"hidden",cursor:"pointer",boxShadow:"var(--sh2)"}}>
               <Squiggle c="var(--coral)" w={100} s={{position:"absolute",bottom:26,right:28}}/>
-              <Chip bg="#fff" color="var(--coral)">École des parents</Chip>
+              <img src="assets/logo-parentlab.png" alt="" style={{position:"absolute",top:24,right:24,height:84,width:84,background:"#fff",borderRadius:14,padding:6,objectFit:"contain"}}/>
+              <Chip bg="#fff" color="var(--coral)">École de la parentalité</Chip>
               <h3 className="display" style={{fontSize:42,fontWeight:500,marginTop:12,color:"var(--ink)",letterSpacing:"-.02em"}}>Parent <em className="editorial" style={{color:"var(--coral)",fontWeight:400}}>Lab.</em></h3>
               <p style={{fontSize:13,color:"var(--ink-s)",marginTop:4,maxWidth:320}}>Un endroit pour souffler, partager, apprendre, sans jugement.</p>
               <div style={{position:"absolute",bottom:28,left:30,display:"flex",alignItems:"center",gap:8,fontSize:13,fontWeight:600,color:"var(--coral)"}}>En savoir plus <Icon name="arrowRight" size={16}/></div>
@@ -624,7 +626,7 @@ const Home=({go})=>{
               <div key={i} className="reveal" style={{transitionDelay:(i*100)+"ms"}}>
                 <div className="polaroid" style={{transform:"rotate("+x.rot+"deg)",background:x.c, transition:"transform .3s var(--spring)"}} onMouseEnter={e=>e.currentTarget.style.transform="rotate(0) scale(1.03)"} onMouseLeave={e=>e.currentTarget.style.transform="rotate("+x.rot+"deg)"}>
                   <div style={{background:"#fff",padding:"28px 24px",minHeight:200,display:"flex",flexDirection:"column",justifyContent:"space-between"}}>
-                    <p className="editorial" style={{fontSize:19,lineHeight:1.4,color:"var(--ink)",fontStyle:"italic"}}>{L("« ")+x.t.slice(2,-1)+L(" »")}</p>
+                    <p className="editorial" style={{fontSize:19,lineHeight:1.4,color:"var(--ink)",fontStyle:"italic"}}>{L("« ")+x.t+L(" »")}</p>
                     <div style={{borderTop:"1px solid var(--line)",paddingTop:12,marginTop:16}}>
                       <p style={{fontSize:15,fontWeight:600,color:"var(--ink)"}}>{x.n}</p>
                       <p style={{fontSize:12,color:"var(--ink-m)",marginTop:2}}>{x.r}</p>
@@ -829,7 +831,7 @@ const About=({go})=>{
             {[
               {n:"01",t:"Petites classes",d:L("≤ 20 élèves par classe. Chaque enfant est connu, nommé, suivi.")},
               {n:"02",t:"Pédagogie active",d:"Freinet + Design for Change. On apprend en faisant, en sentant, en comprenant."},
-              {n:"03",t:"HPI & différences",d:L("Les enseignants sont formés. On adapte les parcours pour que chacun s'épanouisse.")},
+              {n:"03",t:"HPI, TDAH & singularités",d:L("Les enseignants sont formés aux profils HPI, TDA et TDAH. On adapte les parcours pour que chaque singularité trouve sa place et s'épanouisse.")},
               {n:"04",t:"Jardin & cuisine",d:L("Le pays est dans les assiettes, sur le tableau, dans les récits, pas en option.")},
               {n:"05",t:"Parents partenaires",d:L("Des rendez-vous réguliers, des outils concrets, un accompagnement continu.")},
               {n:"06",t:"Intergénérationnel",d:"Les anciens transmettent. Les artisans interviennent. Le quartier est une ressource."}
@@ -925,7 +927,7 @@ const About=({go})=>{
             <p className="kicker" style={{color:"var(--sun-l)",marginBottom:14}}>Notre ADN</p>
             <h2 className="display" style={{fontSize:"clamp(40px,5.5vw,72px)",fontWeight:500,color:"#fff",lineHeight:1.02}}>Un projet chrétien, <em className="editorial" style={{color:"var(--coral-l)"}}>inclusif</em> & <em className="editorial" style={{color:"var(--sun-l)"}}>humain.</em></h2>
             <p style={{fontSize:18,lineHeight:1.65,color:"rgba(255,255,255,.85)",marginTop:20,marginBottom:14}}><strong style={{color:"#fff"}}>{L("Nous sommes chrétiens, pas religieux.")}</strong> {L("Notre foi guide notre façon d'accueillir, d'écouter, de respecter chaque enfant et chaque parent. Mais elle ne s'impose à personne.")}</p>
-            <p style={{fontSize:17,lineHeight:1.7,color:"rgba(255,255,255,.78)",marginBottom:14}}>{L("Concrètement : nous accompagnons l'épanouissement de la foi des enfants chrétiens qui le souhaitent, et nous accueillons avec la même attention les familles d'autres convictions ou sans religion. Pas de catéchèse imposée, pas de prosélytisme, pas d'examen de foi à l'inscription.")}</p>
+            <p style={{fontSize:17,lineHeight:1.7,color:"rgba(255,255,255,.78)",marginBottom:14}}>{L("Concrètement : nous accompagnons l'épanouissement de la foi des enfants chrétiens qui le souhaitent, et nous accueillons avec la même attention les familles d'autres convictions ou sans religion.")}</p>
             <p style={{fontSize:17,lineHeight:1.7,color:"rgba(255,255,255,.78)"}}>{L("Ce qui rassemble ici, c'est l'envie d'élever les enfants debout, fiers et libres, dans une école qui prend soin d'eux comme on prend soin d'un terreau précieux.")}</p>
           </div>
           <div className="mob-1col" style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:24}}>
@@ -973,7 +975,7 @@ const About=({go})=>{
         <div style={{maxWidth:1200,margin:"0 auto",position:"relative"}}>
           <div className="reveal" style={{maxWidth:760,marginBottom:56}}>
             <p className="kicker" style={{color:"var(--coral)",marginBottom:14}}>La vigueur de notre accompagnement</p>
-            <h2 className="display" style={{fontSize:"clamp(40px,5.6vw,76px)",fontWeight:500,color:"var(--ink)",lineHeight:1,letterSpacing:"-.035em"}}>Deux regards, <em className="editorial" style={{color:"var(--coral)"}}>un accompagnement</em><br/>qui <span className="underline-hand" style={{display:"inline-block"}}>tient debout.</span></h2>
+            <h2 className="display" style={{fontSize:"clamp(40px,5.6vw,76px)",fontWeight:500,color:"var(--ink)",lineHeight:1,letterSpacing:"-.035em"}}>Deux regards, <em className="editorial" style={{color:"var(--coral)"}}>une attention</em><br/>qui <span className="underline-hand" style={{display:"inline-block"}}>fait grandir.</span></h2>
             <p style={{fontSize:18,lineHeight:1.7,color:"var(--ink-s)",marginTop:20}}>À deux, nous couvrons un spectre rare : <strong style={{color:"var(--ink)"}}>clinique, social, thérapeutique, éducatif, spirituel</strong>. Ce n{A}est pas un hasard, c{A}est la matière dont Sion Émergence est faite.</p>
           </div>
           <div className="mob-1col" style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:20}}>
