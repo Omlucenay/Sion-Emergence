@@ -234,7 +234,7 @@ const Orb3d=()=>null;
 const Ring3d=()=>null;
 const SunRays=()=>null;
 
-/* ───── Petits objets d'école (Academy only) — statiques ───── */
+/* ───── Petits objets d'école (Academy only) · statiques ───── */
 const Cloud=({s={},c="rgba(255,255,255,.2)"})=>(
   <svg viewBox="0 0 120 60" style={{position:"absolute",...s}} aria-hidden="true">
     <path d="M25,45 Q5,45 10,30 Q5,15 25,18 Q30,5 50,12 Q65,0 80,15 Q105,10 105,32 Q120,45 95,48 Z" fill={c}/>
@@ -1114,7 +1114,7 @@ const Academy=({go})=>{
         <SchoolBlob c="#1F4236" s={{width:520,height:520,top:-80,right:-120}} op={.55}/>
         <SchoolBlob c="#1F4236" s={{width:360,height:360,bottom:-60,right:100}} op={.4}/>
         <SchoolBlob c="#1F4236" s={{width:280,height:280,bottom:-40,left:-40}} op={.35}/>
-        {/* Petits objets d'école — statiques */}
+        {/* Petits objets d'école · statiques */}
         <SoftSun c="#F5C83A" size={90} s={{top:130,right:"10%"}}/>
         <Cloud c="rgba(255,255,255,.14)" s={{width:120,height:60,top:250,left:"40%"}}/>
         <Cloud c="#1F4236" s={{width:90,height:44,top:200,right:"32%",opacity:.7}}/>
@@ -1162,7 +1162,7 @@ const Academy=({go})=>{
           </div>
         </div>
       </section>
-      {/* Bandeau photos Academy — après hero */}
+      {/* Bandeau photos Academy · après hero */}
       <section style={{padding:"60px 32px 20px",background:"var(--paper)"}}>
         <div style={{maxWidth:1200,margin:"0 auto"}}>
           <div className="reveal mob-1col" style={{display:"grid",gridTemplateColumns:"1.4fr 1fr 1fr",gap:14}}>
@@ -1179,7 +1179,7 @@ const Academy=({go})=>{
         </div>
       </section>
 
-      {/* MÉTHODE PÉDAGOGIQUE — remontée en tête */}
+      {/* MÉTHODE PÉDAGOGIQUE · remontée en tête */}
       <section id="pedago" style={{padding:"100px 32px",background:"var(--paper)",position:"relative",overflow:"hidden"}}>
         <Cloud c="#E6EEE9" s={{width:100,height:50,top:60,left:"6%"}}/>
         <Cloud c="#FDF0EC" s={{width:130,height:65,top:120,right:"8%"}}/>
