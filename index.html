@@ -554,11 +554,11 @@ const Home=({go})=>{
         <StarSpark c="var(--gold)" size={44} s={{position:"absolute",top:80,left:"8%",opacity:.6}}/>
         <Squiggle c="var(--coral)" w={140} s={{position:"absolute",bottom:120,right:"10%"}}/>
         <div style={{maxWidth:920,margin:"0 auto",textAlign:"center"}}>
-          <div className="reveal"><p className="kicker" style={{color:"var(--forest)",marginBottom:22}}>Notre manifeste</p></div>
+          <div className="reveal"><p className="kicker" style={{color:"var(--forest)",marginBottom:22}}>Une école chrétienne, ouverte à toutes les familles</p></div>
           <h2 className="display reveal d1" style={{fontSize:"clamp(44px,6.5vw,90px)",fontWeight:500,color:"var(--ink)",lineHeight:1,letterSpacing:"-.035em",marginBottom:40}}>
             Nous croyons<br/>qu{A}une <em className="editorial" style={{color:"var(--coral)"}}>bonne école</em><br/>change les <span className="underline-hand" style={{display:"inline-block"}}>familles</span>.
           </h2>
-          <p className="reveal d2" style={{fontSize:21,lineHeight:1.55,color:"var(--ink-s)",fontFamily:"'Fraunces',serif",fontWeight:350,maxWidth:780,margin:"0 auto 16px"}}>Et que des familles soudées changent un territoire. Nos valeurs sont chrétiennes, notre accueil est large. <span className="hand" style={{fontSize:26,color:"var(--coral)",display:"inline-block",verticalAlign:"middle"}}>tout le monde est le bienvenu</span>.</p>
+          <p className="reveal d2" style={{fontSize:21,lineHeight:1.55,color:"var(--ink-s)",fontFamily:"'Fraunces',serif",fontWeight:350,maxWidth:780,margin:"0 auto 16px"}}>Et que des familles soudées changent un territoire. {L("Nous sommes chrétiens, mais pas religieux : notre projet vise l'épanouissement de la foi des enfants comme de leurs talents, dans un cadre")} <strong style={{color:"var(--ink)",fontWeight:600}}>{L("inclusif et sans prosélytisme")}</strong>. <span className="hand" style={{fontSize:26,color:"var(--coral)",display:"inline-block",verticalAlign:"middle"}}>tout le monde est le bienvenu</span>.</p>
           <div className="reveal d3" style={{marginTop:44,display:"flex",justifyContent:"center",gap:14,flexWrap:"wrap"}}>
             <Btn v="forest" size="lg" onClick={()=>go("about")} icon="arrowRight">Lire notre projet</Btn>
           </div>
@@ -575,10 +575,10 @@ const Home=({go})=>{
           </div>
           <div className="mob-1col" style={{display:"grid",gridTemplateColumns:"repeat(2,1fr)",gap:20}}>
             {[
-              {q:L("« Mon enfant s'ennuie à l'école. »"),a:L("Des classes de 20 max, une pédagogie active Freinet + Design for Change, un vrai suivi des enfants HPI.")},
-              {q:L("« J'ai peur qu'on ne le voit pas vraiment. »"),a:L("Chaque enfant est connu, suivi, aimé. Réunions régulières avec les parents. Pas d'enfant invisible chez nous.")},
-              {q:L("« Je ne trouve pas de place pour le périscolaire. »"),a:L("Joy Club accueille tous les jours d'école et pendant les vacances, avec aide aux devoirs et soutien scolaire sur place. Ouvert aussi aux enfants d'autres écoles.")},
-              {q:L("« Être parent, c'est lourd. »"),a:L("Parent Lab est votre école : ateliers, partage entre parents, écoute. Sans jugement, sans leçon.")}
+              {q:L("« Je veux une école qui ressemble à ce qu'on est. »"),a:L("Une école ancrée en Martinique, qui valorise le créole, l'histoire du pays et les valeurs chrétiennes vivantes. Votre enfant sait d'où il vient et en est fier.")},
+              {q:L("« Mon enfant est différent et personne ne sait quoi en faire. »"),a:L("Enseignants formés aux profils HPI, TDA et TDAH. Parcours individualisés, lien étroit avec la famille. Votre enfant est connu, vu et accompagné, vraiment.")},
+              {q:L("« Je porte tout, et je n'y arrive plus seule. »"),a:L("Joy Club prend le relais sur la garde et l'aide aux devoirs (mercredi, vacances et soutien scolaire). Parent Lab vous écoute et vous outille, sans jugement.")},
+              {q:L("« Je veux qu'il apprenne à créer, pas juste à reproduire. »"),a:L("Design for Change et pédagogie Freinet : votre enfant apprend à observer, imaginer, coopérer et mener un projet jusqu'au concret. La graine de l'autonomie, dès le primaire.")}
             ].map((x, i)=>(
               <div key={i} className="reveal" style={{background:"#fff",borderRadius:"var(--r4)",padding:"32px 34px",boxShadow:"var(--sh2)",transitionDelay:(i*80)+"ms",position:"relative",overflow:"hidden"}}>
                 <StarSpark c="var(--coral)" size={20} s={{position:"absolute",top:24,right:24,opacity:.6}}/>
@@ -617,9 +617,9 @@ const Home=({go})=>{
           </div>
           <div className="mob-1col" style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:40,paddingTop:40}}>
             {[
-              {n:"Marie",r:"maman · Martinique",t:L("Je voulais une école qui voit mon fils pour qui il est vraiment. Sion Academy, c'est ça, et plus encore, parce qu'on est une famille."),rot:-3,c:"var(--blush)"},
-              {n:"Jean-Paul",r:"grand-père · Ducos",t:L("On m'a invité à venir raconter le jardin créole aux enfants. Depuis, j'y retourne chaque mois. Ça me rajeunit."),rot:2,c:"var(--gold-l)"},
-              {n:"Karine",r:"éducatrice · Fort-de-France",t:L("Parent Lab m'a aidée à comprendre ma fille quand tout semblait bloqué. C'est un lieu qui sauve, sincèrement."),rot:-1,c:"var(--teal-l)"}
+              {n:"Maeva",r:"maman de deux enfants · Ducos",t:L("Je veux une école qui ressemble à ce qu'on est. Quand on m'a parlé de Sion Émergence, j'ai senti dès le premier mot que c'était ça."),rot:-3,c:"var(--blush)"},
+              {n:"Steeve & Audrey",r:"parents d'un garçon HPI · Fort-de-France",t:L("Notre fils a un QI de 132 et il dit qu'il est bête. À Sion, on nous a parlé d'enseignants formés et d'un vrai suivi. On a enfin l'impression d'être entendus."),rot:2,c:"var(--gold-l)"},
+              {n:"Ruddy",r:"chef d'entreprise · Le Lamentin",t:L("Je veux que mes filles apprennent à créer, pas juste à reproduire. Quand Olivier-Marie m'a parlé de Design for Change, j'ai compris que Sion, c'était autre chose. Elles iront."),rot:-1,c:"var(--teal-l)"}
             ].map((x, i)=>(
               <div key={i} className="reveal" style={{transitionDelay:(i*100)+"ms"}}>
                 <div className="polaroid" style={{transform:"rotate("+x.rot+"deg)",background:x.c, transition:"transform .3s var(--spring)"}} onMouseEnter={e=>e.currentTarget.style.transform="rotate(0) scale(1.03)"} onMouseLeave={e=>e.currentTarget.style.transform="rotate("+x.rot+"deg)"}>
@@ -921,10 +921,12 @@ const About=({go})=>{
         <Cube3d size={54} s={{top:120,left:"8%"}} cl={{top:"#F5C83A",right:"#E8725A",front:"#52B08A"}}/>
         <Ring3d size={80} c="#F5C83A" s={{bottom:100,right:"10%",opacity:.7}}/>
         <div style={{maxWidth:1200,margin:"0 auto",position:"relative",zIndex:1,color:"#fff"}}>
-          <div className="reveal" style={{maxWidth:720,marginBottom:64}}>
+          <div className="reveal" style={{maxWidth:760,marginBottom:64}}>
             <p className="kicker" style={{color:"var(--sun-l)",marginBottom:14}}>Notre ADN</p>
             <h2 className="display" style={{fontSize:"clamp(40px,5.5vw,72px)",fontWeight:500,color:"#fff",lineHeight:1.02}}>Un projet chrétien, <em className="editorial" style={{color:"var(--coral-l)"}}>inclusif</em> & <em className="editorial" style={{color:"var(--sun-l)"}}>humain.</em></h2>
-            <p style={{fontSize:18,lineHeight:1.65,color:"rgba(255,255,255,.78)",marginTop:20}}>Nous croyons qu{A}une bonne école change les familles, et que des familles soudées changent un territoire. Nos valeurs sont chrétiennes, notre accueil est large. <strong style={{color:"#fff"}}>Tout le monde est le bienvenu.</strong></p>
+            <p style={{fontSize:18,lineHeight:1.65,color:"rgba(255,255,255,.85)",marginTop:20,marginBottom:14}}><strong style={{color:"#fff"}}>{L("Nous sommes chrétiens, pas religieux.")}</strong> {L("Notre foi guide notre façon d'accueillir, d'écouter, de respecter chaque enfant et chaque parent. Mais elle ne s'impose à personne.")}</p>
+            <p style={{fontSize:17,lineHeight:1.7,color:"rgba(255,255,255,.78)",marginBottom:14}}>{L("Concrètement : nous accompagnons l'épanouissement de la foi des enfants chrétiens qui le souhaitent, et nous accueillons avec la même attention les familles d'autres convictions ou sans religion. Pas de catéchèse imposée, pas de prosélytisme, pas d'examen de foi à l'inscription.")}</p>
+            <p style={{fontSize:17,lineHeight:1.7,color:"rgba(255,255,255,.78)"}}>{L("Ce qui rassemble ici, c'est l'envie d'élever les enfants debout, fiers et libres, dans une école qui prend soin d'eux comme on prend soin d'un terreau précieux.")}</p>
           </div>
           <div className="mob-1col" style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:24}}>
             {[
