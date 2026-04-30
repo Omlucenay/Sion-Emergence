@@ -677,7 +677,7 @@ const Home=({go})=>{
           <div className="reveal" style={{textAlign:"center",maxWidth:680,margin:"0 auto 56px"}}>
             <p className="kicker" style={{color:"var(--forest)",marginBottom:14}}>Grandir avec des modèles forts</p>
             <h2 className="display" style={{fontSize:"clamp(36px,5vw,62px)",fontWeight:500,color:"var(--ink)"}}>S’inspirer de <em className="editorial" style={{color:"var(--coral)"}}>celles et ceux</em> qui nous précèdent.</h2>
-            <p style={{fontSize:17,color:"var(--ink-s)",marginTop:16,lineHeight:1.6}}>Il y a urgence à transmettre à nos enfants les visages de celles et ceux qui ont fait l{A}histoire des Antilles et de la Caraïbe. Penseurs, artistes, scientifiques, sportifs, bâtisseurs, hier comme aujourd{A}hui. C{A}est en s{A}identifiant à des figures fortes venues d{A}ici qu{A}un enfant comprend qu{A}il peut, lui aussi, faire grand.</p>
+            <p style={{fontSize:17,color:"var(--ink-s)",marginTop:16,lineHeight:1.6}}>Il y a urgence à transmettre à nos enfants les visages de celles et ceux qui ont fait l{A}histoire des Antilles et de la Caraïbe. Penseurs, artistes, scientifiques, sportifs, bâtisseurs, hier comme aujourd{A}hui. C{A}est en s{A}identifiant à des figures fortes venues d{A}ici qu{A}un enfant comprend qu{A}il peut, <strong style={{color:"var(--ink)"}}>lui aussi</strong>, faire grand.</p>
           </div>
           <div className="mob-1col" style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:16}}>
             {[
@@ -808,14 +808,14 @@ const About=({go})=>{
                 </div>
               </div>
               <p style={{fontSize:16,lineHeight:1.75,color:"var(--ink-s)",marginBottom:14}}><strong style={{color:"var(--ink)"}}>Ancien prêtre catholique</strong> pendant près de 8 ans, <strong style={{color:"var(--forest)"}}>connu pour son engagement social</strong> et ses prises de position publiques pour défendre les sujets clés du pays : l{A}éducation, la jeunesse, la dignité des familles martiniquaises.</p>
-              <p style={{fontSize:16,lineHeight:1.75,color:"var(--ink-s)",marginBottom:14}}>Aujourd{A}hui <strong style={{color:"var(--ink)"}}>assistant social</strong> auprès des familles et <strong style={{color:"var(--forest)"}}>praticien en TCC et en Gestalt-thérapie</strong>. Un parcours rare qui tisse le spirituel, le social, le clinique et l{A}engagement public.</p>
+              <p style={{fontSize:16,lineHeight:1.75,color:"var(--ink-s)",marginBottom:14}}>Aujourd{A}hui <strong style={{color:"var(--ink)"}}>assistant social</strong> auprès des familles et <strong style={{color:"var(--forest)"}}>praticien en TCC et en Gestalt thérapie</strong>. Un parcours rare qui tisse le spirituel, le social, le clinique et l{A}engagement public.</p>
               <p style={{fontSize:16,lineHeight:1.75,color:"var(--ink-s)"}}>Sa conviction : l{A}école doit faire corps avec les familles et le territoire, et celles et ceux qui la portent doivent être <em style={{color:"var(--forest)",fontStyle:"italic"}}>debout dans le pays</em>.</p>
               <div style={{marginTop:20,display:"flex",gap:8,flexWrap:"wrap"}}>
                 <Chip bg="var(--mist)" color="var(--forest)">Ancien prêtre</Chip>
                 <Chip bg="var(--mist)" color="var(--forest)">Engagement social</Chip>
                 <Chip bg="var(--mist)" color="var(--forest)">Assistant social</Chip>
                 <Chip bg="var(--mist)" color="var(--forest)">TCC</Chip>
-                <Chip bg="var(--mist)" color="var(--forest)">Gestalt-thérapie</Chip>
+                <Chip bg="var(--mist)" color="var(--forest)">Gestalt thérapie</Chip>
               </div>
             </div>
           </div>
@@ -1193,7 +1193,7 @@ const Academy=({go})=>{
                 </div>
               </div>
               <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:10,marginTop:16}}>
-                {[["≤ 20","élèves / classe","#F5C0B0"],["Freinet & DFC","pédagogies actives","#AFDCDD"],["HPI","pris en compte","#F2E19A"]].map(([a,b,c])=>(
+                {[["≤ 20","élèves / classe","#F5C0B0"],["Freinet & DFC","pédagogies actives","#AFDCDD"],["Sur-mesure","HPI · TDAH · dys","#F2E19A"]].map(([a,b,c])=>(
                   <div key={a} style={{background:"rgba(255,255,255,.08)",borderRadius:16,padding:"16px 12px",textAlign:"center"}}>
                     <p className="joy" style={{fontSize:22,fontWeight:700,color:c}}>{a}</p>
                     <p style={{fontSize:12,color:"rgba(255,255,255,.5)",marginTop:2}}>{b}</p>
@@ -1274,7 +1274,7 @@ const Academy=({go})=>{
             </div>
           </div>
           <div className="reveal mob-1col" style={{marginTop:48,display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:14}}>
-            {[["≤ 20","élèves · classe","var(--mist)","var(--forest)"],["Freinet & DFC","pédagogies actives","var(--blush-p)","var(--coral-d)"],["HPI","pris en compte","var(--gold-p)","var(--gold-d)"],["Pays","cœur du projet","var(--teal-l)","var(--teal-d)"]].map(([a,b,bg,c],i)=>(
+            {[["≤ 20","élèves · classe","var(--mist)","var(--forest)"],["Freinet & DFC","pédagogies actives","var(--blush-p)","var(--coral-d)"],["Sur-mesure","HPI · TDAH · dys","var(--gold-p)","var(--gold-d)"],["Pays","cœur du projet","var(--teal-l)","var(--teal-d)"]].map(([a,b,bg,c],i)=>(
               <div key={a} className="tile" style={{background:bg,borderRadius:"var(--r4)",padding:"24px 22px",boxShadow:"var(--sh1)",textAlign:"center"}}>
                 <p className="display" style={{fontSize:40,fontWeight:500,color:c,lineHeight:1,marginBottom:6}}>{a}</p>
                 <p style={{fontSize:13,color:"var(--ink-m)"}}>{b}</p>
@@ -1300,14 +1300,14 @@ const Academy=({go})=>{
             {[
               {t:"Petites classes",sub:"≤ 20 élèves",d:L("On connaît chaque enfant par son prénom. Les enseignants prennent le temps qu'il faut pour accompagner, écouter, expliquer. Aucun enfant n'est invisible à Sion Academy."),c:"var(--forest)",bg:"var(--mist)"},
               {t:"Apprendre en faisant",sub:"Freinet & DFC",d:L("Les enfants manipulent, essaient, se trompent, recommencent. Méthode Freinet et Design for Change, c'est comme ça qu'ils retiennent pour de vrai."),c:"var(--teal-d)",bg:"var(--teal-l)"},
-              {t:"HPI, TDA, TDAH",sub:"Accompagnés vraiment",d:L("Trop d'enfants à haut potentiel, avec TDA ou TDAH, vivent l'école comme une souffrance silencieuse, dans des structures qui n'ont pas le temps de les comprendre. Chez nous, enseignants formés, parcours sur-mesure, lien étroit avec la famille : chaque enfant est connu, suivi, valorisé."),c:"var(--coral-d)",bg:"var(--blush-p)"},
-              {t:"Ma Martinique",sub:"Cultures caraïbes",d:L("Contes, langue créole, histoire du pays, savoirs des anciens. Découverte des grandes personnalités antillaises et caribéennes (Césaire, Glissant, Fanon, Condé, Damas) et des lieux culturels forts. Nos enfants savent d'où ils viennent et en sont profondément fiers."),c:"var(--gold-d)",bg:"var(--gold-p)"},
+              {t:"HPI, TDA, TDAH",sub:"Accompagnés vraiment",d:L("Haut potentiel, TDA, TDAH, dys… À Sion Academy, chaque enfant est accueilli avec ses spécificités. Enseignants formés à la neuroatypie, parcours sur-mesure, lien étroit avec la famille : chaque enfant est connu, compris, valorisé."),c:"var(--coral-d)",bg:"var(--blush-p)"},
+              {t:"Ma Martinique",sub:"Cultures caraïbes",d:L("Contes, langue créole, histoire du pays, savoirs des anciens. Découverte des grandes figures antillaises et caribéennes et des lieux culturels qui ont façonné notre identité. Nos enfants savent d'où ils viennent et en sont profondément fiers."),c:"var(--gold-d)",bg:"var(--gold-p)"},
               {t:"Sport & corps",sub:"Bouger pour grandir",d:L("Un enfant a besoin de bouger pour apprendre. Sport, activités physiques régulières, jeux d'extérieur : l'enfant est appréhendé dans toutes ses dimensions, y compris ses besoins physiologiques."),c:"var(--teal-d)",bg:"var(--teal-l)"},
               {t:"Valeurs chrétiennes",sub:"Ouvertes à tous",d:L("Le respect, l'écoute, l'attention aux autres. Des valeurs qui se vivent au quotidien, sans prosélytisme, dans l'accueil de toutes les familles."),c:"var(--forest)",bg:"var(--mist)"},
               {t:"Familles bienvenues",sub:"Main dans la main",d:L("Les parents ne restent pas à la porte. Ils entrent, ils participent, ils présentent leurs projets en classe à fréquence régulière. La coéducation est au cœur du projet Sion Academy.")
 ,c:"var(--coral-d)",bg:"var(--blush-p)"}
             ].map((x, i)=>(
-              <div key={x.t} className="reveal tile card-3d" style={{background:x.bg, borderRadius:"var(--r4)",padding:"32px 28px",boxShadow:"var(--sh2)",transitionDelay:(i*60)+"ms",position:"relative",overflow:"hidden"}}>
+              <div key={x.t} className="reveal tile card-3d" style={{background:x.bg, borderRadius:"var(--r4)",padding:"32px 28px",boxShadow:"var(--sh2)",transitionDelay:(i*60)+"ms",position:"relative",overflow:"hidden",gridColumn:i===6?"1 / -1":"auto"}}>
                 <StarSpark c={x.c} size={18} s={{position:"absolute",top:24,right:24,opacity:.35}}/>
                 <Chip bg="#fff" color={x.c}>{x.sub}</Chip>
                 <h3 className="serif" style={{fontSize:22,fontWeight:700,color:"var(--ink)",margin:"14px 0 10px"}}>{x.t}</h3>
@@ -1823,7 +1823,7 @@ const Partenaires=({go})=>{
               <h3 className="display" style={{fontSize:"clamp(32px,4vw,46px)",fontWeight:500,color:"var(--ink)",marginBottom:14}}>Écrivez-nous.</h3>
               <p style={{fontSize:16,color:"var(--ink-s)",lineHeight:1.7,marginBottom:24}}>{L("Que vous soyez une famille, un partenaire potentiel, un intervenant ou simplement curieux, le formulaire ci-contre nous arrive directement. Nous vous répondrons sous quelques jours.")}</p>
               <div style={{borderRadius:"var(--r4)",overflow:"hidden",boxShadow:"var(--sh2)",marginBottom:24}}>
-                <img src="assets/famille-5personnes.jpg" alt={L("Famille martiniquaise rassemblée, esprit Sion Émergence")} style={{width:"100%",aspectRatio:"4/3",objectFit:"cover",display:"block"}} loading="lazy"/>
+                <img src="assets/famille-5personnes.jpg" alt={L("Famille martiniquaise rassemblée, esprit Sion Émergence")} style={{width:"100%",aspectRatio:"4/5",objectFit:"cover",objectPosition:"center top",display:"block"}} loading="lazy"/>
               </div>
               <Btn v="paper" size="md" onClick={()=>go("partenaires")} icon="arrowRight">Soutenir le projet, écrire une lettre</Btn>
             </div>
