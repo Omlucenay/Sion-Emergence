@@ -652,7 +652,7 @@ const Home=({go})=>{
             {[
               {n:"Maeva",r:"maman de deux enfants · Ducos",t:L("Je veux une école qui ressemble à ce qu'on est. Quand on m'a parlé de Sion Émergence, j'ai senti dès le premier mot que c'était ça."),rot:-3,c:"var(--blush)"},
               {n:"Steeve & Audrey",r:"parents d'un garçon HPI · Fort-de-France",t:L("Notre fils est diagnostiqué HPI et il se sent nul à l'école. Quand on a découvert Sion Émergence, on a entendu pour la première fois qu'on allait vraiment l'accompagner. On a enfin l'impression d'être entendus."),rot:2,c:"var(--gold-l)"},
-              {n:"Ruddy",r:"chef d'entreprise · Le Lamentin",t:L("Je veux que mes filles apprennent à créer, pas juste à reproduire. Quand Olivier-Marie m'a parlé de Design for Change, j'ai compris que Sion, c'était autre chose. Elles iront."),rot:-1,c:"var(--teal-l)"}
+              {n:"Ruddy",r:"chef d'entreprise · Le Lamentin",t:L("Je veux que mes filles apprennent à créer, pas juste à reproduire. Quand j'ai entendu parler de Design for Change, j'ai compris que Sion, c'était autre chose. Ça me motive vraiment à les inscrire."),rot:-1,c:"var(--teal-l)"}
             ].map((x, i)=>(
               <div key={i} className="reveal" style={{transitionDelay:(i*100)+"ms"}}>
                 <div className="polaroid" style={{transform:"rotate("+x.rot+"deg)",background:x.c, transition:"transform .3s var(--spring)"}} onMouseEnter={e=>e.currentTarget.style.transform="rotate(0) scale(1.03)"} onMouseLeave={e=>e.currentTarget.style.transform="rotate("+x.rot+"deg)"}>
