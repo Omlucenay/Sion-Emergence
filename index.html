@@ -507,32 +507,60 @@ const Home=({go})=>{
           {/* Bento grid - varied tiles */}
           <div className="mob-1col" style={{display:"grid",gridTemplateColumns:"repeat(6,1fr)",gridAutoRows:"280px",gap:20}}>
             {/* Sion Academy, big tile */}
-            <div className="tile card-3d reveal living-forest" onClick={()=>go("academy")} style={{gridColumn:"span 3",gridRow:"span 2",color:"#fff",borderRadius:"var(--r5)",padding:"40px",position:"relative",overflow:"hidden",cursor:"pointer",boxShadow:"var(--sh3)"}}>
+            <div className="tile card-3d reveal living-forest" onClick={()=>go("academy")} style={{gridColumn:"span 3",gridRow:"span 2",color:"#fff",borderRadius:"var(--r5)",padding:"36px 40px",position:"relative",overflow:"hidden",cursor:"pointer",boxShadow:"var(--sh3)",display:"flex",flexDirection:"column"}}>
               <div style={{position:"absolute",top:-40,right:-40,opacity:.35}}><SunRays c="var(--sun)" size={240}/></div>
               <Orb3d size={36} c="#F5C83A" s={{bottom:110,right:30,animation:"none"}}/>
-              <Chip bg="rgba(255,255,255,.12)" color="#fff">École · Hors contrat</Chip>
-              <img src="assets/logo-academy.png" alt="" style={{height:76,marginTop:18,background:"#fff",borderRadius:16,padding:8,display:"block"}}/>
-              <h3 className="display" style={{fontSize:"clamp(38px,4.5vw,62px)",fontWeight:500,marginTop:22,letterSpacing:"-.03em"}}>Sion<br/><em className="editorial" style={{fontWeight:400,color:"var(--gold-l)"}}>Academy.</em></h3>
-              <p style={{fontSize:15,lineHeight:1.65,color:"rgba(255,255,255,.82)",marginTop:14,maxWidth:420}}>Une école chaleureuse, exigeante et ouverte. Petites classes, pédagogie active, attention particulière pour les enfants HPI, et un vrai amour du pays.</p>
-              <div style={{position:"absolute",bottom:32,left:40,display:"flex",alignItems:"center",gap:10,fontFamily:"'Inter',sans-serif",fontSize:14,fontWeight:600}}>Découvrir l{A}école <Icon name="arrowRight" size={18} color="var(--gold-l)"/></div>
+              <div style={{display:"flex",alignItems:"flex-start",justifyContent:"space-between",gap:20,position:"relative",zIndex:1}}>
+                <Chip bg="rgba(255,255,255,.12)" color="#fff">École · Hors contrat</Chip>
+                <img src="assets/logo-academy.png" alt="" style={{height:140,width:140,background:"#fff",borderRadius:20,padding:10,display:"block",objectFit:"contain",boxShadow:"0 12px 28px -8px rgba(0,0,0,.3)"}}/>
+              </div>
+              <h3 className="display" style={{fontSize:"clamp(40px,4.8vw,68px)",fontWeight:500,marginTop:24,letterSpacing:"-.03em",position:"relative",zIndex:1}}>Sion<br/><em className="editorial" style={{fontWeight:400,color:"var(--gold-l)"}}>Academy.</em></h3>
+              <p style={{fontSize:15,lineHeight:1.65,color:"rgba(255,255,255,.85)",marginTop:14,maxWidth:440,position:"relative",zIndex:1}}>École primaire chaleureuse, exigeante et ouverte. Petites classes, pédagogie active, accueil des profils neuroatypiques (HPI, TDA, TDAH), et un vrai amour du pays.</p>
+              <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:10,marginTop:24,position:"relative",zIndex:1}}>
+                {[["≤ 20","élèves / classe"],["Freinet","& DFC"],["HPI · TDAH","accueillis"]].map(([a,b])=>(
+                  <div key={a} style={{background:"rgba(255,255,255,.10)",border:"1px solid rgba(255,255,255,.18)",borderRadius:14,padding:"12px 10px",textAlign:"center"}}>
+                    <p className="serif" style={{fontSize:18,fontWeight:700,color:"var(--gold-l)",lineHeight:1.1}}>{a}</p>
+                    <p style={{fontSize:11,color:"rgba(255,255,255,.7)",marginTop:4}}>{b}</p>
+                  </div>
+                ))}
+              </div>
+              <div style={{marginTop:"auto",paddingTop:24,display:"flex",alignItems:"center",gap:10,fontFamily:"'Inter',sans-serif",fontSize:14,fontWeight:600,position:"relative",zIndex:1}}>Découvrir l{A}école <Icon name="arrowRight" size={18} color="var(--gold-l)"/></div>
             </div>
             {/* Joy Club */}
-            <div className="tile card-3d reveal d1" onClick={()=>go("joyclub")} style={{gridColumn:"span 3",gridRow:"span 1",background:"var(--teal)",color:"#fff",borderRadius:"var(--r5)",padding:"30px",position:"relative",overflow:"hidden",cursor:"pointer",boxShadow:"var(--sh3)"}}>
+            <div className="tile card-3d reveal d1" onClick={()=>go("joyclub")} style={{gridColumn:"span 3",gridRow:"span 1",background:"var(--teal)",color:"#fff",borderRadius:"var(--r5)",padding:"28px 32px",position:"relative",overflow:"hidden",cursor:"pointer",boxShadow:"var(--sh3)",display:"flex",flexDirection:"column"}}>
               <Dot c="rgba(255,255,255,.15)" size={140} s={{position:"absolute",top:-40,right:-40}}/>
-              <img src="assets/logo-joyclub.png" alt="" style={{position:"absolute",top:24,right:24,height:84,width:84,background:"#fff",borderRadius:14,padding:6,objectFit:"contain"}}/>
-              <Chip bg="rgba(255,255,255,.18)" color="#fff">Périscolaire · Vacances</Chip>
-              <h3 className="joy" style={{fontSize:42,fontWeight:600,marginTop:12,letterSpacing:"-.02em"}}>Joy Club</h3>
-              <p className="hand" style={{color:"var(--gold-l)",fontSize:24,marginTop:-4}}>le club des enfants heureux</p>
-              <div style={{position:"absolute",bottom:28,left:30,display:"flex",alignItems:"center",gap:8,fontSize:13,fontWeight:600}}>Explorer <Icon name="arrowRight" size={16}/></div>
+              <div style={{display:"flex",alignItems:"flex-start",justifyContent:"space-between",gap:16,position:"relative",zIndex:1}}>
+                <div>
+                  <Chip bg="rgba(255,255,255,.18)" color="#fff">Périscolaire · Vacances</Chip>
+                  <h3 className="joy" style={{fontSize:42,fontWeight:600,marginTop:10,letterSpacing:"-.02em"}}>Joy Club</h3>
+                  <p className="hand" style={{color:"var(--gold-l)",fontSize:22,marginTop:-2,lineHeight:1.05}}>le club des enfants heureux</p>
+                </div>
+                <img src="assets/logo-joyclub.png" alt="" style={{height:120,width:120,background:"#fff",borderRadius:16,padding:8,objectFit:"contain",boxShadow:"0 10px 24px -8px rgba(0,0,0,.3)",flexShrink:0}}/>
+              </div>
+              <div style={{display:"flex",gap:8,flexWrap:"wrap",marginTop:14,position:"relative",zIndex:1}}>
+                {["Aide aux devoirs","Soutien scolaire","Mercredi","Vacances","Ouvert à tous"].map(t=>(
+                  <span key={t} style={{fontSize:11,padding:"5px 10px",background:"rgba(255,255,255,.14)",borderRadius:999,color:"rgba(255,255,255,.92)"}}>{t}</span>
+                ))}
+              </div>
+              <div style={{marginTop:"auto",paddingTop:14,display:"flex",alignItems:"center",gap:8,fontSize:13,fontWeight:600,position:"relative",zIndex:1}}>Explorer <Icon name="arrowRight" size={16}/></div>
             </div>
             {/* Parent Lab */}
-            <div className="tile card-3d reveal d2" onClick={()=>go("parentlab")} style={{gridColumn:"span 3",gridRow:"span 1",background:"var(--blush)",color:"var(--ink)",borderRadius:"var(--r5)",padding:"30px",position:"relative",overflow:"hidden",cursor:"pointer",boxShadow:"var(--sh2)"}}>
+            <div className="tile card-3d reveal d2" onClick={()=>go("parentlab")} style={{gridColumn:"span 3",gridRow:"span 1",background:"var(--blush)",color:"var(--ink)",borderRadius:"var(--r5)",padding:"28px 32px",position:"relative",overflow:"hidden",cursor:"pointer",boxShadow:"var(--sh2)",display:"flex",flexDirection:"column"}}>
               <Squiggle c="var(--coral)" w={100} s={{position:"absolute",bottom:26,right:28}}/>
-              <img src="assets/logo-parentlab.png" alt="" style={{position:"absolute",top:24,right:24,height:84,width:84,background:"#fff",borderRadius:14,padding:6,objectFit:"contain"}}/>
-              <Chip bg="#fff" color="var(--coral)">École de la parentalité</Chip>
-              <h3 className="display" style={{fontSize:42,fontWeight:500,marginTop:12,color:"var(--ink)",letterSpacing:"-.02em"}}>Parent <em className="editorial" style={{color:"var(--coral)",fontWeight:400}}>Lab.</em></h3>
-              <p style={{fontSize:13,color:"var(--ink-s)",marginTop:4,maxWidth:320}}>Un endroit pour souffler, partager, apprendre, sans jugement.</p>
-              <div style={{position:"absolute",bottom:28,left:30,display:"flex",alignItems:"center",gap:8,fontSize:13,fontWeight:600,color:"var(--coral)"}}>En savoir plus <Icon name="arrowRight" size={16}/></div>
+              <div style={{display:"flex",alignItems:"flex-start",justifyContent:"space-between",gap:16,position:"relative",zIndex:1}}>
+                <div>
+                  <Chip bg="#fff" color="var(--coral)">École de la parentalité</Chip>
+                  <h3 className="display" style={{fontSize:42,fontWeight:500,marginTop:10,color:"var(--ink)",letterSpacing:"-.02em"}}>Parent <em className="editorial" style={{color:"var(--coral)",fontWeight:400}}>Lab.</em></h3>
+                  <p style={{fontSize:13,color:"var(--ink-s)",marginTop:4,maxWidth:280,lineHeight:1.4}}>Notre laboratoire de renforcement des parents. Un endroit pour souffler, partager, apprendre, sans jugement.</p>
+                </div>
+                <img src="assets/logo-parentlab.png" alt="" style={{height:120,width:120,background:"#fff",borderRadius:16,padding:8,objectFit:"contain",boxShadow:"0 10px 24px -8px rgba(27,40,38,.18)",flexShrink:0}}/>
+              </div>
+              <div style={{display:"flex",gap:8,flexWrap:"wrap",marginTop:14,position:"relative",zIndex:1}}>
+                {["Ateliers","Groupes de parole","Écoute pro","Sans jugement"].map(t=>(
+                  <span key={t} style={{fontSize:11,padding:"5px 10px",background:"#fff",borderRadius:999,color:"var(--coral-d)",fontWeight:500}}>{t}</span>
+                ))}
+              </div>
+              <div style={{marginTop:"auto",paddingTop:14,display:"flex",alignItems:"center",gap:8,fontSize:13,fontWeight:600,color:"var(--coral)",position:"relative",zIndex:1}}>En savoir plus <Icon name="arrowRight" size={16}/></div>
             </div>
             {/* Dispositifs x3 small */}
             <div className="tile card-3d reveal d3" onClick={()=>go("dispositifs")} style={{gridColumn:"span 2",gridRow:"span 1",background:"#fff",color:"var(--ink)",borderRadius:"var(--r5)",padding:"28px",position:"relative",overflow:"hidden",cursor:"pointer",boxShadow:"var(--sh2)"}}>
