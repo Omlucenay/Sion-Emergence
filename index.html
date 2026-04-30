@@ -763,11 +763,11 @@ const About=({go})=>{
               <p className="reveal d2" style={{fontSize:18,lineHeight:1.65,color:"var(--ink-s)",maxWidth:560}}>Sion Émergence est né d{A}une envie simple : offrir à la Martinique un lieu qui rassemble vraiment les enfants, les parents et le territoire. Un endroit où l{A}excellence n{A}est pas réservée à quelques-uns. Un endroit qui croit que chaque enfant a en lui quelque chose de précieux à faire grandir.</p>
             </div>
             <div className="reveal d2 hide-mob" style={{position:"relative",height:600}}>
-              <div style={{position:"absolute",top:0,right:-20,width:"60%",aspectRatio:"3/4",borderRadius:"var(--r4)",overflow:"hidden",boxShadow:"0 30px 60px -20px rgba(27,40,38,.3)",transform:"rotate(5deg)",zIndex:1}}>
-                <img src="assets/parentlab-couple-dessin.jpg" alt={L("Couple de parents martiniquais tenant le dessin de leurs enfants")} style={{width:"100%",height:"100%",objectFit:"cover",objectPosition:"center top",display:"block"}} loading="lazy"/>
+              <div style={{position:"absolute",top:0,right:-20,width:"60%",aspectRatio:"4/3",borderRadius:"var(--r4)",overflow:"hidden",boxShadow:"0 30px 60px -20px rgba(27,40,38,.3)",transform:"rotate(5deg)",zIndex:1}}>
+                <img src="assets/parentlab-couple-dessin.jpg" alt={L("Atelier Parent Lab : présentation aux parents en Martinique")} style={{width:"100%",height:"100%",objectFit:"cover",objectPosition:"center",display:"block"}} loading="lazy"/>
               </div>
-              <div style={{position:"absolute",bottom:0,left:-10,width:"58%",aspectRatio:"3/4",borderRadius:"var(--r4)",overflow:"hidden",boxShadow:"0 30px 60px -20px rgba(27,40,38,.3)",transform:"rotate(-6deg)",zIndex:2}}>
-                <img src="assets/academy-2filles-rires.jpg" alt={L("Deux filles en uniforme Sion Academy qui rient ensemble")} style={{width:"100%",height:"100%",objectFit:"cover",objectPosition:"center top",display:"block"}} loading="lazy"/>
+              <div style={{position:"absolute",bottom:0,left:-10,width:"58%",aspectRatio:"4/3",borderRadius:"var(--r4)",overflow:"hidden",boxShadow:"0 30px 60px -20px rgba(27,40,38,.3)",transform:"rotate(-6deg)",zIndex:2}}>
+                <img src="assets/academy-2filles-rires.jpg" alt={L("Atelier confection pour le spectacle, parents et enfants Sion Academy")} style={{width:"100%",height:"100%",objectFit:"cover",objectPosition:"center",display:"block"}} loading="lazy"/>
               </div>
             </div>
           </div>
@@ -1070,7 +1070,7 @@ const About=({go})=>{
       <section style={{padding:"0 0 0 0"}}>
         <div style={{maxWidth:"100%",margin:"0 auto"}}>
           <div className="reveal" style={{overflow:"hidden",position:"relative"}}>
-            <img src="assets/famille-5personnes.jpg" alt={L("Famille afro-caribéenne soudée devant la maison")} style={{width:"100%",height:"auto",display:"block",aspectRatio:"21/6",objectFit:"cover"}} loading="lazy"/>
+            <img src="assets/emergence-famille-attestations.jpg" alt={L("Famille martiniquaise avec attestations Parent Lab et Jardin pédagogique de Sion Émergence, panier de fruits du pays")} style={{width:"100%",height:"auto",display:"block",aspectRatio:"21/8",objectFit:"cover",objectPosition:"center 30%"}} loading="lazy"/>
           </div>
         </div>
       </section>
@@ -1661,7 +1661,7 @@ const Dispositifs=({go})=>{
   const items=[
     {icon:"leaf",title:"Le jardin pédagogique",tag:"Nature & apprentissage",c:"var(--forest)",bg:"var(--mist)",img:"assets/dispositifs-jardin-tomates.jpg",imgAlt:L("Jardin pédagogique avec tomates et légumes martiniquais"),desc:L("Le jardin est un prolongement de la classe. On y apprend à compter avec le vivant, on met les mains dans la terre, on se laisse enseigner par la nature : entraide des plantes, patience le temps que la graine germe et donne son fruit. Pas une activité récréative, un véritable laboratoire vivant."),points:["Sciences du vivant","Patience & entraide","Éco-responsabilité","Du potager à l'assiette"]},
     {icon:"utensils",title:"Le traiteur écoresponsable",tag:"Alimentation & territoire",c:"var(--teal-d)",bg:"var(--teal-l)",img:"assets/cuisine-traiteur.jpg",imgAlt:L("Récolte de tomates au jardin pédagogique de Sion Academy, du potager à l'assiette"),desc:L("Manger ensemble est un acte éducatif et communautaire. Cuisine de produits locaux, de saison, issus en partie du jardin pédagogique."),points:["Local & de saison","Lien jardin","Éducation alimentaire","Événements"]},
-    {icon:"sprout",title:"Producteurs locaux & souveraineté",tag:"Du pays, par le pays",c:"var(--gold-d)",bg:"var(--gold-p)",img:"assets/academy-enfants-martinique.jpg",imgAlt:L("Producteurs locaux martiniquais partagent leurs savoirs avec les enfants"),desc:L("Le jardin est aussi un espace de rencontre avec les producteurs locaux qui viennent partager leur savoir. Les enfants deviennent à la maison de vrais ambassadeurs d'une alimentation différente, d'un nouveau regard sur la consommation raisonnable, et d'une véritable souveraineté alimentaire pour la Martinique."),points:["Producteurs du pays","Souveraineté alimentaire","Consommation raisonnée","Enfants ambassadeurs"]},
+    {icon:"sprout",title:"Producteurs locaux & souveraineté",tag:"Du pays, par le pays",c:"var(--gold-d)",bg:"var(--gold-p)",img:"assets/dispositifs-vente-produits.jpg",imgAlt:L("Enfants vendent les légumes du jardin pédagogique, exercice de maths et d'économie"),desc:L("Le jardin est aussi un espace de rencontre avec les producteurs locaux qui viennent partager leur savoir. Les enfants deviennent à la maison de vrais ambassadeurs d'une alimentation différente, d'un nouveau regard sur la consommation raisonnable, et d'une véritable souveraineté alimentaire pour la Martinique."),points:["Producteurs du pays","Souveraineté alimentaire","Consommation raisonnée","Enfants ambassadeurs"]},
     {icon:"handshake",title:"La dynamique intergénérationnelle",tag:"Transmission & lien social",c:"var(--coral-d)",bg:"var(--blush-p)",img:"assets/intergen-grands-parents-jardin.jpg",imgAlt:L("Grands-parents et enfants au jardin pédagogique"),desc:L("Sion Émergence n'est pas réservé aux enfants. Notre dynamique intergénérationnelle est aussi une réponse au fléau de l'isolement des aînés : nous tissons des liens réguliers avec les EHPAD et autres structures d'accueil. Les anciens transmettent, les jeunes apportent leur énergie, les familles se rencontrent."),points:["Liens avec EHPAD","Intervenants anciens","Rencontres ouvertes","Lutte contre l'isolement"]}
   ];
   return(
