@@ -477,7 +477,7 @@ const Home=({go})=>{
             {/* Polaroid trio, univers afro-caribéen · 3D parallax */}
             <div className="reveal d2 hide-mob scene-3d" style={{position:"relative",height:580}}>
               <div className="polaroid float-y" style={{position:"absolute",top:0,right:20,width:260,transform:"rotate(4deg) translateZ(30px)",animationDelay:"0s"}}>
-                <img src="assets/academy-2filles-rires.jpg" alt={L("Un enfant afro-caribéen qui apprend en classe")} style={{width:"100%",aspectRatio:"3/4",objectFit:"cover",display:"block"}}/>
+                <img src="assets/academy-3garcons-rires.jpg" alt={L("Trois enfants Sion Academy hilares dans le couloir, joie et complicité")} style={{width:"100%",aspectRatio:"3/4",objectFit:"cover",display:"block"}}/>
                 <p className="hand" style={{position:"absolute",bottom:14,left:0,right:0,textAlign:"center",fontSize:20,color:"var(--ink-s)"}}>premier jour</p>
               </div>
               <div className="polaroid float-y" style={{position:"absolute",top:170,left:0,width:230,transform:"rotate(-5deg) translateZ(10px)",animationDelay:"1.2s"}}>
@@ -686,7 +686,7 @@ const Home=({go})=>{
               {src:"assets/academy-3garcons-livres.jpg",alt:L("Enfant qui lit un livre, apprentissage par la lecture"),t:"Lire pour grandir"},
               {src:"assets/joyclub-enfants-courent.jpg",alt:L("Enfant afro-caribéen joyeux, Joy Club"),t:"Joie & jeu"},
               {src:"assets/academy-projet-groupe.jpg",alt:L("Enfants apprennent ensemble, pédagogie active"),t:"Coopérer"},
-              {src:"assets/intergen-grands-parents-jardin.jpg",alt:L("Enfant au jardin pédagogique, nature et apprentissage"),t:"Nature"},
+              {src:"assets/academy-marelle-3filles.jpg",alt:L("Enfants jouent à la marelle dans la cour, jeu et mouvement"),t:"Nature"},
               {src:"assets/joyclub-atelier-art.jpg",alt:L("Enfant créatif, atelier artistique"),t:"Créer"},
               {src:"assets/famille-grand-pere-lecture.jpg",alt:L("Famille rassemblée, Parent Lab"),t:"En famille"}
             ].map((x, i)=>(
@@ -763,10 +763,10 @@ const About=({go})=>{
               <p className="reveal d2" style={{fontSize:18,lineHeight:1.65,color:"var(--ink-s)",maxWidth:560}}>Sion Émergence est né d{A}une envie simple : offrir à la Martinique un lieu qui rassemble vraiment les enfants, les parents et le territoire. Un endroit où l{A}excellence n{A}est pas réservée à quelques-uns. Un endroit qui croit que chaque enfant a en lui quelque chose de précieux à faire grandir.</p>
             </div>
             <div className="reveal d2 hide-mob" style={{position:"relative",height:600}}>
-              <div style={{position:"absolute",top:0,right:-20,width:"60%",aspectRatio:"4/3",borderRadius:"var(--r4)",overflow:"hidden",boxShadow:"0 30px 60px -20px rgba(27,40,38,.3)",transform:"rotate(5deg)",zIndex:1}}>
+              <div style={{position:"absolute",top:0,right:-20,width:"62%",aspectRatio:"3/2",borderRadius:"var(--r4)",overflow:"hidden",boxShadow:"0 30px 60px -20px rgba(27,40,38,.3)",transform:"rotate(5deg)",zIndex:1}}>
                 <img src="assets/parentlab-couple-dessin.jpg" alt={L("Atelier Parent Lab : présentation aux parents en Martinique")} style={{width:"100%",height:"100%",objectFit:"cover",objectPosition:"center",display:"block"}} loading="lazy"/>
               </div>
-              <div style={{position:"absolute",bottom:0,left:-10,width:"58%",aspectRatio:"4/3",borderRadius:"var(--r4)",overflow:"hidden",boxShadow:"0 30px 60px -20px rgba(27,40,38,.3)",transform:"rotate(-6deg)",zIndex:2}}>
+              <div style={{position:"absolute",bottom:0,left:-10,width:"60%",aspectRatio:"3/2",borderRadius:"var(--r4)",overflow:"hidden",boxShadow:"0 30px 60px -20px rgba(27,40,38,.3)",transform:"rotate(-6deg)",zIndex:2}}>
                 <img src="assets/academy-2filles-rires.jpg" alt={L("Atelier confection pour le spectacle, parents et enfants Sion Academy")} style={{width:"100%",height:"100%",objectFit:"cover",objectPosition:"center",display:"block"}} loading="lazy"/>
               </div>
             </div>
@@ -1045,7 +1045,7 @@ const About=({go})=>{
               <p style={{fontSize:18,lineHeight:1.7,color:"var(--ink-s)",marginTop:18}}>Sion Émergence fonctionne avec <strong style={{color:"var(--ink)"}}>tous ceux qui portent le pays</strong> : artisans, anciens, intervenants, professionnels, associations, institutions. Parce qu{A}une école ne s{A}élève pas sans ses voisins.</p>
             </div>
             <div className="reveal d1" style={{borderRadius:"var(--r5)",overflow:"hidden",boxShadow:"var(--sh3)"}}>
-              <img src="assets/intergen-grands-parents-jardin.jpg" alt={L("Grands-parents martiniquais avec enfants au jardin, transmission intergénérationnelle")} style={{width:"100%",height:"auto",display:"block",aspectRatio:"4/3",objectFit:"cover"}} loading="lazy"/>
+              <img src="assets/academy-2filles-presentation.jpg" alt={L("Élèves Sion Academy présentent un exposé sur les figures antillaises, transmission de la culture")} style={{width:"100%",height:"auto",display:"block",aspectRatio:"4/3",objectFit:"cover"}} loading="lazy"/>
             </div>
           </div>
           <div className="mob-1col" style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:18}}>
@@ -1070,7 +1070,7 @@ const About=({go})=>{
       <section style={{padding:"0 0 0 0"}}>
         <div style={{maxWidth:"100%",margin:"0 auto"}}>
           <div className="reveal" style={{overflow:"hidden",position:"relative"}}>
-            <img src="assets/emergence-famille-attestations.jpg" alt={L("Famille martiniquaise avec attestations Parent Lab et Jardin pédagogique de Sion Émergence, panier de fruits du pays")} style={{width:"100%",height:"auto",display:"block",aspectRatio:"21/8",objectFit:"cover",objectPosition:"center 30%"}} loading="lazy"/>
+            <img src="assets/emergence-famille-attestations.jpg" alt={L("Famille martiniquaise avec attestations Parent Lab et Jardin pédagogique de Sion Émergence, panier de fruits du pays")} style={{width:"100%",height:"auto",display:"block",aspectRatio:"16/10",objectFit:"cover",objectPosition:"center 25%"}} loading="lazy"/>
           </div>
         </div>
       </section>
@@ -1209,10 +1209,10 @@ const Academy=({go})=>{
         <div style={{maxWidth:1200,margin:"0 auto"}}>
           <div className="reveal mob-1col" style={{display:"grid",gridTemplateColumns:"1.4fr 1fr 1fr",gap:14}}>
             <div style={{borderRadius:"var(--r4)",overflow:"hidden",boxShadow:"var(--sh2)",aspectRatio:"4/3"}}>
-              <img src="assets/academy-classe-main-levee.jpg" alt={L("Élève qui lève la main en classe de maths Sion Academy")} style={{width:"100%",height:"100%",objectFit:"cover",display:"block"}} loading="lazy"/>
+              <img src="assets/academy-foot-3garcons.jpg" alt={L("Trois élèves Sion Academy jouent au football dans la cour")} style={{width:"100%",height:"100%",objectFit:"cover",display:"block"}} loading="lazy"/>
             </div>
             <div style={{borderRadius:"var(--r4)",overflow:"hidden",boxShadow:"var(--sh2)",aspectRatio:"4/3"}}>
-              <img src="assets/academy-3garcons-livres.jpg" alt={L("Trois enfants de Sion Academy lisent un livre")} style={{width:"100%",height:"100%",objectFit:"cover",display:"block"}} loading="lazy"/>
+              <img src="assets/academy-maths-tomates.jpg" alt={L("Élèves Sion Academy apprennent les multiplications avec des tomates au jardin")} style={{width:"100%",height:"100%",objectFit:"cover",display:"block"}} loading="lazy"/>
             </div>
             <div style={{borderRadius:"var(--r4)",overflow:"hidden",boxShadow:"var(--sh2)",aspectRatio:"4/3"}}>
               <img src="assets/academy-diplomes.jpg" alt={L("Enfants Sion Academy avec toques de diplômés")} style={{width:"100%",height:"100%",objectFit:"cover",display:"block"}} loading="lazy"/>
