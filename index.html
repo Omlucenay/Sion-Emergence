@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
+<html lang="fr"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sion Émergence, École, Joy Club & Parent Lab · Martinique</title>
+<title>Sion Émergence, École, Joy Club &amp; Parent Lab · Martinique</title>
 <meta name="description" content="Sion Émergence, un tiers-lieu éducatif en Martinique. École bienveillante Sion Academy, périscolaire Joy Club et école de la parentalité Parent Lab. Une enfance qui a du sens, une famille qui respire.">
 <meta name="keywords" content="école Martinique, école hors contrat Martinique, école chrétienne Martinique, Sion Academy, Sion Émergence, périscolaire Martinique, Joy Club, Parent Lab, école de la parentalité, pédagogie active Martinique, HPI Martinique">
 <meta name="author" content="Sion Émergence">
@@ -15,7 +14,7 @@
 <meta property="og:site_name" content="Sion Émergence">
 <link rel="canonical" href="https://sion-emergence.fr/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,400..800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,700&family=Inter:wght@300..700&family=Fredoka:wght@400;500;600;700&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin></script>
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin></script>
@@ -169,12 +168,16 @@ label{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercas
 .polaroid{background:#fff;padding:14px 14px 54px;box-shadow:0 20px 50px -16px rgba(27,40,38,.22),0 6px 12px -4px rgba(27,40,38,.08);position:relative}
 .polaroid::after{content:"";position:absolute;left:50%;top:-8px;transform:translateX(-50%) rotate(-1deg);width:72px;height:16px;background:rgba(232,114,90,.35);border-radius:2px}
 </style>
+
 </head>
 <body>
 <div id="root"></div>
 <script type="text/babel">
+
+
+
 const {useState, useEffect, useRef}=React;
-const A="\u2019";
+const A="’";
 const L=(s)=>s.replace(/'/g, A);
 
 /* ───── Hooks ───── */
@@ -620,7 +623,7 @@ const Home=({go})=>{
           <div className="mob-1col" style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:40,paddingTop:40}}>
             {[
               {n:"Maeva",r:"maman de deux enfants · Ducos",t:L("Je veux une école qui ressemble à ce qu'on est. Quand on m'a parlé de Sion Émergence, j'ai senti dès le premier mot que c'était ça."),rot:-3,c:"var(--blush)"},
-              {n:"Steeve & Audrey",r:"parents d'un garçon HPI · Fort-de-France",t:L("Notre fils a un QI de 132 et il dit qu'il est bête. À Sion, on nous a parlé d'enseignants formés et d'un vrai suivi. On a enfin l'impression d'être entendus."),rot:2,c:"var(--gold-l)"},
+              {n:"Steeve & Audrey",r:"parents d'un garçon HPI · Fort-de-France",t:L("Notre fils est diagnostiqué HPI et il se sent nul à l'école. Quand on a découvert Sion Émergence, on a entendu pour la première fois qu'on allait vraiment l'accompagner. On a enfin l'impression d'être entendus."),rot:2,c:"var(--gold-l)"},
               {n:"Ruddy",r:"chef d'entreprise · Le Lamentin",t:L("Je veux que mes filles apprennent à créer, pas juste à reproduire. Quand Olivier-Marie m'a parlé de Design for Change, j'ai compris que Sion, c'était autre chose. Elles iront."),rot:-1,c:"var(--teal-l)"}
             ].map((x, i)=>(
               <div key={i} className="reveal" style={{transitionDelay:(i*100)+"ms"}}>
@@ -644,9 +647,9 @@ const Home=({go})=>{
       <section style={{padding:"100px 32px",background:"var(--paper-s)"}}>
         <div style={{maxWidth:1440,margin:"0 auto"}}>
           <div className="reveal" style={{textAlign:"center",maxWidth:680,margin:"0 auto 56px"}}>
-            <p className="kicker" style={{color:"var(--forest)",marginBottom:14}}>Le pays, dans les yeux des enfants</p>
-            <h2 className="display" style={{fontSize:"clamp(36px,5vw,62px)",fontWeight:500,color:"var(--ink)"}}>Un lieu <em className="editorial" style={{color:"var(--coral)"}}>profondément martiniquais</em>.</h2>
-            <p style={{fontSize:17,color:"var(--ink-s)",marginTop:16,lineHeight:1.6}}>Nos élèves grandissent entourés des couleurs, des sons, des histoires et des saveurs du pays. L{A}histoire de la Martinique, les contes caraïbes, la langue créole, les savoirs des anciens, tout ça a sa place dans nos classes.</p>
+            <p className="kicker" style={{color:"var(--forest)",marginBottom:14}}>Grandir avec des modèles forts</p>
+            <h2 className="display" style={{fontSize:"clamp(36px,5vw,62px)",fontWeight:500,color:"var(--ink)"}}>S’inspirer de <em className="editorial" style={{color:"var(--coral)"}}>celles et ceux</em> qui nous précèdent.</h2>
+            <p style={{fontSize:17,color:"var(--ink-s)",marginTop:16,lineHeight:1.6}}>Il y a urgence à transmettre à nos enfants les visages de celles et ceux qui ont fait l{A}histoire des Antilles et de la Caraïbe. Penseurs, artistes, scientifiques, sportifs, bâtisseurs, hier comme aujourd{A}hui. C{A}est en s{A}identifiant à des figures fortes venues d{A}ici qu{A}un enfant comprend qu{A}il peut, lui aussi, faire grand.</p>
           </div>
           <div className="mob-1col" style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:16}}>
             {[
@@ -679,7 +682,7 @@ const Home=({go})=>{
           <div className="mob-1col" style={{display:"grid",gridTemplateColumns:"1.2fr .8fr",gap:48,alignItems:"start"}}>
             <div className="reveal">
               <p style={{fontSize:17,lineHeight:1.85,color:"var(--ink-s)",marginBottom:18}}>Sion Émergence n{A}est pas une école de plus. C{A}est un <strong style={{color:"var(--forest)"}}>tiers-lieu éducatif et communautaire</strong> en Martinique, qui articule trois offres complémentaires autour d{A}une même vision : faire grandir les enfants et renforcer les familles.</p>
-              <p style={{fontSize:17,lineHeight:1.85,color:"var(--ink-s)",marginBottom:18}}><strong style={{color:"var(--ink)"}}>Sion Academy</strong> est notre école primaire chrétienne hors contrat. Classes de 20 enfants maximum, pédagogie Freinet couplée au Design for Change (DFC), prise en compte réelle des enfants à haut potentiel (HPI), ancrage fort dans la culture martiniquaise. Une école qui apprend en faisant, qui respecte chaque enfant et qui prépare sérieusement à la suite.</p>
+              <p style={{fontSize:17,lineHeight:1.85,color:"var(--ink-s)",marginBottom:18}}><strong style={{color:"var(--ink)"}}>Sion Academy</strong>   est notre école primaire chrétienne hors contrat. Classes de 20 enfants maximum, pédagogie Freinet couplée au Design For Change (DFC), prise en charge des profils neuroatypiques (TDAH, troubles dys, etc) et des enfants à haut potentiel (HPI), ancrage fort dans la culture martiniquaise. Une école qui apprend en faisant, qui respecte chaque enfant et qui prépare sérieusement à la suite.</p>
               <p style={{fontSize:17,lineHeight:1.85,color:"var(--ink-s)",marginBottom:18}}><strong style={{color:"var(--ink)"}}>Joy Club</strong> accueille les enfants de Martinique avant et après l{A}école, le mercredi et pendant toutes les vacances scolaires. Aide aux devoirs et soutien scolaire sur place pour faciliter les déplacements des parents. Un vrai centre aéré joyeux, ouvert à tous, avec ateliers créatifs, sorties culturelles, rencontres avec les artisans du pays.</p>
               <p style={{fontSize:17,lineHeight:1.85,color:"var(--ink-s)"}}><strong style={{color:"var(--ink)"}}>Parent Lab</strong> est notre école de la parentalité : ateliers, groupes de parole, conférences, accompagnement à la parentalité. Parce qu{A}un parent soutenu élève mieux, et qu{A}une famille soudée change un territoire.</p>
             </div>
@@ -728,7 +731,7 @@ const About=({go})=>{
           <div className="mob-1col" style={{display:"grid",gridTemplateColumns:"1.2fr .8fr",gap:56,alignItems:"center"}}>
             <div>
               <div className="reveal" style={{marginBottom:14}}><p className="kicker" style={{color:"var(--forest)"}}>Le projet · Sion Émergence</p></div>
-              <h1 className="display reveal d1" style={{fontSize:"clamp(48px,7vw,104px)",fontWeight:500,color:"var(--ink)",lineHeight:.98,letterSpacing:"-.035em",marginBottom:32}}>Un lieu<br/><em className="editorial" style={{color:"var(--coral)"}}>qui tient debout</em><br/><span style={{color:"var(--forest)"}}>parce qu{A}il tient</span> <span className="underline-hand" style={{display:"inline-block"}}>par le cœur.</span></h1>
+              <h1 className="display reveal d1" style={{fontSize:"clamp(48px,7vw,104px)",fontWeight:500,color:"var(--ink)",lineHeight:.98,letterSpacing:"-.035em",marginBottom:32}}>Une école<br/><em className="editorial" style={{color:"var(--coral)"}}>née ici</em><br/><span style={{color:"var(--forest)"}}>pour</span> <span className="underline-hand" style={{display:"inline-block"}}>nos enfants.</span></h1>
               <p className="reveal d2" style={{fontSize:18,lineHeight:1.65,color:"var(--ink-s)",maxWidth:560}}>Sion Émergence est né d{A}une envie simple : offrir à la Martinique un lieu qui rassemble vraiment les enfants, les parents et le territoire. Un endroit où l{A}excellence n{A}est pas réservée à quelques-uns. Un endroit qui croit que chaque enfant a en lui quelque chose de précieux à faire grandir.</p>
             </div>
             <div className="reveal d2 hide-mob" style={{position:"relative",height:600}}>
@@ -928,13 +931,13 @@ const About=({go})=>{
             <h2 className="display" style={{fontSize:"clamp(40px,5.5vw,72px)",fontWeight:500,color:"#fff",lineHeight:1.02}}>Un projet chrétien, <em className="editorial" style={{color:"var(--coral-l)"}}>inclusif</em> & <em className="editorial" style={{color:"var(--sun-l)"}}>humain.</em></h2>
             <p style={{fontSize:18,lineHeight:1.65,color:"rgba(255,255,255,.85)",marginTop:20,marginBottom:14}}><strong style={{color:"#fff"}}>{L("Nous sommes chrétiens, pas religieux.")}</strong> {L("Notre foi guide notre façon d'accueillir, d'écouter, de respecter chaque enfant et chaque parent. Mais elle ne s'impose à personne.")}</p>
             <p style={{fontSize:17,lineHeight:1.7,color:"rgba(255,255,255,.78)",marginBottom:14}}>{L("Concrètement : nous accompagnons l'épanouissement de la foi des enfants chrétiens qui le souhaitent, et nous accueillons avec la même attention les familles d'autres convictions ou sans religion.")}</p>
-            <p style={{fontSize:17,lineHeight:1.7,color:"rgba(255,255,255,.78)"}}>{L("Ce qui rassemble ici, c'est l'envie d'élever les enfants debout, fiers et libres, dans une école qui prend soin d'eux comme on prend soin d'un terreau précieux.")}</p>
+            <p style={{fontSize:17,lineHeight:1.7,color:"rgba(255,255,255,.78)"}}>{L("Ce qui rassemble ici, c'est l'envie d'élever des enfants fiers et libres, dans une école qui prend soin d'eux comme on prend soin d'un terreau précieux.")}</p>
           </div>
           <div className="mob-1col" style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:24}}>
             {[
               {t:"Notre mission",s:"Ce que nous faisons",c:"var(--coral-l)",
                 d:L("Créer un espace où l'éducation, la famille et le territoire se rejoignent pour former des enfants épanouis et des familles renforcées."),
-                extra:["Former des enfants debout, intelligents, libres","Soutenir les parents, jamais les juger","Reconnecter l'école au pays","Rassembler les générations autour de l'enfant"]},
+                extra:["Former des enfants intelligents et libres","Soutenir les parents, jamais les juger","Reconnecter l'école au pays","Rassembler les générations autour de l'enfant"]},
               {t:"Notre vision",s:"Ce vers quoi nous tendons",c:"var(--teal-l)",
                 d:L("Une Martinique où chaque enfant, quelles que soient ses origines, accède à une éducation de qualité dans un cadre bienveillant et exigeant."),
                 extra:[L("Une jeunesse caribéenne fière & curieuse"),"Des familles qui ne s'épuisent plus seules","Un pays qui forme le pays","Une intelligence caribéenne qui émerge"]},
@@ -1055,8 +1058,10 @@ const About=({go})=>{
             <p className="kicker" style={{color:"var(--sun-l)",marginBottom:22,fontSize:13}}>Manifeste</p>
             <h2 className="display" style={{fontSize:"clamp(44px,7vw,110px)",fontWeight:500,color:"#fff",lineHeight:.98,letterSpacing:"-.04em",marginBottom:40}}>Nous voulons<br/><em className="editorial" style={{color:"var(--coral-l)"}}>l{A}émergence</em><br/>d{A}une <span className="underline-hand" style={{display:"inline-block"}}>intelligence caribéenne.</span></h2>
             <div style={{maxWidth:760,margin:"0 auto"}}>
-              <p style={{fontSize:"clamp(18px,2vw,22px)",lineHeight:1.7,color:"rgba(255,255,255,.9)",marginBottom:20}}>Une intelligence qui ne s{A}excuse pas d{A}être caribéenne. Qui ne copie pas. Qui <strong style={{color:"#fff"}}>invente à partir d{A}ici</strong>, de son sol, de sa langue, de ses anciens.</p>
-              <p style={{fontSize:"clamp(18px,2vw,22px)",lineHeight:1.7,color:"rgba(255,255,255,.85)",marginBottom:20}}>Une intelligence <em style={{color:"var(--sun-l)",fontStyle:"italic"}}>enracinée</em> et pourtant ouverte. Sérieuse et joyeuse. Exigeante et bienveillante. Chrétienne dans le geste, universelle dans l{A}accueil.</p>
+              <p style={{fontSize:"clamp(18px,2vw,22px)",lineHeight:1.7,color:"rgba(255,255,255,.9)",marginBottom:20}}>Une intelligence qui ne s{A}excuse pas d{A}être caribéenne. Qui ne copie pas. Qui <strong style={{color:"#fff"}}>invente à partir de son histoire</strong>, de son sol, de sa langue,
+de ses anciens.</p>
+              <p style={{fontSize:"clamp(18px,2vw,22px)",lineHeight:1.7,color:"rgba(255,255,255,.85)",marginBottom:20}}>Une intelligence <em style={{color:"var(--sun-l)",fontStyle:"italic"}}>enracinée</em>  et ouverte à la fois. Sérieuse et joyeuse. Exigeante et bienveillante.
+Chrétienne dans la vision, donc universelle dans l{A}accueil.</p>
               <p style={{fontSize:"clamp(18px,2vw,22px)",lineHeight:1.7,color:"rgba(255,255,255,.78)",marginBottom:40}}>C{A}est à cela que nous travaillons. Pas seuls. <strong style={{color:"var(--coral-l)"}}>Avec vous, si vous le voulez.</strong></p>
               <div style={{display:"flex",gap:14,justifyContent:"center",flexWrap:"wrap"}}>
                 <Btn v="coral" size="lg" onClick={()=>go("candidatures")} icon="arrowRight">Rejoindre le projet</Btn>
@@ -1110,7 +1115,7 @@ const Academy=({go})=>{
   const faqs=[
     [L("L'école est-elle ouverte à tous ?"),L("Oui. Sion Academy est une école chrétienne ouverte à toutes les familles qui adhèrent à notre projet éducatif et à nos valeurs. Nous ne demandons pas d'appartenance religieuse, nous demandons l'adhésion sincère au projet.")],
     [L("Qu'est-ce qu'une école hors contrat ?"),L("Une école libre, non liée à l'Éducation nationale, qui définit ses programmes et sa pédagogie tout en respectant les obligations d'instruction légales.")],
-    ["Comment reconnaissez-vous les enfants HPI ?",L("Nos enseignants sont formés à l'identification. Nous adaptons parcours et apprentissages, en lien étroit avec la famille.")],
+    [L("Comment reconnaissez-vous les enfants HPI ?"),L("Nos enseignants sont formés à l'identification. Nous adaptons parcours et apprentissages, en lien étroit avec la famille.")],
     ["Quels sont les effectifs ?",L("≤ 20 élèves par classe. Cette taille garantit un suivi réel et une relation éducative de qualité.")],
     [L("Comment se déroule l'admission ?"),L("Prise de contact → visite du lieu → entretien famille → étude du dossier. Rendez-vous sur la page Candidatures.")]
   ];
@@ -1339,7 +1344,7 @@ const Academy=({go})=>{
             <div className="reveal">
               <p className="kicker" style={{color:"var(--sun-l)",marginBottom:14}}>Ancrage martiniquais & caribéen</p>
               <h2 className="display" style={{fontSize:"clamp(34px,4.6vw,58px)",fontWeight:500,color:"#fff",marginBottom:18}}>{L("Savoir d'où l'on vient")}<br/><em className="editorial" style={{color:"var(--coral-l)"}}>pour aller plus loin.</em></h2>
-              <p style={{fontSize:17,lineHeight:1.85,color:"rgba(255,255,255,.82)",marginBottom:18}}>{L("L'histoire de la Martinique, les contes caraïbes, la langue créole, les savoirs des anciens. Tout ça a sa place dans les classes de Sion Academy, pas comme un folklore, mais comme un socle vivant.")}</p>
+              <p style={{fontSize:17,lineHeight:1.85,color:"rgba(255,255,255,.82)",marginBottom:18}}>{L("L'histoire de la Martinique, les contes caraïbes, la langue créole, les savoirs des anciens. Toute cette richesse a sa place dans les classes de Sion Academy comme un socle vivant.")}</p>
               <p style={{fontSize:17,lineHeight:1.85,color:"rgba(255,255,255,.75)"}}>{L("Nos enfants grandissent fiers de leur identité, ouverts au monde, bilingues français/créole, conscients de leur territoire et de sa biodiversité exceptionnelle.")}</p>
             </div>
             <div className="reveal d1" style={{display:"flex",flexDirection:"column",gap:14}}>
@@ -1823,6 +1828,10 @@ const App=()=>{
 };
 
 ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
+
+
+
 </script>
-</body>
-</html>
+
+
+</body></html>
