@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/aire2407/sion-emergence.fr/
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp -r assets $DEPLOYPATH
