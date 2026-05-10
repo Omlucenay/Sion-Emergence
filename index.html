@@ -2014,9 +2014,12 @@ const Partenaires=({go})=>{
 /* ─────────────────────────────────────
    APP
 ────────────────────────────────────── */
+const VALID_PAGES=["home","about","academy","joyclub","parentlab","dispositifs","candidatures","partenaires"];
 const App=()=>{
-  const[page, setPage]=useState("home");
-  const go=(p)=>{setPage(p);requestAnimationFrame(()=>{document.documentElement.scrollTop=0;document.body.scrollTop=0;window.scrollTo({top:0,left:0,behavior:"instant"})})};
+  const getInitialPage=()=>{const h=window.location.hash.replace("#","");return VALID_PAGES.includes(h)?h:"home";};
+  const[page, setPage]=useState(getInitialPage);
+  const go=(p)=>{setPage(p);window.location.hash=p==="home"?"":p;requestAnimationFrame(()=>{document.documentElement.scrollTop=0;document.body.scrollTop=0;window.scrollTo({top:0,left:0,behavior:"instant"})})};
+  useEffect(()=>{const onHash=()=>{const h=window.location.hash.replace("#","");if(VALID_PAGES.includes(h))setPage(h);};window.addEventListener("hashchange",onHash);return()=>window.removeEventListener("hashchange",onHash);},[]);
   const pages={home:<Home go={go}/>,about:<About go={go}/>,academy:<Academy go={go}/>,joyclub:<JoyClub go={go}/>,parentlab:<ParentLab go={go}/>,dispositifs:<Dispositifs go={go}/>,candidatures:<Candidatures go={go}/>,partenaires:<Partenaires go={go}/>};
   return(<><Nav page={page} go={go}/>{pages[page]||<Home go={go}/>}<NewsletterPopup/></>);
 };
