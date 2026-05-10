@@ -363,7 +363,7 @@ const Nav=({page, go})=>{
     <div style={{background:"var(--ink)",color:"var(--paper)",overflow:"hidden",padding:"8px 0",fontSize:12,fontFamily:"'Inter',sans-serif",fontWeight:500,letterSpacing:".05em"}}>
       <div style={{display:"flex",gap:48,whiteSpace:"nowrap",width:"max-content"}} className="marquee-track">
         {Array(2).fill(0).map((_,k)=><div key={k} style={{display:"flex",gap:48}}>
-          {["Inscriptions 2026 · 2027 ouvertes","Un tiers-lieu éducatif en Martinique","École · Joy Club · Parent Lab","Rentrée en septembre 2026","contact@sion-emergence.fr"].map((t, i)=>
+          {["Inscriptions ouvertes","Un tiers-lieu éducatif en Martinique","École primaire · Centre aéré · École de la parentalité","Joy Club · Rentrée septembre 2026","Sion Academy · Rentrée septembre 2027","Parent Lab · Ateliers dès 2026","contact@sion-emergence.fr"].map((t, i)=>
             <span key={i} style={{display:"flex",alignItems:"center",gap:16}}>
               <span style={{opacity:.95}}>{t}</span>
               <span style={{opacity:.4}}></span>
@@ -436,6 +436,170 @@ const Footer=({go})=>(
 /* ─────────────────────────────────────
    PAGE HOME
 ────────────────────────────────────── */
+const NewsletterSection=()=>{
+  const[prenom,setPrenom]=useState("");
+  const[email,setEmail]=useState("");
+  const[errors,setErrors]=useState({});
+  const[sent,setSent]=useState(false);
+  const[loading,setLoading]=useState(false);
+
+  const validate=()=>{
+    const e={};
+    if(!prenom.trim()||prenom.trim().length<2) e.prenom="Prénom requis (min. 2 caractères)";
+    if(!email.trim()) e.email="Adresse e-mail requise";
+    else if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) e.email="Adresse e-mail invalide";
+    return e;
+  };
+
+  const WEBHOOK="https://hook.eu2.make.com/lldcybv78ck1fgq5inzgxxlx73ozvbpk";
+
+  const handleSubmit=async(ev)=>{
+    ev.preventDefault();
+    const e=validate();
+    if(Object.keys(e).length>0){setErrors(e);return;}
+    setErrors({});setLoading(true);
+    try{
+      await fetch(WEBHOOK,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({prenom:prenom.trim(),email:email.trim(),source:"section"})});
+    }catch(_){}
+    setLoading(false);setSent(true);
+  };
+
+  const fieldStyle=(hasErr)=>({
+    width:"100%",padding:"14px 18px",borderRadius:"var(--r2)",border:`1.5px solid ${hasErr?"var(--coral)":"var(--line)"}`,
+    fontFamily:"'Inter',sans-serif",fontSize:15,color:"var(--ink)",background:"#fff",outline:"none",
+    transition:"border-color .2s var(--out)",boxSizing:"border-box"
+  });
+
+  if(sent) return(
+    <section style={{padding:"100px 32px",background:"var(--mist)",position:"relative",overflow:"hidden"}}>
+      <div style={{maxWidth:620,margin:"0 auto",textAlign:"center"}}>
+        <div style={{fontSize:56,marginBottom:16}}>🌿</div>
+        <h2 className="display" style={{fontSize:"clamp(32px,4.5vw,52px)",fontWeight:500,color:"var(--forest)",marginBottom:14}}>Merci <em className="editorial">{prenom} !</em></h2>
+        <p style={{fontSize:17,color:"var(--ink-s)",lineHeight:1.7}}>Vous êtes maintenant inscrit·e à la newsletter Sion Émergence. Nous vous tiendrons informé·e des actualités du projet.</p>
+      </div>
+    </section>
+  );
+
+  return(
+    <section style={{padding:"100px 32px",background:"var(--mist)",position:"relative",overflow:"hidden"}}>
+      <Arc c="var(--forest-l)" w={260} h={90} s={{position:"absolute",top:24,right:"8%",opacity:.18}}/>
+      <div style={{maxWidth:700,margin:"0 auto",position:"relative",zIndex:1}}>
+        <div className="reveal" style={{textAlign:"center",marginBottom:44}}>
+          <p className="kicker" style={{color:"var(--forest)",marginBottom:14}}>Restez informé·e</p>
+          <h2 className="display" style={{fontSize:"clamp(34px,5vw,60px)",fontWeight:500,color:"var(--ink)",lineHeight:1.05,marginBottom:16}}>La newsletter <em className="editorial" style={{color:"var(--coral)"}}>Sion.</em></h2>
+          <p style={{fontSize:17,color:"var(--ink-s)",lineHeight:1.7,maxWidth:520,margin:"0 auto"}}>Actualités du projet, avancées de l'ouverture, événements à venir : recevez nos nouvelles directement dans votre boîte mail.</p>
+        </div>
+        <form className="reveal d1" onSubmit={handleSubmit} noValidate style={{background:"#fff",borderRadius:"var(--r5)",padding:"44px 40px",boxShadow:"var(--sh3)"}}>
+          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:16,marginBottom:16}}>
+            <div>
+              <label style={{display:"block",fontSize:13,fontWeight:600,color:"var(--ink-s)",marginBottom:6,letterSpacing:".02em"}}>Prénom <span style={{color:"var(--coral)"}}>*</span></label>
+              <input value={prenom} onChange={e=>setPrenom(e.target.value)} placeholder="Votre prénom" style={fieldStyle(errors.prenom)} onFocus={e=>e.target.style.borderColor="var(--forest)"} onBlur={e=>e.target.style.borderColor=errors.prenom?"var(--coral)":"var(--line)"}/>
+              {errors.prenom&&<p style={{fontSize:12,color:"var(--coral)",marginTop:5}}>{errors.prenom}</p>}
+            </div>
+            <div>
+              <label style={{display:"block",fontSize:13,fontWeight:600,color:"var(--ink-s)",marginBottom:6,letterSpacing:".02em"}}>Adresse e-mail <span style={{color:"var(--coral)"}}>*</span></label>
+              <input type="email" value={email} onChange={e=>setEmail(e.target.value)} placeholder="votre@email.fr" style={fieldStyle(errors.email)} onFocus={e=>e.target.style.borderColor="var(--forest)"} onBlur={e=>e.target.style.borderColor=errors.email?"var(--coral)":"var(--line)"}/>
+              {errors.email&&<p style={{fontSize:12,color:"var(--coral)",marginTop:5}}>{errors.email}</p>}
+            </div>
+          </div>
+          <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",flexWrap:"wrap",gap:16,marginTop:8}}>
+            <p style={{fontSize:12,color:"var(--ink-l)",maxWidth:340}}>Pas de spam. Désinscription libre à tout moment. Vos données restent confidentielles.</p>
+            <Btn v="forest" size="lg" icon="arrowRight" onClick={()=>{}} >{loading?"Envoi en cours…":"S'abonner à la newsletter"}</Btn>
+          </div>
+        </form>
+      </div>
+    </section>
+  );
+};
+
+const NewsletterPopup=()=>{
+  const[visible,setVisible]=useState(false);
+  const[prenom,setPrenom]=useState("");
+  const[email,setEmail]=useState("");
+  const[errors,setErrors]=useState({});
+  const[sent,setSent]=useState(false);
+  const[loading,setLoading]=useState(false);
+
+  useEffect(()=>{
+    if(sessionStorage.getItem("nl_dismissed")) return;
+    const t=setTimeout(()=>setVisible(true),5000);
+    return()=>clearTimeout(t);
+  },[]);
+
+  const close=()=>{sessionStorage.setItem("nl_dismissed","1");setVisible(false);};
+
+  const validate=()=>{
+    const e={};
+    if(!prenom.trim()||prenom.trim().length<2) e.prenom="Prénom requis (min. 2 car.)";
+    if(!email.trim()) e.email="E-mail requis";
+    else if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) e.email="E-mail invalide";
+    return e;
+  };
+
+  const WEBHOOK="https://hook.eu2.make.com/lldcybv78ck1fgq5inzgxxlx73ozvbpk";
+
+  const handleSubmit=async(ev)=>{
+    ev.preventDefault();
+    const e=validate();
+    if(Object.keys(e).length>0){setErrors(e);return;}
+    setErrors({});setLoading(true);
+    try{
+      await fetch(WEBHOOK,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({prenom:prenom.trim(),email:email.trim(),source:"popup"})});
+    }catch(_){}
+    setLoading(false);setSent(true);
+    setTimeout(close,2800);
+  };
+
+  const fieldStyle=(hasErr)=>({
+    width:"100%",padding:"12px 16px",borderRadius:"var(--r2)",border:`1.5px solid ${hasErr?"var(--coral)":"var(--line)"}`,
+    fontFamily:"'Inter',sans-serif",fontSize:14,color:"var(--ink)",background:"#fff",outline:"none",
+    transition:"border-color .2s var(--out)",boxSizing:"border-box"
+  });
+
+  if(!visible) return null;
+
+  return(
+    <div style={{position:"fixed",inset:0,zIndex:9999,display:"flex",alignItems:"center",justifyContent:"center",padding:20}}
+      onClick={e=>{if(e.target===e.currentTarget)close();}}>
+      {/* Backdrop */}
+      <div style={{position:"absolute",inset:0,background:"rgba(27,40,38,.55)",backdropFilter:"blur(6px)",animation:"fadeIn .35s var(--out)"}}/>
+      {/* Card */}
+      <div style={{position:"relative",background:"var(--paper)",borderRadius:"var(--r5)",padding:"52px 44px 44px",maxWidth:520,width:"100%",boxShadow:"var(--sh5)",animation:"slideUp .45s var(--spring)"}}>
+        <button onClick={close} aria-label="Fermer" style={{position:"absolute",top:18,right:18,background:"var(--paper-d)",border:"none",borderRadius:"50%",width:36,height:36,cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center",fontSize:18,color:"var(--ink-m)",transition:"background .2s"}} onMouseEnter={e=>e.currentTarget.style.background="var(--line)"} onMouseLeave={e=>e.currentTarget.style.background="var(--paper-d)"}>✕</button>
+        {sent?(
+          <div style={{textAlign:"center",padding:"12px 0"}}>
+            <div style={{fontSize:52,marginBottom:14}}>🌿</div>
+            <h2 className="display" style={{fontSize:36,fontWeight:500,color:"var(--forest)",marginBottom:10}}>Merci <em className="editorial">{prenom} !</em></h2>
+            <p style={{fontSize:16,color:"var(--ink-s)",lineHeight:1.65}}>Vous êtes inscrit·e. On se retrouve dans votre boîte mail avec les actualités Sion.</p>
+          </div>
+        ):(
+          <form onSubmit={handleSubmit} noValidate>
+            <p className="kicker" style={{color:"var(--coral)",marginBottom:12}}>Restez informé·e</p>
+            <h2 className="display" style={{fontSize:"clamp(28px,4vw,40px)",fontWeight:500,color:"var(--ink)",lineHeight:1.05,marginBottom:10}}>La newsletter <em className="editorial" style={{color:"var(--forest)"}}>Sion.</em></h2>
+            <p style={{fontSize:15,color:"var(--ink-s)",lineHeight:1.65,marginBottom:28}}>Actualités, ouverture, événements : recevez nos nouvelles directement dans votre boîte mail.</p>
+            <div style={{marginBottom:14}}>
+              <label style={{display:"block",fontSize:12,fontWeight:600,color:"var(--ink-s)",marginBottom:5,letterSpacing:".02em"}}>Prénom <span style={{color:"var(--coral)"}}>*</span></label>
+              <input value={prenom} onChange={e=>setPrenom(e.target.value)} placeholder="Votre prénom" style={fieldStyle(errors.prenom)} onFocus={e=>e.target.style.borderColor="var(--forest)"} onBlur={e=>e.target.style.borderColor=errors.prenom?"var(--coral)":"var(--line)"}/>
+              {errors.prenom&&<p style={{fontSize:11,color:"var(--coral)",marginTop:4}}>{errors.prenom}</p>}
+            </div>
+            <div style={{marginBottom:24}}>
+              <label style={{display:"block",fontSize:12,fontWeight:600,color:"var(--ink-s)",marginBottom:5,letterSpacing:".02em"}}>Adresse e-mail <span style={{color:"var(--coral)"}}>*</span></label>
+              <input type="email" value={email} onChange={e=>setEmail(e.target.value)} placeholder="votre@email.fr" style={fieldStyle(errors.email)} onFocus={e=>e.target.style.borderColor="var(--forest)"} onBlur={e=>e.target.style.borderColor=errors.email?"var(--coral)":"var(--line)"}/>
+              {errors.email&&<p style={{fontSize:11,color:"var(--coral)",marginTop:4}}>{errors.email}</p>}
+            </div>
+            <Btn v="forest" size="lg" full icon="arrowRight" onClick={()=>{}}>{loading?"Envoi en cours…":"S'abonner à la newsletter"}</Btn>
+            <p style={{fontSize:11,color:"var(--ink-l)",marginTop:12,textAlign:"center"}}>Pas de spam · Désinscription libre · Données confidentielles</p>
+          </form>
+        )}
+      </div>
+      <style>{`
+        @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+        @keyframes slideUp{from{opacity:0;transform:translateY(32px) scale(.97)}to{opacity:1;transform:none}}
+      `}</style>
+    </div>
+  );
+};
+
 const Home=({go})=>{
   const ref=useRef();useReveal(ref);
   return(
@@ -450,8 +614,8 @@ const Home=({go})=>{
           <div className="mob-1col" style={{display:"grid",gridTemplateColumns:"1.2fr .8fr",gap:80,alignItems:"end"}}>
             <div>
               <div className="reveal" style={{display:"inline-flex",alignItems:"center",gap:10,marginBottom:28}}>
-                <Chip dot="var(--coral)" color="var(--forest)" bg="var(--mist)">Rentrée · Septembre 2026</Chip>
-                <Chip color="var(--ink)" bg="var(--gold-l)">Martinique</Chip>
+                <Chip dot="var(--coral)" color="var(--forest)" bg="var(--mist)">École · Rentrée septembre 2027</Chip>
+                <Chip color="var(--ink)" bg="var(--gold-l)">Joy Club · Septembre 2026</Chip>
               </div>
               <h1 className="display display-xl reveal d1" style={{fontSize:"clamp(56px,9vw,128px)",fontWeight:500,color:"var(--ink)",marginBottom:24}}>
                 L{A}enfance,<br/>
@@ -626,6 +790,8 @@ const Home=({go})=>{
         </div>
       </section>
 
+      <NewsletterSection/>
+
       {/* CITATION CÉSAIRE */}
       <section style={{padding:"100px 32px",background:"var(--ink)",color:"#fff",position:"relative",overflow:"hidden"}}>
         <div style={{position:"absolute",top:-80,right:-40,opacity:.25}} style={{opacity:.85}}><SunRays c="var(--sun)" size={320}/></div>
@@ -715,7 +881,7 @@ const Home=({go})=>{
               <p style={{fontSize:17,lineHeight:1.85,color:"var(--ink-s)"}}><strong style={{color:"var(--ink)"}}>Parent Lab</strong> est notre école de la parentalité : ateliers, groupes de parole, conférences, accompagnement à la parentalité. Parce qu{A}un parent soutenu élève mieux, et qu{A}une famille soudée change un territoire.</p>
             </div>
             <div className="reveal d1" style={{display:"flex",flexDirection:"column",gap:14}}>
-              {[{ic:"mapPin",c:"var(--forest)",t:"Martinique",d:"Au cœur de la Caraïbe"},{ic:"clock",c:"var(--coral)",t:"Rentrée septembre 2026",d:"Candidatures ouvertes"},{ic:"users",c:"var(--teal-d)",t:"≤ 20 élèves par classe",d:"Chaque enfant connu, nommé, suivi"},{ic:"sprout",c:"var(--gold-d)",t:"Ancrage martiniquais",d:"Pays · créole · savoirs transmis"}].map((x, i)=>(
+              {[{ic:"mapPin",c:"var(--forest)",t:"Martinique",d:"Au cœur de la Caraïbe"},{ic:"clock",c:"var(--coral)",t:"Lancement progressif",d:"Joy Club & Parent Lab dès 2026 · École en 2027"},{ic:"users",c:"var(--teal-d)",t:"≤ 20 élèves par classe",d:"Chaque enfant connu, nommé, suivi"},{ic:"sprout",c:"var(--gold-d)",t:"Ancrage martiniquais",d:"Pays · créole · savoirs transmis"}].map((x, i)=>(
                 <div key={x.t} className="tile" style={{background:"var(--paper-s)",borderRadius:"var(--r3)",padding:"22px 24px",display:"flex",gap:14,alignItems:"center",boxShadow:"var(--sh1)"}}>
                   <Icon name={x.ic} size={22} color={x.c} bg="#fff" padding={18}/>
                   <div><p style={{fontSize:15,fontWeight:700,color:"var(--ink)",marginBottom:2}}>{x.t}</p><p style={{fontSize:13,color:"var(--ink-m)"}}>{x.d}</p></div>
@@ -732,7 +898,7 @@ const Home=({go})=>{
         <Arc c="var(--coral)" w={300} h={120} s={{position:"absolute",bottom:40,left:"10%",opacity:.5}}/>
         <div style={{maxWidth:900,margin:"0 auto",textAlign:"center",position:"relative",zIndex:1}}>
           <div className="reveal">
-            <p className="kicker" style={{color:"var(--gold-l)",marginBottom:24}}>Rentrée 2026 · 2027</p>
+            <p className="kicker" style={{color:"var(--gold-l)",marginBottom:24}}>Sion Academy · Rentrée 2027</p>
             <h2 className="display" style={{fontSize:"clamp(48px,7vw,110px)",fontWeight:500,lineHeight:1,letterSpacing:"-.035em",color:"#fff",marginBottom:32}}>Une place<br/><em className="editorial" style={{color:"var(--coral)"}}>pour votre</em><br/><span className="circle-hand" style={{display:"inline-block",padding:"0 18px"}}>enfant.</span></h2>
             <p style={{fontSize:19,color:"rgba(250,247,240,.75)",maxWidth:620,margin:"0 auto 44px"}}>Les places sont limitées. Nous rencontrons chaque famille. Prenez contact dès aujourd{A}hui, on fera connaissance.</p>
             <div style={{display:"flex",gap:14,justifyContent:"center",flexWrap:"wrap"}}>
@@ -1730,7 +1896,7 @@ const Candidatures=({go})=>{
       <section style={{padding:"56px 32px 64px",background:"var(--ink)",color:"#fff",position:"relative",overflow:"hidden"}}>
         <SunRays c="var(--sun)" size={240} s={{position:"absolute",top:-60,right:-40,opacity:.25}}/>
         <div style={{maxWidth:1200,margin:"0 auto",position:"relative"}}>
-          <div className="reveal"><Chip bg="rgba(255,255,255,.14)" color="#fff">Rentrée 2026 · 2027</Chip></div>
+          <div className="reveal"><Chip bg="rgba(255,255,255,.14)" color="#fff">Inscriptions ouvertes · Joy Club 2026 · Académie 2027</Chip></div>
           <h1 className="display reveal d1" style={{fontSize:"clamp(52px,8vw,120px)",fontWeight:500,color:"#fff",lineHeight:.96,marginTop:20,marginBottom:22,letterSpacing:"-.035em"}}>Rejoindre<br/><em className="editorial" style={{color:"var(--coral)"}}>Sion Émergence.</em></h1>
           <p className="reveal d2" style={{fontSize:19,lineHeight:1.65,color:"rgba(250,247,240,.75)",maxWidth:580}}>Les places sont limitées. Nous rencontrons chaque famille individuellement pour vérifier l{A}alignement autour du projet.</p>
         </div>
@@ -1749,7 +1915,7 @@ const Candidatures=({go})=>{
               ))}
               <div className="tile" style={{marginTop:24,padding:"22px 24px",background:"var(--blush-p)",borderRadius:"var(--r3)",boxShadow:"var(--sh1)"}}>
                 <p className="kicker" style={{color:"var(--coral-d)",marginBottom:8}}>Avant de candidater</p>
-                <p style={{fontSize:15,lineHeight:1.6,color:"var(--ink-s)",marginBottom:14}}>{L("Vous pouvez aussi nous adresser une lettre d'intention signée en ligne. Cela nous permet de mesurer l'intérêt des familles pour la rentrée 2026 et de préparer l'ouverture.")}</p>
+                <p style={{fontSize:15,lineHeight:1.6,color:"var(--ink-s)",marginBottom:14}}>{L("Vous pouvez aussi nous adresser une lettre d'intention signée en ligne. Cela nous permet de mesurer l'intérêt des familles pour la rentrée 2027 de Sion Academy et l'ouverture du Joy Club en septembre 2026, et de préparer l'ouverture.")}</p>
                 <a href="https://intentions.sion-emergence.fr" target="_blank" rel="noopener" style={{display:"inline-flex",alignItems:"center",gap:8,padding:"10px 18px",background:"var(--coral)",color:"#fff",borderRadius:"var(--r-pill)",fontSize:14,fontWeight:600,textDecoration:"none"}}>Écrire une lettre d&apos;intention →</a>
               </div>
             </div>
@@ -1852,7 +2018,7 @@ const App=()=>{
   const[page, setPage]=useState("home");
   const go=(p)=>{setPage(p);requestAnimationFrame(()=>{document.documentElement.scrollTop=0;document.body.scrollTop=0;window.scrollTo({top:0,left:0,behavior:"instant"})})};
   const pages={home:<Home go={go}/>,about:<About go={go}/>,academy:<Academy go={go}/>,joyclub:<JoyClub go={go}/>,parentlab:<ParentLab go={go}/>,dispositifs:<Dispositifs go={go}/>,candidatures:<Candidatures go={go}/>,partenaires:<Partenaires go={go}/>};
-  return(<><Nav page={page} go={go}/>{pages[page]||<Home go={go}/>}</>);
+  return(<><Nav page={page} go={go}/>{pages[page]||<Home go={go}/>}<NewsletterPopup/></>);
 };
 
 ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
