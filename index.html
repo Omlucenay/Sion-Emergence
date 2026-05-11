@@ -346,7 +346,8 @@ const NAV=[
   {id:"joyclub",label:"Joy Club"},
   {id:"parentlab",label:"Parent Lab"},
   {id:"dispositifs",label:"Dispositifs"},
-  {id:"partenaires",label:"Partenaires"}
+  {id:"partenaires",label:"Partenaires"},
+  {id:"recrutement",label:"Rejoindre l'équipe"}
 ];
 
 const Nav=({page, go})=>{
@@ -416,7 +417,7 @@ const Footer=({go})=>(
         </div>
         {[
           {t:"Explorer",l:[["Le projet","about"],["Sion Academy","academy"],["Joy Club","joyclub"],["Parent Lab","parentlab"],["Dispositifs","dispositifs"]]},
-          {t:"Nous rejoindre",l:[["Candidatures","candidatures"],["Partenaires","partenaires"]]},
+          {t:"Nous rejoindre",l:[["Inscrire mon enfant","candidatures"],["Travailler avec nous","recrutement"],["Partenaires","partenaires"]]},
           {t:"Contact",l:[["contact@sion-emergence.fr","partenaires"],["Martinique","partenaires"]]}
         ].map(c=>(
           <div key={c.t}>
@@ -629,8 +630,7 @@ const Home=({go})=>{
                 {L("Un tiers-lieu, c'est un espace ouvert où l'on apprend, on grandit et on se rencontre, au-delà de l'école. Nous avons choisi ce format parce qu'un enfant ne grandit pas dans une seule pièce : il a besoin d'une école sérieuse, d'un périscolaire joyeux, de parents soutenus, et d'un quartier qui accueille. Une école seule ne suffit pas, un tiers-lieu chrétien et inclusif change la donne.")}
               </p>
               <div className="reveal d3" style={{display:"flex",flexWrap:"wrap",gap:14,marginBottom:56}}>
-                <Btn v="coral" size="lg" onClick={()=>go("candidatures")} icon="arrowRight">Déposer une candidature</Btn>
-                <Btn v="paper" size="lg" onClick={()=>go("about")}>Découvrir le projet</Btn>
+                <Btn v="coral" size="lg" onClick={()=>go("candidatures")} icon="arrowRight">Inscrire mon enfant</Btn>
                 <Btn v="ghost" size="lg" onClick={()=>window.open('https://intentions.sion-emergence.fr','_blank')}>Écrire une lettre d'intention</Btn>
               </div>
               {/* stats mini */}
@@ -902,7 +902,7 @@ const Home=({go})=>{
             <h2 className="display" style={{fontSize:"clamp(48px,7vw,110px)",fontWeight:500,lineHeight:1,letterSpacing:"-.035em",color:"#fff",marginBottom:32}}>Une place<br/><em className="editorial" style={{color:"var(--coral)"}}>pour votre</em><br/><span className="circle-hand" style={{display:"inline-block",padding:"0 18px"}}>enfant.</span></h2>
             <p style={{fontSize:19,color:"rgba(250,247,240,.75)",maxWidth:620,margin:"0 auto 44px"}}>Les places sont limitées. Nous rencontrons chaque famille. Prenez contact dès aujourd{A}hui, on fera connaissance.</p>
             <div style={{display:"flex",gap:14,justifyContent:"center",flexWrap:"wrap"}}>
-              <Btn v="coral" size="lg" onClick={()=>go("candidatures")} icon="arrowRight">Déposer une candidature</Btn>
+              <Btn v="coral" size="lg" onClick={()=>go("candidatures")} icon="arrowRight">Inscrire mon enfant</Btn>
               <Btn v="paper" size="lg" onClick={()=>go("partenaires")}>Nous contacter</Btn>
             </div>
           </div>
@@ -2012,15 +2012,161 @@ const Partenaires=({go})=>{
 };
 
 /* ─────────────────────────────────────
+   PAGE RECRUTEMENT
+────────────────────────────────────── */
+const Recrutement=({go})=>{
+  const ref=useRef();useReveal(ref);
+  const[poste,setPoste]=useState("");
+  const[autreVisible,setAutreVisible]=useState(false);
+  const[sent,setSent]=useState(false);
+  const[loading,setLoading]=useState(false);
+
+  const handlePosteChange=(e)=>{
+    setPoste(e.target.value);
+    setAutreVisible(e.target.value==="autre");
+  };
+
+  const handleSubmit=async(e)=>{
+    e.preventDefault();
+    if(!e.target.checkValidity()){e.target.reportValidity();return;}
+    setLoading(true);
+    const data={
+      prenom:e.target.prenom.value.trim(),
+      nom:e.target.nom.value.trim(),
+      naissance:e.target.naissance.value,
+      email:e.target.email.value.trim(),
+      telephone:e.target.telephone.value.trim(),
+      poste:poste,
+      autrePoste:autreVisible?e.target.autrePoste?.value.trim():"",
+      message:e.target.message?.value.trim()||""
+    };
+    try{
+      await fetch("/api/candidature",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(data)});
+    }catch(_){}
+    setLoading(false);setSent(true);
+  };
+
+  const postes=[
+    {v:"eje",l:"Éducatrice de jeunes enfants"},
+    {v:"professeur",l:"Professeur / Enseignant"},
+    {v:"autre",l:"Autre profil"}
+  ];
+
+  return(
+    <div ref={ref}>
+      {/* HERO */}
+      <section style={{padding:"56px 32px 80px",background:"var(--ink)",color:"#fff",position:"relative",overflow:"hidden"}}>
+        <div style={{position:"absolute",inset:0,background:"radial-gradient(ellipse at 70% -10%,rgba(212,160,23,.18) 0%,transparent 60%)",pointerEvents:"none"}}/>
+        <div style={{maxWidth:1200,margin:"0 auto",position:"relative"}}>
+          <div className="reveal"><Chip bg="rgba(255,255,255,.14)" color="#fff">Équipe & recrutement</Chip></div>
+          <h1 className="display reveal d1" style={{fontSize:"clamp(52px,8vw,120px)",fontWeight:500,color:"#fff",lineHeight:.96,marginTop:20,marginBottom:22,letterSpacing:"-.035em"}}>Tu veux faire<br/>partie de <em className="editorial" style={{color:"var(--coral)"}}>l'aventure ?</em></h1>
+          <p className="reveal d2" style={{fontSize:19,lineHeight:1.65,color:"rgba(250,247,240,.75)",maxWidth:580}}>On construit quelque chose qui ne ressemble à rien d'autre en Martinique. Si tu sens que ta place est ici, dis-le nous.</p>
+        </div>
+      </section>
+
+      {/* POSTES */}
+      <section style={{padding:"80px 32px 40px",background:"var(--paper)"}}>
+        <div style={{maxWidth:900,margin:"0 auto"}}>
+          <div className="reveal" style={{marginBottom:40}}>
+            <p className="kicker" style={{color:"var(--forest)",marginBottom:14}}>Ce qu'on recherche</p>
+            <h2 className="display" style={{fontSize:"clamp(34px,4.5vw,54px)",fontWeight:500,color:"var(--ink)",marginBottom:12}}>Les profils qui <em className="editorial" style={{color:"var(--coral)"}}>nous parlent.</em></h2>
+            <p style={{fontSize:16,color:"var(--ink-s)",lineHeight:1.7}}>On ne cherche pas juste des compétences. On cherche des personnes qui croient, elles aussi, que l'éducation peut être autrement.</p>
+          </div>
+          <div className="mob-1col reveal d1" style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:16,marginBottom:16}}>
+            {[
+              {t:"Éducatrice de jeunes enfants",d:"Accompagner les tout-petits dans leur développement global, au sein d'un environnement bienveillant et vivant.",c:"var(--forest)",bg:"var(--mist)"},
+              {t:"Professeur",d:"Enseigner en pédagogie active, dans un tiers-lieu qui donne à chaque enfant la place dont il a besoin.",c:"var(--teal-d)",bg:"var(--teal-l)"}
+            ].map((p,i)=>(
+              <div key={p.t} className="tile card-3d" style={{background:p.bg,borderRadius:"var(--r4)",padding:"28px 30px",boxShadow:"var(--sh2)",transitionDelay:(i*80)+"ms",borderLeft:"4px solid "+p.c}}>
+                <Chip bg="#fff" color={p.c}>Poste ouvert</Chip>
+                <h3 className="serif" style={{fontSize:22,fontWeight:700,color:"var(--ink)",margin:"12px 0 8px"}}>{p.t}</h3>
+                <p style={{fontSize:14,color:"var(--ink-s)",lineHeight:1.6}}>{p.d}</p>
+              </div>
+            ))}
+          </div>
+          <div className="reveal d2 tile" style={{background:"var(--ink)",borderRadius:"var(--r4)",padding:"28px 30px",boxShadow:"var(--sh3)"}}>
+            <Chip bg="rgba(212,160,23,.2)" color="var(--gold)">Autre profil</Chip>
+            <h3 className="serif" style={{fontSize:22,fontWeight:700,color:"var(--paper)",margin:"12px 0 8px"}}>Tu as un autre profil ?</h3>
+            <p style={{fontSize:14,color:"rgba(250,247,240,.7)",lineHeight:1.6}}>Précise-le dans le formulaire. On lit tout, et on prend le temps de te répondre.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* FORMULAIRE */}
+      <section style={{padding:"40px 32px 100px",background:"var(--paper)"}}>
+        <div style={{maxWidth:900,margin:"0 auto"}}>
+          <div style={{display:"flex",alignItems:"center",gap:24,margin:"40px 0 32px"}}>
+            <div style={{flex:1,height:1,background:"var(--line)"}}/>
+            <p className="kicker" style={{color:"var(--gold)",whiteSpace:"nowrap"}}>Ta candidature</p>
+            <div style={{flex:1,height:1,background:"var(--line)"}}/>
+          </div>
+
+          <div className="reveal" style={{background:"#fff",borderRadius:"var(--r5)",padding:"44px 48px",boxShadow:"var(--sh3)",position:"relative",overflow:"hidden"}}>
+            <StarSpark c="var(--coral)" size={22} s={{position:"absolute",top:24,right:28,opacity:.35}}/>
+
+            {sent?(
+              <div style={{textAlign:"center",padding:"40px 0"}}>
+                <div style={{marginBottom:20,display:"flex",justifyContent:"center"}}><Icon name="check" size={40} color="#fff" bg="var(--forest)" padding={26}/></div>
+                <h3 className="display" style={{fontSize:40,fontWeight:500,color:"var(--ink)",marginBottom:10}}>Candidature reçue</h3>
+                <p style={{fontSize:17,color:"var(--ink-s)",lineHeight:1.7,maxWidth:440,margin:"0 auto"}}>On a bien noté ta démarche. On reviendra vers toi très bientôt.</p>
+              </div>
+            ):(
+              <form onSubmit={handleSubmit} noValidate>
+                <p className="kicker" style={{color:"var(--forest)",marginBottom:24}}>Identité</p>
+                <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:16,marginBottom:16}}>
+                  <div><label>Prénom *</label><input name="prenom" required placeholder="Ton prénom"/></div>
+                  <div><label>Nom *</label><input name="nom" required placeholder="Ton nom de famille"/></div>
+                </div>
+                <div style={{marginBottom:24}}>
+                  <label>Date de naissance *</label>
+                  <input name="naissance" type="date" required/>
+                </div>
+
+                <p className="kicker" style={{color:"var(--forest)",marginBottom:16,paddingTop:16,borderTop:"1px solid var(--line)"}}>Contact</p>
+                <div style={{marginBottom:16}}><label>Adresse email *</label><input name="email" type="email" required placeholder="exemple@email.com"/></div>
+                <div style={{marginBottom:24}}><label>Téléphone *</label><input name="telephone" required placeholder="+596 06 00 00 00"/></div>
+
+                <p className="kicker" style={{color:"var(--forest)",marginBottom:16,paddingTop:16,borderTop:"1px solid var(--line)"}}>Poste souhaité</p>
+                <div style={{marginBottom:16}}>
+                  <label>Quel poste t'intéresse ? *</label>
+                  <select name="poste" required value={poste} onChange={handlePosteChange} style={{appearance:"none",backgroundImage:"url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' viewBox='0 0 12 7'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%232F5D50' stroke-width='1.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E\")",backgroundRepeat:"no-repeat",backgroundPosition:"right 1rem center",paddingRight:"2.5rem"}}>
+                    <option value="" disabled>Choisis un poste</option>
+                    {postes.map(p=><option key={p.v} value={p.v}>{p.l}</option>)}
+                  </select>
+                </div>
+                {autreVisible&&(
+                  <div style={{marginBottom:16}}>
+                    <label>Précise ton profil *</label>
+                    <input name="autrePoste" required placeholder="Ex. agent administratif, animateur…"/>
+                  </div>
+                )}
+                <div style={{marginBottom:28}}>
+                  <label>Quelques mots sur toi</label>
+                  <textarea name="message" placeholder="Pourquoi Sion Émergence t'attire ? Dis-le à ta façon." style={{minHeight:110}}/>
+                  <p style={{fontSize:12,color:"var(--ink-l)",marginTop:6}}>Facultatif, mais les candidatures avec un mot humain derrière sont toujours celles qu'on retient le plus.</p>
+                </div>
+                <Btn v="forest" size="lg" full icon="arrowRight">{loading?"Envoi en cours…":"Envoyer ma candidature"}</Btn>
+                <p style={{fontSize:12,color:"var(--ink-l)",textAlign:"center",marginTop:14}}>Tes informations restent confidentielles et ne sont utilisées que dans le cadre de ce recrutement.</p>
+              </form>
+            )}
+          </div>
+        </div>
+      </section>
+      <Footer go={go}/>
+    </div>
+  );
+};
+
+/* ─────────────────────────────────────
    APP
 ────────────────────────────────────── */
-const VALID_PAGES=["home","about","academy","joyclub","parentlab","dispositifs","candidatures","partenaires"];
+const VALID_PAGES=["home","about","academy","joyclub","parentlab","dispositifs","candidatures","partenaires","recrutement"];
 const App=()=>{
   const getInitialPage=()=>{const h=window.location.hash.replace("#","");return VALID_PAGES.includes(h)?h:"home";};
   const[page, setPage]=useState(getInitialPage);
   const go=(p)=>{setPage(p);window.location.hash=p==="home"?"":p;requestAnimationFrame(()=>{document.documentElement.scrollTop=0;document.body.scrollTop=0;window.scrollTo({top:0,left:0,behavior:"instant"})})};
   useEffect(()=>{const onHash=()=>{const h=window.location.hash.replace("#","");if(VALID_PAGES.includes(h))setPage(h);};window.addEventListener("hashchange",onHash);return()=>window.removeEventListener("hashchange",onHash);},[]);
-  const pages={home:<Home go={go}/>,about:<About go={go}/>,academy:<Academy go={go}/>,joyclub:<JoyClub go={go}/>,parentlab:<ParentLab go={go}/>,dispositifs:<Dispositifs go={go}/>,candidatures:<Candidatures go={go}/>,partenaires:<Partenaires go={go}/>};
+  const pages={home:<Home go={go}/>,about:<About go={go}/>,academy:<Academy go={go}/>,joyclub:<JoyClub go={go}/>,parentlab:<ParentLab go={go}/>,dispositifs:<Dispositifs go={go}/>,candidatures:<Candidatures go={go}/>,partenaires:<Partenaires go={go}/>,recrutement:<Recrutement go={go}/>};
   return(<><Nav page={page} go={go}/>{pages[page]||<Home go={go}/>}<NewsletterPopup/></>);
 };
 
