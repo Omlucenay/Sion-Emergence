@@ -2052,7 +2052,7 @@ const Recrutement=({go})=>{
       message:e.target.message?.value.trim()||""
     };
     try{
-      await fetch("https://script.google.com/macros/s/AKfycby7LBQF-waIY_5n9PFKKXRAkNe75hSHtwww2HBoNAJvGcYdMX986PvAqBxWHX-tD8ie/exec",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(data)});
+      const fd=new FormData();Object.entries(data).forEach(([k,v])=>fd.append(k,v));await fetch("https://script.google.com/macros/s/AKfycby7LBQF-waIY_5n9PFKKXRAkNe75hSHtwww2HBoNAJvGcYdMX986PvAqBxWHX-tD8ie/exec",{method:"POST",body:fd,mode:"no-cors"});
     }catch(_){}
     setLoading(false);setSent(true);
   };
