@@ -382,7 +382,14 @@ const Nav=({page, go})=>{
           </div>
         </button>
         <div className="hide-mob" style={{display:"flex",gap:4,alignItems:"center",background:"rgba(255,255,255,.7)",borderRadius:999,padding:"8px",boxShadow:"var(--sh2)",border:"1px solid rgba(27,40,38,.06)"}}>
-          {NAV.slice(1).map(n=><button key={n.id} onClick={()=>go(n.id)} className="nav-3d" style={{background:page===n.id?"var(--ink)":"transparent",color:page===n.id?"#fff":"var(--ink-s)",border:"none",cursor:"pointer",fontFamily:"'Inter',sans-serif",fontSize:13,fontWeight:500,padding:"10px 18px",borderRadius:999}} onMouseEnter={e=>{if(page!==n.id)e.currentTarget.style.background="rgba(27,40,38,.06)"}} onMouseLeave={e=>{if(page!==n.id)e.currentTarget.style.background="transparent"}}>{n.label}</button>)}
+          {NAV.slice(1).map(n=>{
+            const isRecrutement=n.id==="recrutement";
+            const isActive=page===n.id;
+            const bg=isActive?"var(--ink)":isRecrutement?"var(--coral)":"transparent";
+            const color=isActive?"#fff":isRecrutement?"#fff":"var(--ink-s)";
+            const hoverBg=isRecrutement?"var(--coral-d)":"rgba(27,40,38,.06)";
+            return <button key={n.id} onClick={()=>go(n.id)} className="nav-3d" style={{background:bg,color,border:"none",cursor:"pointer",fontFamily:"'Inter',sans-serif",fontSize:13,fontWeight:isRecrutement?600:500,padding:"10px 18px",borderRadius:999,boxShadow:isRecrutement&&!isActive?"0 4px 14px -4px rgba(232,114,90,.5)":"none"}} onMouseEnter={e=>{if(!isActive)e.currentTarget.style.background=hoverBg}} onMouseLeave={e=>{if(!isActive)e.currentTarget.style.background=bg}}>{n.label}</button>;
+          })}
         </div>
         <div className="hide-mob" style={{display:"flex",alignItems:"center",gap:10}}>
           <Btn v="paper" size="sm" onClick={()=>window.open('https://intentions.sion-emergence.fr','_blank')}>Lettre d'intention</Btn>
@@ -393,7 +400,11 @@ const Nav=({page, go})=>{
         </button>
       </div>
       {open&&<div className="show-mob" style={{padding:"12px 20px 24px",flexDirection:"column",gap:4,background:"var(--paper)",borderTop:"1px solid var(--line)"}}>
-        {NAV.map(n=><button key={n.id} onClick={()=>{go(n.id);setOpen(false)}} style={{background:page===n.id?"var(--mist)":"none",border:"none",padding:"14px 18px",textAlign:"left",fontFamily:"'Inter',sans-serif",fontSize:15,fontWeight:500,color:"var(--ink)",borderRadius:12}}>{n.label}</button>)}
+        {NAV.map(n=>{
+          const isRecrutement=n.id==="recrutement";
+          const isActive=page===n.id;
+          return <button key={n.id} onClick={()=>{go(n.id);setOpen(false)}} style={{background:isActive?"var(--mist)":isRecrutement?"var(--coral)":"none",border:"none",padding:"14px 18px",textAlign:"left",fontFamily:"'Inter',sans-serif",fontSize:15,fontWeight:isRecrutement?600:500,color:isRecrutement?"#fff":"var(--ink)",borderRadius:12}}>{n.label}</button>;
+        })}
         <div style={{marginTop:12,display:"flex",flexDirection:"column",gap:10}}>
           <Btn v="paper" full onClick={()=>{window.open('https://intentions.sion-emergence.fr','_blank');setOpen(false)}}>Lettre d'intention</Btn>
           <Btn v="coral" full onClick={()=>{go("candidatures");setOpen(false)}} icon="arrowRight">J'inscris mon enfant</Btn>
