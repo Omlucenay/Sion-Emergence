@@ -57,15 +57,9 @@ function InscriptionForm() {
       return
     }
 
-    
+    await supabase.rpc('decrement_places', { atelier_id })
 
-    await fetch('/api/decrement-places', {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({ atelier_id })
-})
-
-await fetch(WEBHOOK_INSCRIPTION, {
+    await fetch(WEBHOOK_INSCRIPTION, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ ...form, atelier_id, atelier_titre })
