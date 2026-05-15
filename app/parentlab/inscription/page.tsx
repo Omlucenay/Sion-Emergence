@@ -4,6 +4,8 @@ import { Suspense, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { createClient } from '@/lib/supabase'
 
+const WEBHOOK_INSCRIPTION = 'https://hook.eu2.make.com/sp0og4bdl76lfxmtzav4si9y9coyeyr4'
+
 function InscriptionForm() {
   const searchParams = useSearchParams()
   const atelier_id = searchParams.get('atelier_id')
@@ -47,6 +49,13 @@ function InscriptionForm() {
     }
 
     await supabase.rpc('decrement_places', { atelier_id })
+
+    await fetch(WEBHOOK_INSCRIPTION, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ ...form, atelier_id, atelier_titre })
+    })
+
     setDone(true)
     setLoading(false)
   }
