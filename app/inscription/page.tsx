@@ -32,6 +32,19 @@ export default function InscriptionPage() {
     }
     setLoading(true)
     setError('')
+        // Vérification doublon email
+    const { data: existing } = await supabase
+      .from('demandes_inscription')
+      .select('id')
+      .eq('email', form.email)
+      .maybeSingle()
+
+    if (existing) {
+      setError('Une demande existe déjà avec cet email.')
+      setLoading(false)
+      return
+    }
+
 
     const payload = { ...form, services }
 
