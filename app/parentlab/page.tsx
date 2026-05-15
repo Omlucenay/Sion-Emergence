@@ -72,7 +72,7 @@ export default function ParentLabPage() {
             <h2 className="font-bold text-lg mb-1" style={{color:'#2F5D50'}}>{a.titre}</h2>
             <p className="text-sm mb-3" style={{color:'#6B7280'}}>{a.description}</p>
             <div className="text-xs space-y-1" style={{color:'#6B7280'}}>
-              <p>{new Date(a.date).toLocaleDateString('fr-FR', {weekday:'long', day:'numeric', month:'long', year:'numeric'})}</p>
+              <p>{new Date(a.date + 'T00:00:00').toLocaleDateString('fr-FR', {weekday:'long', day:'numeric', month:'long', year:'numeric'})}</p>
               {a.heure_debut && (
                 <p>{a.heure_debut.slice(0,5)} - {calcHeureFin(a.heure_debut, a.duree_minutes)} · {a.lieu}</p>
               )}
