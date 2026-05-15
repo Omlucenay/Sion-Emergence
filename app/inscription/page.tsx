@@ -3,6 +3,8 @@
 import { useState } from 'react'
 import { createClient } from '@/lib/supabase'
 
+const MAKE_WEBHOOK = 'https://hook.eu2.make.com/9mycfujqb8ktoksixmtj99bxc2f17iv1'
+
 export default function InscriptionPage() {
   const [form, setForm] = useState({
     prenom: '', nom: '', email: '', telephone: '', message: ''
@@ -30,14 +32,28 @@ export default function InscriptionPage() {
     }
     setLoading(true)
     setError('')
-    const { error } = await supabase.from('demandes_inscription').insert({
-      ...form, services
-    })
-    if (error) {
+
+    const payload = { ...form, services }
+
+    // Enregistre dans Supabase
+    const { error: dbError } = await supabase
+      .from('demandes_inscription')
+      .insert(payload)
+
+    if (dbError) {
       setError('Une erreur est survenue. Réessayez.')
-    } else {
-      setDone(true)
+      setLoading(false)
+      return
     }
+
+    // Notifie Make
+    await fetch(MAKE_WEBHOOK, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+
+    setDone(true)
     setLoading(false)
   }
 
@@ -59,8 +75,6 @@ export default function InscriptionPage() {
       </div>
 
       <div className="p-6 space-y-4 max-w-lg mx-auto">
-
-        {/* Services */}
         <div>
           <p className="text-sm font-bold mb-3" style={{color:'#2F5D50'}}>Je souhaite rejoindre</p>
           <div className="space-y-3">
@@ -92,7 +106,6 @@ export default function InscriptionPage() {
           </div>
         </div>
 
-        {/* Champs */}
         <div className="bg-white rounded-2xl p-5 space-y-4 shadow-sm">
           {[
             { key: 'prenom', label: 'Prénom', placeholder: 'Marie', type: 'text' },
