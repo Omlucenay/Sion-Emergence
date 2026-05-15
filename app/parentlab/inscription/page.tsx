@@ -1,10 +1,10 @@
 'use client'
 
-import { useState } from 'react'
+import { Suspense, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { createClient } from '@/lib/supabase'
 
-export default function InscriptionAtelierPage() {
+function InscriptionForm() {
   const searchParams = useSearchParams()
   const atelier_id = searchParams.get('atelier_id')
   const atelier_titre = searchParams.get('titre') || 'cet atelier'
@@ -47,7 +47,6 @@ export default function InscriptionAtelierPage() {
     }
 
     await supabase.rpc('decrement_places', { atelier_id })
-
     setDone(true)
     setLoading(false)
   }
@@ -93,5 +92,13 @@ export default function InscriptionAtelierPage() {
         </button>
       </div>
     </main>
+  )
+}
+
+export default function InscriptionAtelierPage() {
+  return (
+    <Suspense fallback={<div>Chargement...</div>}>
+      <InscriptionForm />
+    </Suspense>
   )
 }
