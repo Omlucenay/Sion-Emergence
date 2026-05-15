@@ -17,9 +17,17 @@ function InscriptionForm() {
   const [error, setError] = useState('')
   const supabase = createClient()
 
+  function isValidEmail(email: string) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+  }
+
   async function handleSubmit() {
     if (!form.prenom || !form.nom || !form.email) {
       setError('Tous les champs sont obligatoires')
+      return
+    }
+    if (!isValidEmail(form.email)) {
+      setError('Adresse email invalide')
       return
     }
     setLoading(true)
@@ -40,10 +48,10 @@ function InscriptionForm() {
 
     const { error: dbError } = await supabase
       .from('inscriptions_ateliers')
-      .insert({ ...form, atelier_id, statut: 'confirme' })
+      .insert({ prenom: form.prenom, nom: form.nom, email: form.email, atelier_id, statut: 'confirme' })
 
     if (dbError) {
-      setError('Une erreur est survenue. Réessayez.')
+      setError('Une erreur est survenue : ' + dbError.message)
       setLoading(false)
       return
     }
