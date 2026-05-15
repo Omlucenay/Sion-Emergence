@@ -83,7 +83,7 @@ function InscriptionForm() {
   return (
     <main className="min-h-screen" style={{background:'#F7F6F2'}}>
       <div className="px-6 pt-12 pb-6" style={{background:'#2F5D50'}}>
-        <button onClick={() => router.push('/parentlab')} className="text-xs mb-3 underline block" style={{color:'rgba(255,255,255,0.7)'}}>Retour aux ateliers</button>
+        <button onClick={() => router.push('/parentlab')} className="text-xs mb-3 underline block cursor-pointer" style={{color:'rgba(255,255,255,0.7)'}}>Retour aux ateliers</button>
         <h1 className="text-white text-2xl font-bold">Je m'inscris</h1>
         <p className="text-sm mt-1" style={{color:'rgba(255,255,255,0.7)'}}>{atelier_titre}</p>
       </div>
