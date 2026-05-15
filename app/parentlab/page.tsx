@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { createClient } from '@/lib/supabase'
 
 type Atelier = {
@@ -29,6 +30,7 @@ export default function ParentLabPage() {
   const [ateliers, setAteliers] = useState<Atelier[]>([])
   const [loading, setLoading] = useState(true)
   const supabase = createClient()
+  const router = useRouter()
 
   useEffect(() => {
     async function fetchAteliers() {
@@ -77,7 +79,10 @@ export default function ParentLabPage() {
               {a.animateurs && <p>Avec {a.animateurs}</p>}
             </div>
             {a.places_restantes > 0 && (
-              <button className="w-full mt-4 py-3 rounded-xl font-bold text-white" style={{background:'#2F5D50'}}>
+              <button
+                onClick={() => router.push(`/parentlab/inscription?atelier_id=${a.id}&titre=${encodeURIComponent(a.titre)}`)}
+                className="w-full mt-4 py-3 rounded-xl font-bold text-white"
+                style={{background:'#2F5D50'}}>
                 Je m'inscris
               </button>
             )}
