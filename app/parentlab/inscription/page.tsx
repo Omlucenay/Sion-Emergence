@@ -1,7 +1,7 @@
 'use client'
 
 import { Suspense, useState } from 'react'
-import { useSearchParams } from 'next/navigation'
+import { useSearchParams, useRouter } from 'next/navigation'
 import { createClient } from '@/lib/supabase'
 
 const WEBHOOK_INSCRIPTION = 'https://hook.eu2.make.com/sp0og4bdl76lfxmtzav4si9y9coyeyr4'
@@ -81,6 +81,7 @@ function InscriptionForm() {
   return (
     <main className="min-h-screen" style={{background:'#F7F6F2'}}>
       <div className="px-6 pt-12 pb-6" style={{background:'#2F5D50'}}>
+        <button onClick={() => router.push('/parentlab')} className="text-xs mb-2 underline" style={{color:'rgba(255,255,255,0.6)'}}>Retour aux ateliers</button>
         <h1 className="text-white text-2xl font-bold">Je m'inscris</h1>
         <p className="text-sm mt-1" style={{color:'rgba(255,255,255,0.7)'}}>{atelier_titre}</p>
       </div>
