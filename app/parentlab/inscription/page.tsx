@@ -8,6 +8,7 @@ const WEBHOOK_INSCRIPTION = 'https://hook.eu2.make.com/sp0og4bdl76lfxmtzav4si9y9
 
 function InscriptionForm() {
   const searchParams = useSearchParams()
+  const router = useRouter()
   const atelier_id = searchParams.get('atelier_id')
   const atelier_titre = searchParams.get('titre') || 'cet atelier'
 
@@ -73,7 +74,8 @@ function InscriptionForm() {
       <div className="max-w-sm mx-auto px-6 text-center">
         <div className="text-5xl mb-4">🎉</div>
         <h1 className="text-2xl font-bold mb-2" style={{color:'#2F5D50'}}>Tu es inscrit !</h1>
-        <p className="text-sm" style={{color:'#6B7280'}}>Un email de confirmation avec les détails t'a été envoyé.</p>
+        <p className="text-sm mb-4" style={{color:'#6B7280'}}>Un email de confirmation avec les détails t'a été envoyé.</p>
+        <button onClick={() => router.push('/parentlab')} className="text-sm underline" style={{color:'#2F5D50'}}>Retour aux ateliers</button>
       </div>
     </main>
   )
@@ -81,7 +83,7 @@ function InscriptionForm() {
   return (
     <main className="min-h-screen" style={{background:'#F7F6F2'}}>
       <div className="px-6 pt-12 pb-6" style={{background:'#2F5D50'}}>
-        <button onClick={() => router.push('/parentlab')} className="text-xs mb-2 underline" style={{color:'rgba(255,255,255,0.6)'}}>Retour aux ateliers</button>
+        <button onClick={() => router.push('/parentlab')} className="text-xs mb-3 underline block" style={{color:'rgba(255,255,255,0.7)'}}>Retour aux ateliers</button>
         <h1 className="text-white text-2xl font-bold">Je m'inscris</h1>
         <p className="text-sm mt-1" style={{color:'rgba(255,255,255,0.7)'}}>{atelier_titre}</p>
       </div>
