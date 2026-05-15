@@ -57,7 +57,7 @@ function InscriptionForm() {
       return
     }
 
-    await supabase.rpc('decrement_places', { atelier_id })
+    
 
     await fetch(WEBHOOK_INSCRIPTION, {
       method: 'POST',
