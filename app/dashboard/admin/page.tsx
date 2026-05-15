@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { createClient } from '@/lib/supabase'
 
 type Demande = {
@@ -19,11 +20,25 @@ export default function AdminPage() {
   const [demandes, setDemandes] = useState<Demande[]>([])
   const [loading, setLoading] = useState(true)
   const [filtre, setFiltre] = useState('en_attente')
+  const [authorized, setAuthorized] = useState(false)
   const supabase = createClient()
+  const router = useRouter()
 
   useEffect(() => {
-    fetchDemandes()
-  }, [filtre])
+    async function checkAdmin() {
+      const { data: { user } } = await supabase.auth.getUser()
+      if (!user || user.id !== 'cadcbca6-05fb-44cc-913e-55a4f297e650') {
+        router.push('/login')
+        return
+      }
+      setAuthorized(true)
+    }
+    checkAdmin()
+  }, [])
+
+  useEffect(() => {
+    if (authorized) fetchDemandes()
+  }, [filtre, authorized])
 
   async function fetchDemandes() {
     setLoading(true)
@@ -43,6 +58,12 @@ export default function AdminPage() {
       .eq('id', id)
     fetchDemandes()
   }
+
+  if (!authorized) return (
+    <main className="min-h-screen flex items-center justify-center" style={{background:'#F7F6F2'}}>
+      <p style={{color:'#2F5D50'}}>Vérification...</p>
+    </main>
+  )
 
   return (
     <main className="min-h-screen" style={{background:'#F7F6F2'}}>
